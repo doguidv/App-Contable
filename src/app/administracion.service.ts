@@ -26,7 +26,7 @@ export class AdministracionService {
 }
   guardarInfo(Infocontable:Infocontable[]){
 
-    this.http.put ('https://appibikexco-default-rtdb.firebaseio.com/datos.json',Infocontable).subscribe({
+    this.http.put (URL,Infocontable).subscribe({
         next: (v) => console.log('Se Guardo la informacion' + v),
         error: (e) => console.log('Error' + e),
       });

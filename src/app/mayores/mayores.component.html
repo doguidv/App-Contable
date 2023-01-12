@@ -8,20 +8,22 @@
         <th scope="col">Fecha</th>
         <th scope="col">Detalle</th>
         <th scope="col">Cantidad</th>
-    
         <th scope="col">Precio</th>
-
         <th scope="col">Promedio</th>
         <th scope="col">Total</th>
       
     </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>  {{ListInfoContable.Fecha  | date}} </td>
-        <td>   {{ListInfoContable.Detalle}}    </td>
-        <td>  {{ListInfoContable.Importe | currency}}   </td>
-    <td scope="col">total = cantidad mas Importe </td>
+      <tr *ngFor="let InfoContable of InfoContable">
+        <td>  {{InfoContable.Fecha | date }} </td>
+        <td>   {{InfoContable.Detalle}}    </td>
+        <td> Cantidad   </td>
+    
+        <td>  {{InfoContable.Importe | currency}}   </td>
+        <td>  Promedio   </td>
+    
+        <td scope="col">total  {{InfoContable.Importe | currency}}   = cantidad mas Importe </td>
       
     </tr>
     </tbody>

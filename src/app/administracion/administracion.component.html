@@ -3,6 +3,7 @@
         <div class="input-group mb-3">
             <input type="text" class="" placeholder="Fecha">
             <input type="text"  placeholder="Detalle">
+            <input type="text"  placeholder="Cantidad">
             <input type="text" name="" placeholder="Importe">
             <button class="btn btn-primary" (click)="addInfo()">  Guardar</button>
         </div>
@@ -21,6 +22,9 @@
                         <tr>
                           <th scope="col">Fecha</th>
                           <th scope="col">Detalle</th>
+                          
+                          <th scope="col">Cantidad</th>
+                        
                           <th scope="col">Precio</th>
                         </tr>
                       </thead>
@@ -28,6 +32,7 @@
                         <tr>
                           <td>  {{Infocontable.Fecha  | date}} </td>
                           <td>   {{Infocontable.Detalle}}    </td>
+                          <td scope="col">Cantidad</td>
                           <td>  {{Infocontable.Importe | currency}}   </td>
                           <td>
                             <button class="btn btn-warning">editar</button>
