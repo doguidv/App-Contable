@@ -1,10 +1,14 @@
-<p>administracion works!</p>
 
-<form action="">
-       <div>
+
+    <form action="" >
+    <div class="input-group mb-3">
         <input type="text" class="" placeholder="Fecha">
         <input type="text"  placeholder="Detalle">
         <input type="text" name="" placeholder="Importe">
-        <button class="btn btn-primary">   Guardar</button>
-</div>
+        <button class="btn btn-primary" (click)="addInfo()">  Guardar</button>
+    </div>
 </form>
+  
+   
+   
+   <app-home  *ngFor="let Infocontable of Infocontable "  [ListInfoContable]="Infocontable"></app-home>
