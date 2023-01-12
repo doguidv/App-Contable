@@ -9,8 +9,9 @@ import { InfoContableService } from '../info-contable.service';
 })
 export class AdministracionComponent {
 
-@Output ()ListInfoContable:Infocontable;
-  Infocontable:Infocontable[]=[];
+@Output ()  ListInfoContable:Infocontable;
+  
+Infocontable:Infocontable[]=[];
 
 
   Fecha:number= 1/1/2023;
@@ -18,6 +19,7 @@ export class AdministracionComponent {
   registrado=false;
   Detalle:string="hola";
   Importe:number=1;
+  cantidad:number;
   id_categorias:number=1;
   
 
@@ -30,15 +32,19 @@ export class AdministracionComponent {
   
     ngOnInit():void{
       this.AdministracionService.getAll()
-      .subscribe(Infocontable => this.Infocontable=Infocontable); 
+      .subscribe(Infocontable => this.Infocontable  = Infocontable); 
     }
 
     addInfo(){
-      let MiInfo= new Infocontable  (this.Fecha, this.Detalle,  this.Importe, this.id_categorias);
+      let MiInfo= new Infocontable  (this.Fecha, this.Detalle,  this.Importe, this.id_categorias,this.cantidad);
     //  this.
       this.infocontable.addToInfo(MiInfo);
       this.registrado=true;
       this.mensaje="Informacion registrada"
     }
+    
+ maxReached( m:string ){
+  alert(m);
+ }
 
 }

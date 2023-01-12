@@ -1,14 +1,47 @@
 
-
     <form action="" >
-    <div class="input-group mb-3">
-        <input type="text" class="" placeholder="Fecha">
-        <input type="text"  placeholder="Detalle">
-        <input type="text" name="" placeholder="Importe">
-        <button class="btn btn-primary" (click)="addInfo()">  Guardar</button>
+        <div class="input-group mb-3">
+            <input type="text" class="" placeholder="Fecha">
+            <input type="text"  placeholder="Detalle">
+            <input type="text" name="" placeholder="Importe">
+            <button class="btn btn-primary" (click)="addInfo()">  Guardar</button>
+        </div>
+    </form>
+      
+       
+
+    <div class="container">
+        <div class="card">
+            <div class="car-header">
+                <h3>Info Contable</h3>
+            </div>
+            <div class="card-body">
+                <table class="table-hover">
+                    <thead>
+                        <tr>
+                          <th scope="col">Fecha</th>
+                          <th scope="col">Detalle</th>
+                          <th scope="col">Precio</th>
+                        </tr>
+                      </thead>
+                      <tbody *ngFor="let Infocontable of Infocontable ">
+                        <tr>
+                          <td>  {{Infocontable.Fecha  | date}} </td>
+                          <td>   {{Infocontable.Detalle}}    </td>
+                          <td>  {{Infocontable.Importe | currency}}   </td>
+                          <td>
+                            <button class="btn btn-warning">editar</button>
+                            
+                            <button class="btn btn-warning">borrar</button>
+        
+                        </td>
+                        </tr>
+                 
+                    </tbody>    
+                 </table>
+            </div>
+        </div>
     </div>
-</form>
-  
-   
-   
-   <app-home  *ngFor="let Infocontable of Infocontable "  [ListInfoContable]="Infocontable"></app-home>
+
+
+     

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Infocontable } from '../administracion/administracion';
 
 @Component({
   selector: 'app-mayores',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./mayores.component.scss']
 })
 export class MayoresComponent {
+
+  
+ @Input()ListInfoContable:Infocontable;
 
 }

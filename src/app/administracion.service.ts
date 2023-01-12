@@ -21,9 +21,9 @@ export class AdministracionService {
     
     return  this.http.get<Infocontable[]>(URL)
     .pipe(
-      tap(  ( Infocontable:Infocontable [] )=>Infocontable.forEach(Infocontable  => Infocontable.Fecha  ))
+      tap(  ( infocontable:Infocontable[] )=>infocontable.forEach(infocontable  =>  infocontable.cantidad= 0 ))
      );
-  }
+}
   guardarInfo(Infocontable:Infocontable[]){
 
     this.http.put ('https://appibikexco-default-rtdb.firebaseio.com/datos.json',Infocontable).subscribe({

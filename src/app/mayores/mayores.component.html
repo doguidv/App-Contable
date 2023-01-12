@@ -1,1 +1,28 @@
 <p>mayores works!</p>
+
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Fecha</th>
+        <th scope="col">Detalle</th>
+        <th scope="col">Cantidad</th>
+    
+        <th scope="col">Precio</th>
+
+        <th scope="col">Promedio</th>
+        <th scope="col">Total</th>
+      
+    </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>  {{ListInfoContable.Fecha  | date}} </td>
+        <td>   {{ListInfoContable.Detalle}}    </td>
+        <td>  {{ListInfoContable.Importe | currency}}   </td>
+    <td scope="col">total = cantidad mas Importe </td>
+      
+    </tr>
+    </tbody>
+</table>

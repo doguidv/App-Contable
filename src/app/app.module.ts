@@ -8,12 +8,16 @@ import { MayoresComponent } from './mayores/mayores.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import {  HttpClientModule } from '@angular/common/http';
+import { InputNumberComponent } from './input-number/input-number.component';
+import { ListarComponent } from './listar/listar.component';
 @NgModule({
   declarations: [
     AppComponent,
     AdministracionComponent,
     MayoresComponent,
-    HomeComponent
+    HomeComponent,
+    InputNumberComponent,
+    ListarComponent
   ],
   imports: [
     BrowserModule,

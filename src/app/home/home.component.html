@@ -1,18 +1,36 @@
+<p>home works!</p>
 
+<div class="container">
+    <div class="card">
+        <div class="car-header">
+            <h3>Info Contable</h3>
+        </div>
+        <div class="card-body">
+            <table class="table-hover">
+                <thead>
+                    <tr>
+                      <th scope="col">Fecha</th>
+                      <th scope="col">Detalle</th>
+                      <th scope="col">Precio</th>
+                    </tr>
+                  </thead>
+            <tbody>
+                <tr *ngFor="let InfoContable of InfoContable">
+                <td>
+                   {{InfoContable.Fecha}}
 
-<table class="table">
-       <thead>
-         <tr>
-           <th scope="col">Fecha</th>
-           <th scope="col">Detalle</th>
-           <th scope="col">Precio</th>
-         </tr>
-       </thead>
-       <tbody>
-         <tr>
-           <td>  {{ListInfoContable.Fecha  | date}} </td>
-           <td>   {{ListInfoContable.Detalle}}    </td>
-           <td>  {{ListInfoContable.Importe | currency}}   </td>
-         </tr>
-       </tbody>
-  </table>
+                </td>
+                
+                <td>
+                    {{InfoContable.Detalle}}
+                 </td>
+                 
+                <td>
+                    {{InfoContable.Importe}}
+                 </td>
+                </tr>
+                </tbody>
+             </table>
+        </div>
+    </div>
+</div>
