@@ -8,11 +8,18 @@
         <div class="card-body">
             <table class="table-hover">
                 <thead>
+                  
                     <tr>
-                      <th scope="col">Fecha</th>
-                      <th scope="col">Detalle</th>
-                      <th scope="col">Precio</th>
-                    </tr>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Especie</th>
+                        
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Comision</th>
+                      
+                        <th scope="col">Precio</th>
+                      
+                        <th scope="col">Tipo especie</th>
+                      </tr>
                   </thead>
             <tbody>
                 <tr *ngFor="let InfoContable of InfoContable">
@@ -20,14 +27,27 @@
                    {{InfoContable.Fecha |date}}
 
                 </td>
-                
+                 
                 <td>
                     {{InfoContable.Detalle}}
                  </td>
                  
                 <td>
+                    {{InfoContable.Cantidad}}
+                 </td>
+                 
+                <td>
+                    {{InfoContable.Comision}}
+                 </td>
+                 
+                <td>
                     {{InfoContable.Importe|currency }}
                  </td>
+                 
+                 <td>
+                    {{InfoContable.id_categorias  }}
+                 </td>
+
                 </tr>
                 </tbody>
              </table>
