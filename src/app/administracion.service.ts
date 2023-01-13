@@ -21,13 +21,13 @@ export class AdministracionService {
 
   public getAll():Observable<Infocontable[]> {
 
-    return  this.http.get<Infocontable[]>(url)
+    return  this.http.get<Infocontable[]>(URL)
   
   }
 
   guardarInfo(Infocontable:Infocontable[]){
 
-    this.http.post (url,Infocontable).subscribe({
+    this.http.post (URL,Infocontable).subscribe({
         next: (v) => console.log('Se Guardo la informacion' + v),
         error: (e) => console.log('Error' + e),
       });
