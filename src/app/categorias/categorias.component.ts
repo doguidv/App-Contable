@@ -16,8 +16,7 @@ Categorias:Categorias[]=[];
 
   id_categorias:number=1;
   Tipo_Inversion:string="Acciones";  
-  mensaje="";
-  registrado=false;
+ 
 
 
 
@@ -34,8 +33,6 @@ Categorias:Categorias[]=[];
       let MiCateg= new Categorias  ( this.Tipo_Inversion);
     //  this.
       this.AddCateg.addToInfo(MiCateg);
-      this.registrado=true;
-      this.mensaje="Informacion registrada"
     }
     
  maxReached( m:string ){
