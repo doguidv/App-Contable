@@ -27,7 +27,7 @@ export class AdministracionService {
 
   guardarInfo(Infocontable:Infocontable[]){
 
-    this.http.put (url,Infocontable).subscribe({
+    this.http.post (url,Infocontable).subscribe({
         next: (v) => console.log('Se Guardo la informacion' + v),
         error: (e) => console.log('Error' + e),
       });

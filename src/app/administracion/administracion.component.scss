@@ -1,3 +1,6 @@
+
+
+
 .Rectangle19    {
 box-sizing: border-box;
 
@@ -9,4 +12,13 @@ background: rgba(255, 255, 255, 0.29);
 border: 3px solid #000000;
 box-shadow: -10px 15px 5px 3px rgba(0, 0, 0, 0.25);
 border-radius: 30px;
+}
+.Renglon{
+    box-sizing: border-box;
+
+    width: 1519px;
+    height: 25px;
+    
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid #000000;
 }

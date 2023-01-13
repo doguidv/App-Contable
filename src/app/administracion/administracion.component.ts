@@ -1,4 +1,4 @@
-import { Component, Output } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Infocontable } from './administracion';
 import { AdministracionService } from '../administracion.service';
 import { InfoContableService } from '../info-contable.service';
@@ -9,26 +9,15 @@ import { tick } from '@angular/core/testing';
   templateUrl: './administracion.component.html',
   styleUrls: ['./administracion.component.scss']
 })
-export class AdministracionComponent  {
-
-
-
+export class AdministracionComponent implements OnInit {
 
   constructor(
     private AdministracionService: AdministracionService,private infocontableService:InfoContableService ){
-      
-      this.Infocontable=this.infocontableService._AddInfo;
+     
    }
 
 @Output ()  ListInfoContable:Infocontable;
 
-
-  Fecha:number=0;
-  Detalle:string="";
-  Cantidad:number=0;
-  Importe:number=0;
-  id_categorias:number=0;
-  
 
   
     ngOnInit():void{
@@ -43,13 +32,18 @@ export class AdministracionComponent  {
 
     addInfo(){
 
-      let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.Importe,this.id_categorias);
-
+      let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.Comision,this.Importe,this.id_categorias);
       this.infocontableService.addToInfo(InfoCont);
-      this.AdministracionService.guardarInfo(this.Infocontable);
-
     }
     
+  Fecha:number=0;
+  Detalle:string="";
+  Cantidad:number=0;
+  Comision:number;
+  Importe:number=0;
+  id_categorias:number=0;
+  
+
  maxReached( m:string ){
   alert(m);
  }

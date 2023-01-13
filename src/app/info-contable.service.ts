@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { AdministracionService } from './administracion.service';
-
 import { Infocontable } from './administracion/administracion';
 @Injectable({
   providedIn: 'root'
@@ -9,11 +8,10 @@ import { Infocontable } from './administracion/administracion';
 
 export class InfoContableService {
   
-  _AddInfo:Infocontable[]=[
-   
+  Infocontable:Infocontable[]=[
   ];
 
-  constructor(private adminservice:AdministracionService) { }
+  constructor(private adminservice:AdministracionService ) { }
 
   
   GetInfo(){
@@ -23,8 +21,8 @@ export class InfoContableService {
   
   addToInfo(Infocontable:Infocontable){
 
-    this._AddInfo.push(Infocontable);    
-    this.adminservice.guardarInfo(this._AddInfo);
+    this.Infocontable.push(Infocontable);    
+    this.adminservice.guardarInfo(this.Infocontable);
   }
 
 

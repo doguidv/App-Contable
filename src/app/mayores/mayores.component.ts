@@ -9,7 +9,7 @@ import { Infocontable } from '../administracion/administracion';
   styleUrls: ['./mayores.component.scss']
 })
 export class MayoresComponent {
-
+  
   InfoContable:Infocontable[];
  @Input()ListInfoContable:Infocontable;
 
@@ -22,5 +22,4 @@ export class MayoresComponent {
     })
 
   }
-
 }
