@@ -2,8 +2,7 @@ import { Component, OnInit, Output } from '@angular/core';
 import { Infocontable } from './administracion';
 import { AdministracionService } from '../administracion.service';
 import { InfoContableService } from '../info-contable.service';
-import { NgForm } from '@angular/forms';
-import { tick } from '@angular/core/testing';
+
 @Component({
   selector: 'app-administracion',
   templateUrl: './administracion.component.html',
