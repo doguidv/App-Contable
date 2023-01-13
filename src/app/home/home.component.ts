@@ -16,6 +16,7 @@ export class HomeComponent {
   constructor(private AdminService:AdministracionService,private router:Router){}
 
   ngOnInit():void{
+    
 
     this.AdminService.getAll().subscribe(data=>{
       this.InfoContable=data

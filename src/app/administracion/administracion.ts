@@ -1,19 +1,19 @@
 export class Infocontable{
 
-    constructor(Fecha: number,Detalle:string,Importe:number,id_categorias:number,cantidad:number){
+    constructor(Fecha: number,Detalle:string,Importe:number,id_categorias:number,Cantidad:number){
 
         this.Fecha=Fecha,
     
         this.Detalle=Detalle,
         
         this.Importe=Importe,
-        this.cantidad=cantidad,
+        this.Cantidad=Cantidad,
         this.id_categorias=id_categorias
     }
     
     Fecha:number;
     Detalle:string;
     Importe:number;
-    cantidad:number;
+    Cantidad:number;
     id_categorias: number;
 }

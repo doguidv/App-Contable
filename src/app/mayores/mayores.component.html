@@ -16,14 +16,14 @@
     </thead>
     <tbody>
       <tr *ngFor="let InfoContable of InfoContable">
-        <td>  {{InfoContable.Fecha | date }} </td>
+        <td>  {{InfoContable.Fecha|date }} </td>
         <td>   {{InfoContable.Detalle}}    </td>
         <td> Cantidad   </td>
     
-        <td>  {{InfoContable.Importe | currency}}   </td>
+        <td>  {{InfoContable.Importe|currency}}   </td>
         <td>  Promedio   </td>
     
-        <td scope="col">total  {{InfoContable.Importe | currency}}   = cantidad mas Importe </td>
+        <td scope="col">total  {{InfoContable.Importe |currency}}   = cantidad mas Importe </td>
       
     </tr>
     </tbody>
