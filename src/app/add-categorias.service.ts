@@ -10,7 +10,7 @@ export class AddCategoriasService {
   AddInfo: BehaviorSubject<Categorias[]>= new BehaviorSubject(this._AddCateg);
   constructor() { }
   
-  addToInfo(Categorias:Categorias){
+  addToCategorias(Categorias:Categorias){
   
     let item=this._AddCateg.find((v1)=>v1.Tipo_Inversion==Categorias.Tipo_Inversion);
   
