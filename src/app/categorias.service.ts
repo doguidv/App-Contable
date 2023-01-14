@@ -21,7 +21,7 @@ export class CategoriasService {
       tap(  ( infocontable:Categorias[] )=>infocontable.forEach(Categorias  =>  Categorias ))
      );
 }
-  guardarInfo(Categorias:Categorias[]){
+  guardarCategorias(Categorias:Categorias[]){
 
     this.http.put (URL,Categorias).subscribe({
         next: (v) => console.log('Se Guardo la informacion' + v),

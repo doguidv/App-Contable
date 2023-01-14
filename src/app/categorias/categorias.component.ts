@@ -12,7 +12,11 @@ export class CategoriasComponent {
 
 @Output ()  ListCategorias:Categorias;
   
-Categorias:Categorias[]=[];
+Categorias:Categorias[]=[
+
+new Categorias ("Acciones"),
+new Categorias ("Bonos")
+];
 
   id_categorias:number=1;
   Tipo_Inversion:string="Acciones";  
@@ -32,7 +36,7 @@ Categorias:Categorias[]=[];
     addCateg(){
       let MiCateg= new Categorias  ( this.Tipo_Inversion);
     //  this.
-      this.AddCateg.addToInfo(MiCateg);
+      this.AddCateg.addToCategorias(MiCateg);
     }
     
  maxReached( m:string ){
