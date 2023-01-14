@@ -1,10 +1,18 @@
+.navbar {
+    position: relative;
+width: 1920px;
+height: 96px;
+
+background: #D7D8D4;
+}
+
 
 nav {
     background-color: black;
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     width: 400
     px;
 height: 15px;
@@ -16,7 +24,7 @@ font-size: 15px;
 line-height: 15px;
 
 display: flex;
-align-items: center;
+align-items: normal;
 text-align: center;
 
 color: #000000;
@@ -38,7 +46,7 @@ border-radius: 8px;
 }
 
 .nav-link {
-    position: S;
+    position: static;
 left: 32.14%;
 right: 32.14%;
 top: 33.33%;
@@ -55,5 +63,4 @@ text-align: center;
 
 color: #000000;
 }
-
 
