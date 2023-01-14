@@ -2,28 +2,13 @@
 .card {
     background-color: transparent;
 }
-.car-header {
-    box-sizing: content-box;
+
+tbody{
+  box-sizing: content-box;
 
 position: relative;
-width: 100%;
-height: 100%;
-
-background: rgba(255, 255, 255, 0.29);
-border: 3px solid #000000;
-box-shadow: -10px 15px 5px 3px rgba(0, 0, 0, 0.25);
-border-radius: 30px;
-
-text-align: center;
-}
-
-
-.card-body {
-    box-sizing: content-box;
-
-position: relative;
-width: 100%;
-height: 100%;
+width: 1567px;
+height: 764px;
 
 background: rgba(255, 255, 255, 0.29);
 border: 3px solid #000000;
