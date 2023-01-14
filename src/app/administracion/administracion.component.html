@@ -1,35 +1,37 @@
-<div class="container">
-    <div class="col">
 
-        <form action="" class="form-group row"   >
-            <div class="input-group col-mb-3">
-                <input type="text" class="" placeholder="Fecha" [(ngModel)]="Fecha">
-                
-                <input type="text"  placeholder="Especie" [(ngModel)]="Detalle">
-                
-                <input type="text"  placeholder="Cantidad" [(ngModel)]="Cantidad">
-                
-                <input type="text"  placeholder="Comision" [(ngModel)]="Comision">
 
-                <input type="text" name="" placeholder="Importe" [(ngModel)]="Importe">
-                
-                <input type="text" name="" placeholder="Tipo_Especie" [(ngModel)]="id_categorias">
-               
-            </div>
 
-            <div class="col">
-                <button type="submit" class="btn btn-primary" (click)="addInfo()" >  Guardar</button>
-            </div>
-        </form>
-          
+
+    <div class="Form1">
+        <form id="stiloFormAdmin" action="" class="oculto">
+                <div class="input-group col-mb-3">
+                    <input type="text" class="Inputform1" placeholder="Fecha" [(ngModel)]="Fecha">
+                    
+                    <input type="text" class="Inputform1"  placeholder="Especie" [(ngModel)]="Detalle">
+                    
+                    <input type="text"  class="Inputform1" placeholder="Cantidad" [(ngModel)]="Cantidad">
+                    
+                    <input type="text" class="Inputform1" placeholder="Comision" [(ngModel)]="Comision">
+    
+                    <input type="text" class="Inputform1" name="" placeholder="Importe" [(ngModel)]="Importe">
+                    
+                    <input type="text" class="Inputform1" name="" placeholder="Tipo_Especie" [(ngModel)]="id_categorias">
+                   
+                </div>
+    
+                <div class="col">
+                    <button type="submit" class="btn btn-primary" (click)="addInfo()" >  Guardar</button>
+                </div>
+            </form>
     </div>
 
 
+
+
+<div>
     <a class="btn btn-primary" [routerLink]="['/Tipo_Especie']" >Agregar Tipo Especie</a>
 
-
-
-
+</div>
 
 <table class="table">
     <thead>
@@ -60,8 +62,5 @@
     <button class="btn btn-warning">borrar</button>
     </tr>
     </tbody>
-    
-     <div>
-</div>
 </table>
 
