@@ -11,6 +11,7 @@ import {  HttpClientModule } from '@angular/common/http';
 import { InfoContableService } from './info-contable.service';
 import { AdministracionService } from './administracion.service';
 import { CategoriasComponent } from './categorias/categorias.component';
+import { UpDateComponent } from './up-date/up-date.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +19,7 @@ import { CategoriasComponent } from './categorias/categorias.component';
     MayoresComponent,
     HomeComponent,
     CategoriasComponent,
+    UpDateComponent,
   ],
   imports: [
     BrowserModule,
