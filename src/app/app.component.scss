@@ -1,0 +1,66 @@
+.navbar {
+    position: relative;
+width: 1920px;
+height: 96px;
+
+background: #D7D8D4;
+}
+
+
+nav {
+    background-color: black;
+}
+
+footer {
+    position: fixed;
+    width: 400
+    px;
+height: 15px;
+
+font-family: 'Arial';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 15px;
+
+display: flex;
+align-items: normal;
+text-align: center;
+
+color: #000000;
+}
+
+nav{
+    background-color: black;
+}
+
+.nav-item {
+    position: static;
+left: 0%;
+right: 0%;
+top: 16.67%;
+bottom: 16.67%;
+
+background: linear-gradient(180deg, rgba(0, 255, 255, 0) 0%, #3BFFFF 63.85%);
+border-radius: 8px;
+}
+
+.nav-link {
+    position: static;
+left: 32.14%;
+right: 32.14%;
+top: 33.33%;
+bottom: 31.25%;
+
+font-family: 'Arial';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 17px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+}
+

@@ -1,0 +1,21 @@
+<p>categorias works!</p>
+
+
+<form action="" >
+    <div class="input-group mb-3">
+        <input type="text" name="Tipo_Inversion" placeholder="Tipo_Inversion">
+        <button class="btn btn-primary" (click)="addCateg()">  Guardar</button>
+    </div>
+</form>
+        
+
+
+<div class="Container">
+
+<ul>
+    <li *ngFor="let Categorias of Categorias">
+{{Categorias.Tipo_Inversion}}
+    </li>
+</ul>
+
+</div>
