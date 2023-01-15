@@ -12,7 +12,7 @@
                     <input type="text"  class="Inputform1" placeholder="Cantidad" [(ngModel)]="Cantidad">
                     
                     <input type="text" class="Inputform1" placeholder="Comision" [(ngModel)]="Comision">
-    
+
                     <input type="text" class="Inputform1" name="" placeholder="Importe" [(ngModel)]="Importe">
                     
                     <input type="text" class="Inputform1" name="" placeholder="Tipo_Especie" [(ngModel)]="id_categorias">
@@ -37,11 +37,17 @@
     <thead>
       <tr>
         <th scope="col">Fecha</th>
-        <th scope="col">Detalle</th>
+
+        <th scope="col">Especie</th>
+        
         <th scope="col">Cantidad</th>
+
         <th scope="col">Comision</th>
-        <th scope="col">Precio</th>
+        
+        <th scope="col">Importe</th>
+        
         <th scope="col">Promedio</th>
+        
         <th scope="col">Total</th>
       
     </tr>
@@ -53,7 +59,7 @@
         <td> {{InfoContable.Cantidad}}   </td>
         <td> {{InfoContable.Comision}}   </td>
         <td>  {{InfoContable.Importe|currency}}   </td>
-        <td>     </td>
+        <td>  Promedio   </td>
     
         <td scope="col"> {{InfoContable.Cantidad * InfoContable.Importe |currency}}  </td>
       

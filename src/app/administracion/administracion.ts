@@ -10,10 +10,12 @@ export class Infocontable{
         this.id_categorias=id_categorias
     }
     
-    Fecha:number;
-    Detalle:string;
-    Cantidad:number;
-    Comision:number;
-    Importe:number;
-    id_categorias: number;
+    Fecha:number=0;
+    Detalle:string="";
+    Cantidad:number=0;
+    Comision:number=0;
+    Importe:number=0;
+    id_categorias:number=0;
+  
+
 }

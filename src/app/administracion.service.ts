@@ -7,8 +7,7 @@ import { Infocontable } from './administracion/administracion'
 
 const URL='https://637a13177419b414df99362e.mockapi.io/Infocontable'
 
-const url='http://localhost:80/ApiContable/api/infoContable'
-
+const url='http://127.0.0.1/ApiContable/api/infoContable'
 
 
 @Injectable({
