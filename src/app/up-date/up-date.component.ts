@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute} from '@angular/router';
 import { Infocontable } from '../administracion/administracion';
 import { InfoContableService } from '../info-contable.service';
-
 @Component({
   selector: 'app-up-date',
   templateUrl: './up-date.component.html',
   styleUrls: ['./up-date.component.scss']
 })
 export class UpDateComponent {
+  [x: string]: any;
 
   constructor(
     private infocontableService:InfoContableService,private route:ActivatedRoute ){
@@ -34,23 +34,24 @@ export class UpDateComponent {
       this.Cantidad=InfoCont.Cantidad;
       this.Comision=InfoCont.Comision;
       this.Importe=InfoCont.Importe;
-      this.id_categorias=InfoCont.id_categorias;
+      this.id_categorias_fk=InfoCont.id_categorias_fk;
       
         }
 
 
         UpdateInfo(){
 
-           let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.Comision,this.Importe,this.id_categorias);
+           let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.Comision,this.Importe,this.id_categorias_fk);
        this.infocontableService.UpdateToInfo(this.indice,InfoCont);
-    }
+   
+      }
     
   Fecha:string;
   Detalle:string="";
   Cantidad:number=0;
   Comision:number;
   Importe:number=0;
-  id_categorias:number=0;
+  id_categorias_fk:number=0;
     indice:number;
 
  maxReached( m:string ){

@@ -7,12 +7,12 @@ import { Infocontable } from './administracion/administracion';
 })
 
 export class InfoContableService {
-  
-  Infocontable:Infocontable[]=[];
-
   constructor(private adminservice:AdministracionService ) { }
 
-  
+  Infocontable:Infocontable[]=[
+    new Infocontable("15/06/1994","YPF",12,1,1,1)
+  ];
+
   GetInfo(){
       
     return this.adminservice.getAll();
@@ -35,14 +35,16 @@ export class InfoContableService {
     InfoContModificada.Cantidad=InfoCont.Cantidad;
     InfoContModificada.Comision=InfoCont.Comision;
     InfoContModificada.Importe=InfoCont.Importe;
-    InfoContModificada.id_categorias=InfoCont.id_categorias;
+    InfoContModificada.id_categorias_fk=InfoCont.id_categorias_fk;
   }
   addToInfo(Infocontable:Infocontable){
 
-    this.Infocontable.push(Infocontable);    
+     this.Infocontable.find((v1) =>v1.Fecha == Infocontable.Fecha);
+    
+      this.Infocontable.push({ ...Infocontable});    
     this.adminservice.guardarInfo(this.Infocontable);
+  
   }
-
 
 }
 
