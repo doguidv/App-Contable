@@ -1,7 +1,7 @@
 .navbar {
     position: relative;
-width: 1920px;
-height: 96px;
+width: 100vw;
+height: 60px;
 
 background: #D7D8D4;
 }
@@ -13,9 +13,8 @@ nav {
 
 footer {
     position: fixed;
-    width: 400
-    px;
-height: 15px;
+    width: 400px;
+    height: 150px;
 
 font-family: 'Arial';
 font-style: normal;
@@ -47,8 +46,8 @@ border-radius: 8px;
 
 .nav-link {
     position: static;
-left: 32.14%;
-right: 32.14%;
+left: 32.14vh;
+right: 32.14vh;
 top: 33.33%;
 bottom: 31.25%;
 
