@@ -15,32 +15,28 @@ export class AdministracionComponent implements OnInit {
      
    }
 
-@Output ()  ListInfoContable:Infocontable;
-
-
   
     ngOnInit():void{
       this.infocontableService.GetInfo()
       .subscribe(Infocontable => {
         this.Infocontable  = Infocontable
       }); 
-    }
+        }
   
     Infocontable:Infocontable[]=[];
 
 
     addInfo(){
 
-      let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.Comision,this.Importe,this.id_categorias);
+      let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.Comision,this.Importe,this.id_categorias_fk);
       this.infocontableService.addToInfo(InfoCont);
     }
-    
-  Fecha:number=0;
-  Detalle:string="";
-  Cantidad:number=0;
+  Fecha:string;
+  Detalle:string;
+  Cantidad:number;
   Comision:number;
-  Importe:number=0;
-  id_categorias:number=0;
+  Importe:number;
+  id_categorias_fk:number;
   
 
  maxReached( m:string ){

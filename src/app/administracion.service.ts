@@ -7,7 +7,7 @@ import { Infocontable } from './administracion/administracion'
 
 const URL='https://637a13177419b414df99362e.mockapi.io/Infocontable'
 
-const url='http://localhost:80/ApiContable/api/infoContable'
+const url='http://localhost/ApiContable/api/infoContable'
 
 
 
@@ -23,6 +23,9 @@ export class AdministracionService {
 
     return  this.http.get<Infocontable[]>(URL)
   
+  }
+  public GetId():Observable<Infocontable[]>{
+  return this.http.get<Infocontable[]>(URL)
   }
 
   guardarInfo(Infocontable:Infocontable[]){

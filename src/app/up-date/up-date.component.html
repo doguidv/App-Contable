@@ -1,0 +1,22 @@
+
+<div class="Form1">
+        
+    <form id="stiloFormAdmin" action="" class="oculto">
+            
+                <input type="text" class="Inputform1" placeholder="Fecha" [(ngModel)]="Fecha">
+                
+                <input type="text" class="Inputform1"  placeholder="Especie" [(ngModel)]="Detalle">
+                
+                <input type="text"  class="Inputform1" placeholder="Cantidad" [(ngModel)]="Cantidad">
+                
+                <input type="text" class="Inputform1" placeholder="Comision" [(ngModel)]="Comision">
+
+                <input type="text" class="Inputform1" name="" placeholder="Importe" [(ngModel)]="Importe">
+                
+                <input type="text" class="Inputform1" name="" placeholder="Tipo_Especie" [(ngModel)]="id_categorias_fk">
+                 
+            <div >
+                <button type="submit" class="btn btn-primary" (click)="UpdateInfo()" >  Guardar</button>
+            </div>
+        </form>
+</div>
