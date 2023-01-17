@@ -48,21 +48,26 @@ thead th:nth-child(1) {
   border-radius: 30px;
   }
 
-.Form1 {
-	display: flex;
-	padding: 17px 33px;
-}
-.stiloFormAdmin {
-	display: flex;
-	flex-direction:column;
-	padding: 15px 32px;
-	text-align: justify;
-	text-decoration: none;
-	font-size: 16px;
-	border-radius: 8px;
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
 
+<<<<<<< HEAD
+  .stiloFormAdmin {
+    display: relative;
+    padding: 15px 32px;
+    text-align: justify;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    width: 100vw;
+    height: 100vh;
+  }
+
+  div {
+    height: fit-content;
+    width: fit-content;
+  }
+  
+=======
 .ContenedorDatosAdmin{
 
 display: flex;
@@ -72,6 +77,7 @@ flex-direction: row;
 .ContenedorFormAdmin{
   background-color: red;
 }
+>>>>>>> 67b8d6f876cfa6010fc9e2b7a44a27a5d8177fd7
 
 .Inputform1 {
 	font-style: italic;
