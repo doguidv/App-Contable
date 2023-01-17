@@ -24,7 +24,7 @@ export class AdministracionService {
     return  this.http.get<Infocontable[]>(URL)
   
   }
-  public GetId():Observable<Infocontable[]>{
+  public GetId(id:number):Observable<Infocontable[]>{
   return this.http.get<Infocontable[]>(URL)
   }
 

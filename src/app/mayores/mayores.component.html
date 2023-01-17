@@ -1,5 +1,19 @@
 
+<div class="Contenedor-Resumen">
+  <div class="Btn">
 
+    <div class="Btn-resumen" >
+
+      <input type="text" class="form-control" name="firTerInfo" placeholder="Buscar..." [(ngModel)]="firTerInfo" >
+      
+    
+    </div>
+
+    <div class="Input-ppp">
+      <input type="text" name="" id="" placeholder="">
+      <button>Calculo</button>
+    </div>
+  </div>
 <table class="table">
     <thead>
       <tr>
@@ -13,16 +27,22 @@
       
     </tr>
     </thead>
+    
     <tbody>
-      <tr *ngFor="let InfoContable of InfoContable">
+      <tr *ngFor="let InfoContable of InfoContable | filter:firTerInfo ">
         <td>  {{InfoContable.Fecha|date }} </td>
         <td>   {{InfoContable.Detalle}}    </td>
         <td> {{InfoContable.Cantidad}}   </td>
         <td> {{InfoContable.Comision}}   </td>
         <td>  {{InfoContable.Importe|currency}}   </td>
-        <td>  {{InfoContable.Importe|currency}}   </td>
+        <td>  Promedio   </td>
+        <td> id_ {{InfoContable.id_categorias_fk}}   </td>
         <td scope="col"> {{InfoContable.Cantidad * InfoContable.Importe |currency}}  </td>
-      
+      <td>
+    
+      </td>
     </tr>
+    
     </tbody>
 </table>
+</div>
