@@ -13,11 +13,13 @@
                             
                             <input type="text"  name="Comision" id="Comision"   class="Inputform1" placeholder="Comision" [(ngModel)]="Comision">
 
-                            <input type="text"name="Importe"  id="Importe" class="Inputform1" name="" placeholder="Importe" [(ngModel)]="Importe">
+                            <input type="text"name="Importe"  id="Importe" class="Inputform1" placeholder="Importe" [(ngModel)]="Importe">
                             
-                            <input type="text" name="id_categorias_fk" id="id_categorias_fk" class="Inputform1" name="" placeholder="Tipo_Especie" [(ngModel)]="id_categorias_fk">
-                            
-                        <div >
+                            <select class="form-control input-lg" ng-init="seleccion = { InfoContable: InfoContable.id_categorias_fk}" ng-model="seleccion">
+                                <option *ngFor="let InfoContable of Infocontable"    [value]="InfoContable.id_categorias_fk">  {{Tipo_Inversion}} </option>
+                           </select>
+                           
+                           <div >
                             <button type="submit" class="btn btn-primary" (click)="addInfo()" >  Guardar</button>
                         </div>
                     </form>

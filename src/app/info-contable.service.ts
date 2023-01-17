@@ -9,9 +9,7 @@ import { Infocontable } from './administracion/administracion';
 export class InfoContableService {
   constructor(private adminservice:AdministracionService ) { }
 
-  Infocontable:Infocontable[]=[
-    new Infocontable("15/06/1994","YPF",12,1,1,1)
-  ];
+  Infocontable:Infocontable[]=[];
 
   GetInfo(){
       
@@ -41,7 +39,7 @@ export class InfoContableService {
 
      this.Infocontable.find((v1) =>v1.Fecha == Infocontable.Fecha);
     
-      this.Infocontable.push({ ...Infocontable});    
+      this.Infocontable.push(Infocontable);    
     this.adminservice.guardarInfo(this.Infocontable);
   
   }

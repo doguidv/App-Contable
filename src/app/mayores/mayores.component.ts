@@ -24,7 +24,19 @@ export class MayoresComponent {
     });
 
   }
-  
+
+CalculoTotal (){
+
+  let  PrecioSinCom= this.Cantidad *   this.Importe
+  let PrecioConCom=  this.Comision + this.Importe
+     this.Total = PrecioConCom * PrecioSinCom
+  }
+
+  Cotizacion:number;
+  Total:Number;
+Cantidad:number;
+  Comision:number;
+  Importe:number;
   firTerInfo='';  
     
     indice:number;  

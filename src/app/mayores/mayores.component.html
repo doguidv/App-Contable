@@ -22,7 +22,7 @@
         <th scope="col">Cantidad</th>
         <th scope="col">Comision</th>
         <th scope="col">Precio</th>
-        
+        <th scope="col">Precio mas Comision</th>
         <th scope="col">Cotizacion</th>
         <th scope="col">P P P</th>
         <th scope="col">Total</th>
@@ -37,10 +37,11 @@
         <td> {{InfoContable.Cantidad}}   </td>
         <td> {{InfoContable.Comision}}   </td>
         <td>  {{InfoContable.Importe}}   </td>
-        <td>    <input type="text" name="" id="" placeholder="Ingresar Contizacion">                </td>
-        <td>  P P P   </td>
-        <td> id_ {{InfoContable.id_categorias_fk}}   </td>
-        <td scope="col"> {{InfoContable.Cantidad * InfoContable.Importe }}  </td>
+      
+        <th scope="col">{{InfoContable.Comision + InfoContable.Importe}} </th>
+        <td>    <input type="text" name="Cotizacion" id="Cotizacion" placeholder="Ingresar Contizacion" (click)="Cotizacion" >     </td>
+        <td>     </td>
+        <td scope="col" [(ngModel)]="CalculoTotal"> {{ Total }}  </td>
       <td>
     
       </td>
