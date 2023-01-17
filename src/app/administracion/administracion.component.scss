@@ -49,6 +49,7 @@ thead th:nth-child(1) {
   }
 
 
+<<<<<<< HEAD
   .stiloFormAdmin {
     display: relative;
     padding: 15px 32px;
@@ -66,6 +67,17 @@ thead th:nth-child(1) {
     width: fit-content;
   }
   
+=======
+.ContenedorDatosAdmin{
+
+display: flex;
+flex-direction: row;
+
+}
+.ContenedorFormAdmin{
+  background-color: red;
+}
+>>>>>>> 67b8d6f876cfa6010fc9e2b7a44a27a5d8177fd7
 
 .Inputform1 {
 	font-style: italic;
@@ -82,3 +94,4 @@ thead th:nth-child(1) {
 .Admin{
   margin: 12px;
 }
+

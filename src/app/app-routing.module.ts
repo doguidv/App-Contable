@@ -25,6 +25,9 @@ const routes: Routes = [
     path:'Update/:id',
     component:  UpDateComponent
   },
+    {path:'Buscar/:id',
+  component:MayoresComponent
+  },
   {
     path:'Tipo_Especie',
     component:  CategoriasComponent

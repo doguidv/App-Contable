@@ -10,3 +10,19 @@ border: 3px solid #000000;
 box-shadow: -10px 15px 5px 3px rgba(0, 0, 0, 0.25);
 border-radius: 30px;
 }
+
+
+.Contenedor-Resumen{
+
+    display: flex;
+flex-direction: row;    
+margin: 25px;
+}
+.Btn{
+    flex-direction: column;
+}
+
+.Btn-resumen{
+
+margin: 12px;
+}
