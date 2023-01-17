@@ -13,6 +13,7 @@ import { AdministracionService } from './administracion.service';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { UpDateComponent } from './up-date/up-date.component';
 import { FilterPipe } from './pipes/filter.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,

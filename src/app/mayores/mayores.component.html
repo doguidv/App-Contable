@@ -4,13 +4,13 @@
 
     <div class="Btn-resumen" >
 
-      <input type="text" class="form-control" name="firTerInfo" placeholder="Buscar..." [(ngModel)]="firTerInfo" >
+      <input type="text" class="form-control" name="firTerInfo" placeholder="Buscar..."  >
       
     
     </div>
 
     <div class="Input-ppp">
-      <input type="text" name="" id="" placeholder="">
+    
       <button>Calculo</button>
     </div>
   </div>
@@ -22,22 +22,25 @@
         <th scope="col">Cantidad</th>
         <th scope="col">Comision</th>
         <th scope="col">Precio</th>
-        <th scope="col">Promedio</th>
+        
+        <th scope="col">Cotizacion</th>
+        <th scope="col">P P P</th>
         <th scope="col">Total</th>
       
     </tr>
     </thead>
     
     <tbody>
-      <tr *ngFor="let InfoContable of InfoContable | filter:firTerInfo ">
-        <td>  {{InfoContable.Fecha|date }} </td>
+      <tr *ngFor="let InfoContable of InfoContable ">
+        <td>  {{InfoContable.Fecha }} </td>
         <td>   {{InfoContable.Detalle}}    </td>
         <td> {{InfoContable.Cantidad}}   </td>
         <td> {{InfoContable.Comision}}   </td>
-        <td>  {{InfoContable.Importe|currency}}   </td>
-        <td>  Promedio   </td>
+        <td>  {{InfoContable.Importe}}   </td>
+        <td>    <input type="text" name="" id="" placeholder="Ingresar Contizacion">                </td>
+        <td>  P P P   </td>
         <td> id_ {{InfoContable.id_categorias_fk}}   </td>
-        <td scope="col"> {{InfoContable.Cantidad * InfoContable.Importe |currency}}  </td>
+        <td scope="col"> {{InfoContable.Cantidad * InfoContable.Importe }}  </td>
       <td>
     
       </td>
