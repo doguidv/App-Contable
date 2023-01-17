@@ -63,7 +63,12 @@ thead th:nth-child(1) {
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
+.ContenedorDatosAdmin{
 
+display: flex;
+flex-direction: row;
+
+}
 
 .Inputform1 {
 	font-style: italic;
@@ -80,3 +85,4 @@ thead th:nth-child(1) {
 .Admin{
   margin: 12px;
 }
+
