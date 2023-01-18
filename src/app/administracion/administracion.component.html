@@ -21,7 +21,7 @@
                            
                            <div >
                             <button type="submit" class="btn btn-primary" (click)="addInfo()" >  Guardar</button>
-                        </div>
+                           </div>
                     </form>
             </div>
         
@@ -58,6 +58,7 @@
                     
                     </tr>
                     </thead>
+                    
                     <tbody>
                     <tr *ngFor="let InfoContable of Infocontable; let  i  = index">
                         <td>{{InfoContable.Fecha |date}} </td>

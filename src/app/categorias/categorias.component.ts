@@ -37,7 +37,7 @@ new Categorias ("Plazo Fijo"),
     addCateg(){
       let MiCateg= new Categorias  ( this.Tipo_Inversion);
          this.AddCateg.addToCategorias(MiCateg);
-  }
+     }
     
  maxReached( m:string ){
   alert(m);
