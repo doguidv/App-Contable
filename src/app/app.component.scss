@@ -6,28 +6,17 @@ height: 60px;
 background: #D7D8D4;
 }
 
+.navbar-brand {
+    padding-left: 16px;
+    padding-right: 16px;
+
+}
+
 
 nav {
     background-color: black;
 }
 
-footer {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-
-font-family: 'Arial';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 15px;
-
-display: flex;
-align-items: normal;
-text-align: center;
-
-color: #000000;
-}
 
 nav{
     background-color: black;
@@ -63,3 +52,25 @@ text-align: center;
 color: #000000;
 }
 
+tr {
+    display: grid;
+    grid-template-columns: 280px 50px;
+}
+
+footer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+font-family: 'Arial';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 15px;
+
+display: flex;
+align-items: normal;
+text-align: center;
+
+color: #000000;
+}
