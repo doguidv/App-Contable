@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Infocontable } from './administracion';
 import { AdministracionService } from '../administracion.service';
 import { InfoContableService } from '../info-contable.service';
@@ -13,7 +13,7 @@ import { Categorias } from '../categorias/categorias';
 export class AdministracionComponent implements OnInit {
 
   constructor(
-    private AdministracionService: AdministracionService,private infocontableService:InfoContableService,private CategService:CategoriasService ){
+    private infocontableService:InfoContableService,private CategService:CategoriasService ){
      
    }
 
@@ -30,10 +30,9 @@ export class AdministracionComponent implements OnInit {
       }); 
         }
 
+        Categorias:Categorias[]=[];
 
-        
-        Categorias:Categorias[]=[]
-          Infocontable:Infocontable[]=[];
+        Infocontable:Infocontable[]=[];
 
 
     addInfo(){

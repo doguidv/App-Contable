@@ -5,6 +5,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class AddCategoriasService {
+
   private _AddCateg:Categorias[]=[];
 
   AddInfo: BehaviorSubject<Categorias[]>= new BehaviorSubject(this._AddCateg);
@@ -20,6 +21,6 @@ export class AddCategoriasService {
       item.Tipo_Inversion
     }
     console.log(this._AddCateg);
-    this.AddInfo.next(this._AddCateg)
+    this.AddInfo.next(this._AddCateg);
   }
   }

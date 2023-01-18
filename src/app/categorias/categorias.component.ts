@@ -15,11 +15,12 @@ export class CategoriasComponent {
 Categorias:Categorias[]=[
 
 new Categorias ("Acciones"),
-new Categorias ("Bonos")
+new Categorias ("Bonos"),
+new Categorias ("Plazo Fijo"),
 ];
 
   id_categorias:number=1;
-  Tipo_Inversion:string="Acciones";  
+  Tipo_Inversion:string;  
  
 
 
@@ -35,9 +36,8 @@ new Categorias ("Bonos")
 
     addCateg(){
       let MiCateg= new Categorias  ( this.Tipo_Inversion);
-    //  this.
-      this.AddCateg.addToCategorias(MiCateg);
-    }
+         this.AddCateg.addToCategorias(MiCateg);
+  }
     
  maxReached( m:string ){
   alert(m);

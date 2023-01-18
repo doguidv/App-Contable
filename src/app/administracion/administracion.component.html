@@ -60,10 +60,10 @@
                     </thead>
                     <tbody>
                     <tr *ngFor="let InfoContable of Infocontable; let  i  = index">
-                        <td>{{InfoContable.Fecha}} </td>
+                        <td>{{InfoContable.Fecha |date}} </td>
                         <td>   {{InfoContable.Detalle}}    </td>
                         <td> {{InfoContable.Cantidad}}   </td>
-                        <td> {{InfoContable.Comision}}   </td>
+                        <td> {{InfoContable.Comision |currency}}   </td>
                         <td>  {{InfoContable.Importe|currency}}   </td>   
                         <td>  {{InfoContable.id_categorias_fk}}   </td>   
                         
