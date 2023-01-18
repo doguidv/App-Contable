@@ -15,8 +15,8 @@ border-radius: 30px;
 .Contenedor-Resumen{
 
     display: flex;
-flex-direction: row;    
-margin: 25px;
+    flex-direction: column;    
+    margin: 25px;
 }
 .Btn{
     flex-direction: column;
