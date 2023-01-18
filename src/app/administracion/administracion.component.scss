@@ -1,4 +1,5 @@
 
+
 .car-header {
     text-align: center;
     box-sizing: content-box;
@@ -33,9 +34,6 @@ thead th:nth-child(1) {
   
   th, td {
     padding: 20px;
-  }
-
-  tr {
     height: 30px;
   }
 
@@ -65,6 +63,7 @@ thead th:nth-child(1) {
     width: 100vw;
     height: 100vh;
   }
+  
 
   div {
     height: fit-content;
@@ -79,7 +78,11 @@ flex-direction: row;
 
 }
 .ContenedorFormAdmin{
-  background-color: red;
+  margin-top: 67.5px;
+  margin-bottom: 67.5px;
+  margin-left: 67.5px;
+  margin-right: 60px;
+
 }
 
 
@@ -95,7 +98,5 @@ flex-direction: row;
   display: flex;
   flex-direction: column;
 }
-.Admin{
-  margin: 12px;
-}
+
 
