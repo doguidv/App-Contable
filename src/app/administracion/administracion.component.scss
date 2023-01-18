@@ -16,6 +16,9 @@
   
 }
 
+
+
+
 thead th:nth-child(1) {
     width: 30%;
   }
@@ -35,6 +38,9 @@ thead th:nth-child(1) {
   th, td {
     padding: 20px;
     height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
   }
 
   tbody {
@@ -48,7 +54,15 @@ thead th:nth-child(1) {
   border: 3px solid #000000;
   box-shadow: -10px 15px 5px 3px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: aliceblue;
+
   }
+		
 
 
 
@@ -80,6 +94,10 @@ flex-direction: row;
 
 }
 
+.ContenedorTabla{
+padding-right: -600px;
+
+}
 
 .Inputform1 {
 	font-style: italic;
@@ -93,5 +111,4 @@ flex-direction: row;
   display: flex;
   flex-direction: column;
 }
-
 
