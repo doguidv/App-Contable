@@ -5,7 +5,7 @@ import { Categorias } from './categorias/categorias';
 
 
 
-const URL='/ApiContable/categorias'
+  const URL='/ApiContable/categorias'
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,9 @@ const URL='/ApiContable/categorias'
 export class CategoriasService {
 
 
-  Categorias:Categorias[]=[];
+  Categorias:Categorias[]=[
+    new Categorias ("Acciones"),
+  ];
   
   constructor(private http: HttpClient ) { }
 

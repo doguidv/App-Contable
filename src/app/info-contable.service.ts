@@ -43,6 +43,7 @@ export class InfoContableService {
     this.adminservice.guardarInfo(this.Infocontable);
   
   }
+  
 
 }
 
