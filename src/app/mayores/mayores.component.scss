@@ -1,6 +1,7 @@
 .Contenedor-Resumen{
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
+    padding-left: 15vh;    
     
 }
 
@@ -9,7 +10,7 @@ tbody {
 
    
 position: absolute;
-width: 160vh;
+width: 170vh;
 height: 60vh;
 
 background: rgba(255, 255, 255, 0.29);
@@ -17,19 +18,19 @@ border: 3px solid #000000;
 box-shadow: -10px 15px 5px 3px rgba(0, 0, 0, 0.25);
 border-radius: 30px;
 overflow: auto;
-
+text-align: right;
 
 }
 
 tr {
     position: relative;
- width: 160vw;
+ width: 130vh;
 }
 
 td, th {
-    padding: 10px;
+    padding-left: 50px;
     height: 20px;
-    width: 140vh
+    width: 100vh
 }
 
 .Btn{

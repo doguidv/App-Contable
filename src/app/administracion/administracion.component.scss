@@ -18,58 +18,53 @@
 
 thead,tbody{
   display: block;
-}
+  
+ }
 
 
  th, td {
   padding: 10px;
   height: 20px;
   width: 140vh
+
 }
 
 tbody {
   box-sizing: content-box;
 
-  position: absolute;
-  width: 180vh;
+  width: 150vh;
   height: 40vh;
 
-background: rgba(255, 255, 255, 0.29);
-border: 3px solid #000000;
-box-shadow: -10px 15px 5px 3px rgba(0, 0, 0, 0.25);
-border-radius: 30px;
-overflow: auto;
+
+  background: rgba(255, 255, 255, 0.29);
+  border: 3px solid #000000;
+  box-shadow: -10px 15px 5px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  overflow: auto;
 }
 
 
-.stiloFormAdmin {
-  display: relative;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 8px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  width: 100vw;
-  height: 100vh;
+.oculto {
+  display: flex;
+  flex-direction: column;
 }
 
 .ContenedorDatosAdmin{
 
 display: flex;
 flex-direction: column;
-scroll-padding-right: 60px;
+margin-left: 25vh;
+margin-top: -55px;
 }
 
 
 
 .ContenedorFormAdmin{
 margin-top: 67.5px;
-margin-bottom: 67.5px;
+margin-bottom: 10px;
 margin-right: 50px;
-align-items: flex-start;
-
 }
+
 
 .Inputform1 {
 font-style: italic;
