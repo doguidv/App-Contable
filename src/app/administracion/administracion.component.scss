@@ -16,43 +16,32 @@
 
 }
 
-thead th:nth-child(1) {
-  width: 30%;
-}
 
-thead th:nth-child(2) {
-  width: 20%;
-}
-
-thead th:nth-child(3) {
-  width: 15%;
-}
-
-thead th:nth-child(4) {
-  width: 35%;
-}
 
 th, td {
-  padding: 20px;
-  height: 30px;
+  padding: 10px;
+  height: 20px;
 }
 
 tbody {
   box-sizing: content-box;
 
-position: relative;
-width: 1567px;
-height: 764px;
+  position: absolute;
+  width: 90vh;
+  height: 70vh;
 
 background: rgba(255, 255, 255, 0.29);
 border: 3px solid #000000;
 box-shadow: -10px 15px 5px 3px rgba(0, 0, 0, 0.25);
 border-radius: 30px;
+overflow: auto;
 }
+
+
 .stiloFormAdmin {
   display: relative;
   padding: 15px 32px;
-  text-align: justify;
+  text-align: center;
   text-decoration: none;
   font-size: 16px;
   border-radius: 8px;
@@ -65,13 +54,16 @@ border-radius: 30px;
 
 display: flex;
 flex-direction: row;
-
+scroll-padding-right: 60px;
 }
+
+
+
 .ContenedorFormAdmin{
 margin-top: 67.5px;
 margin-bottom: 67.5px;
-margin-left: 30px;
-margin-right: 90px;
+margin-right: 50px;
+align-items: flex-start;
 
 }
 
