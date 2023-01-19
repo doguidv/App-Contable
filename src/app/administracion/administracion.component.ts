@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Infocontable } from './administracion';
-import { AdministracionService } from '../administracion.service';
 import { InfoContableService } from '../info-contable.service';
 import { CategoriasService } from '../categorias.service';
 import { Categorias } from '../categorias/categorias';
