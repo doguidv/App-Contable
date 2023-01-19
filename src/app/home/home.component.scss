@@ -8,14 +8,15 @@
 tbody{
   box-sizing: border-box;
 
-position: relative;
-width: 1567px;
-height: 764px;
+  position: absolute;
+  width: 160vh;
+  height: 80vh;
 
 background: rgba(255, 255, 255, 0.29);
 border: 3px solid #000000;
 box-shadow: -10px 15px 5px 3px rgba(0, 0, 0, 0.25);
 border-radius: 30px;
+overflow: auto;
 }
 
 
