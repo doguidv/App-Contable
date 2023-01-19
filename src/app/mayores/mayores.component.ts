@@ -28,19 +28,18 @@ export class MayoresComponent {
 
   CalculoTotal (){
 
-  let  PrecioSinCom= this.Cantidad *   this.Importe
-  let PrecioConCom=  this.Comision + this.Importe
-  this.ppp= ((PrecioConCom * this.Cantidad) / this.Cantidad)
-  this.Total = (PrecioConCom  * this.Cantidad)
+   let  PrecioConComision= this.Importe +this.Comision
+    this.ppp= ((PrecioConComision * this.Cantidad) / this.Cantidad);
+    this.Total = (PrecioConComision  * this.Cantidad);
   }
-CalculoResut(Total:number){
+
+  CalculoResut(Total:number){
+    this.Resultado=(this.Cotizacion /  Total)
+  }
   
-  this.Resultado=(this.Cotizacion /  Total)
-}
   ppp:number;
   Resultado:number
   Cotizacion:number;
-  
   Total:Number;
   
   Cantidad:number;
