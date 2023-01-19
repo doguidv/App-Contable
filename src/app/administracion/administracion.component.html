@@ -14,10 +14,9 @@
                             <input type="text"  name="Comision" id="Comision"   class="Inputform1" placeholder="Comision" [(ngModel)]="Comision">
 
                             <input type="text"name="Importe"  id="Importe" class="Inputform1" placeholder="Importe" [(ngModel)]="Importe">
-                            
-                            <select  class="form-control input-lg" ng-init="seleccion = addssads" ng-model="seleccion">
-                                <option *ngFor="let Categoria of Categorias"    [value]=""> Seleccione una opcion {{Categoria.Tipo_Inversion}} </option>
-                           </select>
+                         
+                            <input type="text"name="id_categorias_fk"  id="id_categorias_fk" class="Inputform1" placeholder="id_categorias_fk" [(ngModel)]="id_categorias_fk">
+                         
                            
                            <div >
                             <button type="submit" class="btn btn-primary" (click)="addInfo()" >  Guardar</button>
@@ -64,6 +63,9 @@
                         <td> {{InfoContable.Cantidad}}   </td>
                         <td> {{InfoContable.Comision |currency}}   </td>
                         <td>  {{InfoContable.Importe|currency}}   </td>   
+                        
+                        <td>  {{InfoContable.id_categorias_fk
+                            }}   </td>   
                         <td *ngFor="let categoria of Categorias">  {{categoria.Tipo_Inversion}}   </td>   
                 
 

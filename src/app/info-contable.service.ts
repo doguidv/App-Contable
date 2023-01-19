@@ -11,6 +11,14 @@ export class InfoContableService {
 
   Infocontable:Infocontable[]=[];
 
+
+
+  
+  SetInfo(InfoCont:Infocontable[]){
+    this.Infocontable =  InfoCont;
+  
+  }
+  
   GetInfo(){
       
     return this.adminservice.getAll();
@@ -22,6 +30,7 @@ export class InfoContableService {
   return  InfoCont;
     // return  this.adminservice.GetId();
   }
+
   
   UpdateToInfo(indice:number,InfoCont:Infocontable){
 
@@ -35,6 +44,7 @@ export class InfoContableService {
     InfoContModificada.Importe=InfoCont.Importe;
     InfoContModificada.id_categorias_fk=InfoCont.id_categorias_fk;
   }
+
   addToInfo(Infocontable:Infocontable){
 
      this.Infocontable.find((v1) =>v1.Fecha == Infocontable.Fecha);
