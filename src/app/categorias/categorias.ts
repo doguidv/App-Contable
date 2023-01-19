@@ -6,4 +6,5 @@ export class Categorias{
     }
     
     Tipo_Inversion: string;
+    
 }

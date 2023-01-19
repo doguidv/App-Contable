@@ -16,7 +16,7 @@
                             <input type="text"name="Importe"  id="Importe" class="Inputform1" placeholder="Importe" [(ngModel)]="Importe">
                             
                             <select  class="form-control input-lg" ng-init="seleccion = addssads" ng-model="seleccion">
-                                <option *ngFor="let Categoria of Categorias"    [value]="Categorias"> Seleccione una opcion {{Categoria.Tipo_Inversion}} </option>
+                                <option *ngFor="let Categoria of Categorias"    [value]=""> Seleccione una opcion {{Categoria.Tipo_Inversion}} </option>
                            </select>
                            
                            <div >
@@ -66,11 +66,12 @@
                         <td>  {{InfoContable.Importe|currency}}   </td>   
                         <td *ngFor="let categoria of Categorias">  {{categoria.Tipo_Inversion}}   </td>   
                 
-                        <td>  {{InfoContable.id_categorias_fk}}   </td>   
+
+                        <td  > dsadsd    </td>   
                 
-                        <a class="btn btn-warning"    [routerLink]="['/Update', i]">editar</a> 
-                                            
-                    <button class="btn btn-warning">borrar</button>
+                      
+                <td> <a class="btn btn-warning"    [routerLink]="['/Update', i]">editar</a>  </td> 
+                  <td><button class="btn btn-warning">borrar</button></td>
                     </tr>
                     </tbody>
                 </table>
