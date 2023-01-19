@@ -11,6 +11,14 @@ export class InfoContableService {
 
   Infocontable:Infocontable[]=[];
 
+
+
+  
+  SetInfo(InfoCont:Infocontable[]){
+    this.Infocontable =  InfoCont;
+  
+  }
+  
   GetInfo(){
       
     return this.adminservice.getAll();
@@ -22,18 +30,30 @@ export class InfoContableService {
   return  InfoCont;
     // return  this.adminservice.GetId();
   }
+
   
   UpdateToInfo(indice:number,InfoCont:Infocontable){
 
     let InfoContModificada= this.Infocontable[indice];
 
     InfoContModificada.Fecha=InfoCont.Fecha;
-
     InfoContModificada.Detalle=InfoCont.Detalle;
     InfoContModificada.Cantidad=InfoCont.Cantidad;
     InfoContModificada.Comision=InfoCont.Comision;
     InfoContModificada.Importe=InfoCont.Importe;
     InfoContModificada.id_categorias_fk=InfoCont.id_categorias_fk;
+
+    this.adminservice.Actualizar(indice,InfoCont);
+  }
+
+
+  EliminarInfo(indice:number){
+
+  // this.Infocontable.splite(indice,1);
+
+    this.adminservice.Eliminar(indice);
+
+    if(this.Infocontable!=null) this.adminservice.guardarInfo(this.Infocontable);
   }
   addToInfo(Infocontable:Infocontable){
 

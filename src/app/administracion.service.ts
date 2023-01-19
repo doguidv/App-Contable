@@ -6,7 +6,6 @@ import { Infocontable } from './administracion/administracion'
 
 
 const URL='https://637a13177419b414df99362e.mockapi.io/Infocontable'
-
 const url='http://localhost/AppContable/api/infoContable'
 
 
@@ -24,7 +23,7 @@ export class AdministracionService {
     return  this.http.get<Infocontable[]>(URL)
   
   }
-  public GetId(id:number):Observable<Infocontable[]>{
+  public GetId(indice:number):Observable<Infocontable[]>{
   return this.http.get<Infocontable[]>(URL)
   }
 
@@ -36,7 +35,26 @@ export class AdministracionService {
       });
   }
 
+  Actualizar(indice:number,Infocontable:Infocontable){
 
+    let url='https://637a13177419b414df99362e.mockapi.io/Infocontable/'+indice+'.json';
+
+    
+    this.http.put (url,Infocontable).subscribe({
+      next: (v) => console.log('Info modificada Correctamente' + v),
+      error: (e) => console.log('Error' + e),
+    });
+  }
+
+  Eliminar(indice:number){
+
+    let url='https://637a13177419b414df99362e.mockapi.io/Infocontable/'+indice+'.json';
+
+    this.http.delete (url).subscribe({
+      next: (v) => console.log('Info borrada Correctamente' + v),
+      error: (e) => console.log('Error' + e),
+    });
+  }
 
   
   CalculoTotal (infoContable:Infocontable){

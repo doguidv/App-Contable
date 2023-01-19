@@ -20,8 +20,13 @@ export class AdministracionComponent implements OnInit {
     ngOnInit():void{
       this.infocontableService.GetInfo()
       .subscribe(Infocontable => {
-        this.Infocontable  = Infocontable
+        this.Infocontable  = Object.values( Infocontable);
+
+        this.infocontableService.SetInfo(this.Infocontable);
+
+      
       }); 
+      
       
       this.CategService.getAll()
       .subscribe(Categorias => {
@@ -33,12 +38,14 @@ export class AdministracionComponent implements OnInit {
 
         Infocontable:Infocontable[]=[];
 
-
+    
     addInfo(){
 
       let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.Comision,this.Importe,this.id_categorias_fk);
       this.infocontableService.addToInfo(InfoCont);
     }
+
+
     Tipo_Inversion:string;
   Fecha:string;
   Detalle:string;
