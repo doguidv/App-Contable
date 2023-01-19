@@ -44,6 +44,8 @@ export class AdministracionComponent implements OnInit {
       let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.Comision,this.Importe,this.id_categorias_fk);
       this.infocontableService.addToInfo(InfoCont);
     }
+
+
     Tipo_Inversion:string;
   Fecha:string;
   Detalle:string;

@@ -46,6 +46,15 @@ export class InfoContableService {
     this.adminservice.Actualizar(indice,InfoCont);
   }
 
+
+  EliminarInfo(indice:number){
+
+  // this.Infocontable.splite(indice,1);
+
+    this.adminservice.Eliminar(indice);
+
+    if(this.Infocontable!=null) this.adminservice.guardarInfo(this.Infocontable);
+  }
   addToInfo(Infocontable:Infocontable){
 
      this.Infocontable.find((v1) =>v1.Fecha == Infocontable.Fecha);

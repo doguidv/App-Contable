@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
 import { Infocontable } from '../administracion/administracion';
 import { InfoContableService } from '../info-contable.service';
@@ -7,8 +7,8 @@ import { InfoContableService } from '../info-contable.service';
   templateUrl: './up-date.component.html',
   styleUrls: ['./up-date.component.scss']
 })
-export class UpDateComponent {
-  [x: string]: any;
+export class UpDateComponent implements OnInit {
+  
 
   constructor(
     private infocontableService:InfoContableService,private route:ActivatedRoute ){
@@ -23,19 +23,18 @@ export class UpDateComponent {
       .subscribe(Infocontable => {
         this.Infocontable  = Infocontable
       }); 
+
       this.indice=this.route.snapshot.params['id'];
 
-
       let InfoCont:Infocontable=this.infocontableService.GetID(this.indice);
-
-      this.Fecha=InfoCont.Fecha;
-
-      this.Detalle=InfoCont.Detalle;
-      this.Cantidad=InfoCont.Cantidad;
-      this.Comision=InfoCont.Comision;
-      this.Importe=InfoCont.Importe;
-      this.id_categorias_fk=InfoCont.id_categorias_fk;
       
+        this.Fecha=InfoCont.Fecha;
+        this.Detalle=InfoCont.Detalle;
+        this.Cantidad=InfoCont.Cantidad;
+        this.Comision=InfoCont.Comision;
+        this.Importe=InfoCont.Importe;
+        this.id_categorias_fk=InfoCont.id_categorias_fk;
+        
         }
 
 
