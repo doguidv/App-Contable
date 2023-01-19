@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { tick } from '@angular/core/testing';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AdministracionService } from '../administracion.service';
 import { Infocontable } from '../administracion/administracion';
@@ -19,29 +18,22 @@ export class MayoresComponent {
   constructor(private AdminService:AdministracionService,private router:Router,private route:ActivatedRoute,private infocontableService:InfoContableService ){}
 
   ngOnInit():void{
-
+    this.route.snapshot.data['infocontable'];
     this.AdminService.getAll().subscribe(data=>{
       this.InfoContable=  data;
     });
-
-  }
-
-  CalculoTotal (){
-
-   let  PrecioConComision= this.Importe +this.Comision
-    this.ppp= ((PrecioConComision * this.Cantidad) / this.Cantidad);
-    this.Total = (PrecioConComision  * this.Cantidad);
-  }
-
-  CalculoResut(Total:number){
-    this.Resultado=(this.Cotizacion /  Total)
-  }
   
+
+  }
+
+  Calcular (){
+  this.AdminService.CalculoResut(this.Total,this.Cotizacion)
+   
+}
   ppp:number;
   Resultado:number
   Cotizacion:number;
-  Total:Number;
-  
+ Total:number;
   Cantidad:number;
   Comision:number;
   Importe:number;

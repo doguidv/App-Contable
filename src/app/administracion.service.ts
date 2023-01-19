@@ -35,4 +35,25 @@ export class AdministracionService {
         error: (e) => console.log('Error' + e),
       });
   }
+
+
+
+  
+  CalculoTotal (infoContable:Infocontable){
+
+    let  PrecioConComision= infoContable.Importe + infoContable.Comision
+     this.ppp= ((PrecioConComision * infoContable.Cantidad) / infoContable.Cantidad);
+     this.Total = (PrecioConComision  * infoContable.Cantidad);
+     return this.Total 
+    }
+   
+  
+  ppp:number;
+  Resultado:number
+ Total:number;
+ 
+   CalculoResut(Total:number,Cotizacion:number){
+     let Resultado
+     Resultado=(Cotizacion /  Total)
+   }
 }

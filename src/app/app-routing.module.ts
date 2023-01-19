@@ -15,7 +15,7 @@ const routes: Routes = [
   },
   {
     path:'Mayores',
-    component: MayoresComponent 
+    component: MayoresComponent
     },
   {
     path:'administracion',

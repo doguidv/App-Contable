@@ -15,8 +15,8 @@
 
                             <input type="text"name="Importe"  id="Importe" class="Inputform1" placeholder="Importe" [(ngModel)]="Importe">
                             
-                            <select class="form-control input-lg" ng-init="seleccion = { InfoContable: InfoContable.id_categorias_fk}" ng-model="seleccion">
-                                <option *ngFor="let InfoContable of Infocontable"    [value]="InfoContable.id_categorias_fk">  {{Tipo_Inversion}} </option>
+                            <select  class="form-control input-lg" ng-init="seleccion = { InfoContable: InfoContable.id_categorias_fk}" ng-model="seleccion">
+                                <option *ngFor="let Categoria of Categorias"    [value]="Categorias"> Seleccione una opcion {{Categoria.Tipo_Inversion}} </option>
                            </select>
                            
                            <div >
@@ -53,9 +53,7 @@
                         <th scope="col">Importe</th>
 
                         <th scope="col">Tipo_Especie</th>
-                        
-                        <th scope="col">Total</th>
-                    
+                                            
                     </tr>
                     </thead>
                     
@@ -66,10 +64,9 @@
                         <td> {{InfoContable.Cantidad}}   </td>
                         <td> {{InfoContable.Comision |currency}}   </td>
                         <td>  {{InfoContable.Importe|currency}}   </td>   
-                        <td>  {{InfoContable.id_categorias_fk}}   </td>   
-                        
-                        <td scope="col"> {{InfoContable.Cantidad * InfoContable.Importe |currency}}  </td>
+                        <td *ngFor="let categoria of Categorias">  {{categoria.Tipo_Inversion}}   </td>   
                 
+                        <td>  {{InfoContable.id_categorias_fk}}   </td>   
                 
                         <a class="btn btn-warning"    [routerLink]="['/Update', i]">editar</a> 
                                             
