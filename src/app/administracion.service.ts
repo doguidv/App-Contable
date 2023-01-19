@@ -35,7 +35,16 @@ export class AdministracionService {
       });
   }
 
+  Actualizar(indice:number,Infocontable:Infocontable){
 
+    let url='https://637a13177419b414df99362e.mockapi.io/Infocontable/'+indice+'.json';
+
+    
+    this.http.put (url,Infocontable).subscribe({
+      next: (v) => console.log('Info modificada Correctamente' + v),
+      error: (e) => console.log('Error' + e),
+    });
+  }
 
   
   CalculoTotal (infoContable:Infocontable){

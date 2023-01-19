@@ -58,20 +58,12 @@
                     
                     <tbody>
                     <tr *ngFor="let InfoContable of Infocontable; let  i  = index">
-                        <td>{{InfoContable.Fecha |date}} </td>
+                        <td>{{InfoContable.Fecha}} </td>
                         <td>   {{InfoContable.Detalle}}    </td>
                         <td> {{InfoContable.Cantidad}}   </td>
                         <td> {{InfoContable.Comision |currency}}   </td>
                         <td>  {{InfoContable.Importe|currency}}   </td>   
-                        
-                        <td>  {{InfoContable.id_categorias_fk
-                            }}   </td>   
-                        <td *ngFor="let categoria of Categorias">  {{categoria.Tipo_Inversion}}   </td>   
-                
-
-                        <td  > dsadsd    </td>   
-                
-                      
+                        <td >  {{InfoContable.id_categorias_fk}}   </td>                   
                 <td> <a class="btn btn-warning"    [routerLink]="['/Update', i]">editar</a>  </td> 
                   <td><button class="btn btn-warning">borrar</button></td>
                     </tr>
