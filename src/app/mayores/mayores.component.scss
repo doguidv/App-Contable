@@ -1,3 +1,9 @@
+.Contenedor-Resumen{
+    display: flex;
+    flex-direction: column;    
+    
+}
+
 tbody {
     box-sizing: content-box;
 
@@ -12,17 +18,26 @@ border-radius: 30px;
 }
 
 
-.Contenedor-Resumen{
 
-    display: flex;
-    flex-direction: column;    
-    margin: 25px;
-}
 .Btn{
     flex-direction: column;
 }
 
-.Btn-resumen{
+.Input-ppp {
+    padding: 12px;
 
+}
+
+button {
+    color: white;
+    background-color: #0d6efd;
+    border-color: #00000000;
+    border-radius: 5px;
+    text-align: center;
+    height: 37.6px;
+    width: 82.46px;
+}
+
+.Btn-resumen{
 margin: 12px;
 }
