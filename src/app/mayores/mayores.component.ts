@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { tick } from '@angular/core/testing';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AdministracionService } from '../administracion.service';
 import { Infocontable } from '../administracion/administracion';
@@ -25,16 +26,23 @@ export class MayoresComponent {
 
   }
 
-CalculoTotal (){
+  CalculoTotal (){
 
-  let  PrecioSinCom= this.Cantidad *   this.Importe
-  let PrecioConCom=  this.Comision + this.Importe
-     this.Total = PrecioConCom * PrecioSinCom
+   let  PrecioConComision= this.Importe +this.Comision
+    this.ppp= ((PrecioConComision * this.Cantidad) / this.Cantidad);
+    this.Total = (PrecioConComision  * this.Cantidad);
   }
 
+  CalculoResut(Total:number){
+    this.Resultado=(this.Cotizacion /  Total)
+  }
+  
+  ppp:number;
+  Resultado:number
   Cotizacion:number;
   Total:Number;
-Cantidad:number;
+  
+  Cantidad:number;
   Comision:number;
   Importe:number;
   firTerInfo='';  

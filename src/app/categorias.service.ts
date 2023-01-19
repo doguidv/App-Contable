@@ -5,25 +5,29 @@ import { Categorias } from './categorias/categorias';
 
 
 
-const URL='http://localhost:80/ApiContable/categorias'
+const URL='/ApiContable/categorias'
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoriasService {
 
+
+  Categorias:Categorias[]=[];
+  
   constructor(private http: HttpClient ) { }
 
   public getAll():Observable<Categorias[]> {
     
+    
     return  this.http.get<Categorias[]>(URL)
     .pipe(
-      tap(  ( infocontable:Categorias[] )=>infocontable.forEach(Categorias  =>  Categorias ))
+      tap(  ( Categorias:Categorias[] )=>Categorias.forEach(Categorias  =>  Categorias ))
      );
 }
   guardarCategorias(Categorias:Categorias[]){
 
-    this.http.put (URL,Categorias).subscribe({
+    this.http.post (URL,Categorias).subscribe({
         next: (v) => console.log('Se Guardo la informacion' + v),
         error: (e) => console.log('Error' + e),
       });
