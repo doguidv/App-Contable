@@ -26,7 +26,11 @@ tr {
  width: 160vw;
 }
 
-
+td, th {
+    padding: 10px;
+    height: 20px;
+    width: 140vh
+}
 
 .Btn{
     flex-direction: column;
@@ -50,3 +54,4 @@ button {
 .Btn-resumen{
 margin: 12px;
 }
+

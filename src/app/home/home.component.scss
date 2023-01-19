@@ -9,7 +9,7 @@ tbody{
   box-sizing: border-box;
 
   position: absolute;
-  width: 160vh;
+  width: 180vh;
   height: 80vh;
 
 background: rgba(255, 255, 255, 0.29);
@@ -39,6 +39,9 @@ overflow: auto;
 
   th, td {
     padding: 10px;
+    height: 20px;
+    width: 140vh;
   }
 
+  
   

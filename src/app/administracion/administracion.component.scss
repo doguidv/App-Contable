@@ -18,17 +18,18 @@
 
 
 
-th, td {
+ th, td {
   padding: 10px;
   height: 20px;
+  width: 140vh
 }
 
 tbody {
   box-sizing: content-box;
 
   position: absolute;
-  width: 90vh;
-  height: 70vh;
+  width: 180vh;
+  height: 40vh;
 
 background: rgba(255, 255, 255, 0.29);
 border: 3px solid #000000;
@@ -53,7 +54,7 @@ overflow: auto;
 .ContenedorDatosAdmin{
 
 display: flex;
-flex-direction: row;
+flex-direction: column;
 scroll-padding-right: 60px;
 }
 
