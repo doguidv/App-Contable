@@ -22,12 +22,20 @@ export class MayoresComponent {
     this.AdminService.getAll().subscribe(data=>{
       this.InfoContable =  data;
     });
-  
-   
   }
 
+
+
+  
+  CalculoTotal(InfoContable:Infocontable){
+
+    let PrecioComision =((InfoContable.Importe)+(InfoContable.Importe*(InfoContable.Comision/100)))
+  let Total =  PrecioComision *InfoContable.Cantidad;
+  return Total;
+  }
+
+ppp:number;
   Resultado:number;
-    ppp:number;
     Total:number;
   Cotizacion:number;
   Cantidad:number;
