@@ -6,29 +6,34 @@
 
 thead,tbody{
     display: block;
+    margin-inline-start: 2px;
     
    }
   
-  th {
-    width: 163px;
-    text-align: center;
 
-  
+tr {
+  width: 20vh;
+}
+
+  th {
+    width: 20vh;
+   text-align: center;
+
   }
   
   td {
-    height: 20px;
-    width: 150px;
-   
+    height: 10px;
+    width: 30vh;
   
   }
   
   tbody {
     box-sizing: border-box;
   
-    width: 140vh;
+    width: 170vh;
     height: 40vh;
-    text-align: center;
+    
+    
   
   
     background: rgba(255, 255, 255, 0.29);
@@ -38,10 +43,9 @@ thead,tbody{
     overflow: auto;
   }
   
-.ingcotizacion {
-  margin-right: 20px;
+input {
+  width: 10vh;
 }
-
 
 
 
