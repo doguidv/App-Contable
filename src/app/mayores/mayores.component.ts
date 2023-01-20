@@ -15,8 +15,9 @@ export class MayoresComponent {
  @Input()ListInfoContable:Infocontable;
  @Input()ListCaracteristicas:Categorias;
 
-  constructor(private AdminService:AdministracionService,private router:Router,private route:ActivatedRoute,private infocontableService:InfoContableService ){}
+  constructor(private AdminService:AdministracionService,private router:Router,private route:ActivatedRoute,private infocontableService:InfoContableService ){
 
+  }
   ngOnInit():void{
     this.route.snapshot.data['infocontable'];
     this.AdminService.getAll().subscribe(data=>{
@@ -25,18 +26,22 @@ export class MayoresComponent {
   }
 
 
-
   
   CalculoTotal(InfoContable:Infocontable){
 
     let PrecioComision =((InfoContable.Importe)+(InfoContable.Importe*(InfoContable.Comision/100)))
-  let Total =  PrecioComision *InfoContable.Cantidad;
-  return Total;
+    this.Total =  PrecioComision *InfoContable.Cantidad;
+    this.ppp=this.infocontableService.ppp(this.Total);
   }
 
-ppp:number;
-  Resultado:number;
-    Total:number;
+
+Resultado (){
+
+}
+
+  ppp:number;
+  resultado:number;
+  Total:number;
   Cotizacion:number;
   Cantidad:number;
   Comision:number;
