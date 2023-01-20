@@ -40,21 +40,13 @@
         <td>   {{InfoContable.Detalle}}    </td>
         <td> {{InfoContable.Cantidad}}   </td>
         <td>  {{InfoContable.Importe}}   </td>
-<<<<<<< HEAD
-
-        <th scope="col"    >{{InfoContable.Comision + InfoContable.Importe}} </th>
-        <td class="ingcotizacion">    <input type="text" name="Cotizacion" id="Cotizacion" placeholder="Ingresar Contizacion" [ngModel]="Cotizacion" >     </td>
-=======
         <td> {{InfoContable.Comision}}   </td>  
-        <td>{{ InfoContable.Importe      +     InfoContable.Importe *  InfoContable.Comision/100 }}</td>
-        <td>    <input type="text" name="Cotizacion" id="Cotizacion" placeholder="Ingresar Contizacion" [ngModel]="Cotizacion" >     </td>
->>>>>>> ba8c20a6e4cf1e08dce844796b05845f1e22e440
+        <td>{{ InfoContable.Importe      +     InfoContable.Importe *  InfoContable.Comision/100 }}</td>   
+        <td class="ingcotizacion">    <input type="text" name="Cotizacion" id="Cotizacion" placeholder="Ingresar Contizacion" [ngModel]="Cotizacion" >     </td>
         <td name="ppp" [(ngModel)]="ppp" >   {{ppp }}  </td>
         <td name="Total" [(ngModel)]="Total"   scope="col"  > {{ Total}}  </td>
-        <td  name="Resultado-" [(ngModel)]="Resultado" scope="col"  > {{Resultado }}  </td>
-      
-    </tr>
-    
+        <td  name="Resultado-" [(ngModel)]="Resultado" scope="col"  > {{Resultado }}  </td> 
+    </tr>    
     </tbody>
 </table>
 </div>
