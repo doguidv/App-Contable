@@ -22,9 +22,10 @@
         <th scope="col">Fecha</th>
         <th scope="col">Especie</th>
         <th scope="col">Cantidad</th>
-        <th scope="col">Comision</th>
+        
         <th scope="col">Precio</th>
-        <th scope="col">Precio mas Comision</th>
+        <th scope="col">Comision</th>
+        <th scope="col">Precio Con Comision</th>
         <th scope="col">Cotizacion</th>
         <th scope="col">P P P</th>
         <th scope="col"> Costo Total</th>
@@ -38,10 +39,9 @@
         <td>  {{InfoContable.Fecha }} </td>
         <td>   {{InfoContable.Detalle}}    </td>
         <td> {{InfoContable.Cantidad}}   </td>
-        <td> {{InfoContable.Comision}}   </td>
         <td>  {{InfoContable.Importe}}   </td>
-
-        <th scope="col"    >{{InfoContable.Comision + InfoContable.Importe}} </th>
+        <td> {{InfoContable.Comision}}   </td>  
+        <td>{{ InfoContable.Importe      +     InfoContable.Importe *  InfoContable.Comision/100 }}</td>
         <td>    <input type="text" name="Cotizacion" id="Cotizacion" placeholder="Ingresar Contizacion" [ngModel]="Cotizacion" >     </td>
         <td name="ppp" [(ngModel)]="ppp" >   {{ppp }}  </td>
         <td name="Total" [(ngModel)]="Total"   scope="col"  > {{ Total}}  </td>

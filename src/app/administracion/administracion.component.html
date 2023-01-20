@@ -10,16 +10,18 @@
                             <input type="text" name="Detalle" id="Detalle" class="Inputform1"  placeholder="Especie" [(ngModel)]="Detalle">
                             
                             <input type="text"  name="Cantidad"  id="Cantidad"   class="Inputform1" placeholder="Cantidad" [(ngModel)]="Cantidad">
+                          
                             
+                            <input type="text"name="Importe"  id="Importe" class="Inputform1" placeholder="Importe" [(ngModel)]="Importe">
+
                             <input type="text"  name="Comision" id="Comision"   class="Inputform1" placeholder="Comision" [(ngModel)]="Comision">
 
-                            <input type="text"name="Importe"  id="Importe" class="Inputform1" placeholder="Importe" [(ngModel)]="Importe">
                          
                            <select  name="SelectCateg" id="SelectCateg"   >
 
                             <option  *ngFor="let Categorias of Categorias"  >   {{Categorias.Tipo_Inversion}}        </option>
                            </select>
-                           <div >
+                           <div  >
                             <button type="submit" class="btn btn-primary" (click)="addInfo()" >  Guardar</button>
                            </div>
                     </form>
@@ -42,10 +44,11 @@
                         <th scope="col">Especie</th>
                         
                         <th scope="col">Cantidad</th>
+                        
+                        <th scope="col">Importe</th>
 
                         <th scope="col">Comision</th>
                         
-                        <th scope="col">Importe</th>
 
                         <th scope="col">Tipo_Especie</th>
                                             
@@ -57,8 +60,9 @@
                         <td>{{InfoContable.Fecha}} </td>
                         <td>   {{InfoContable.Detalle}}    </td>
                         <td> {{InfoContable.Cantidad}}   </td>
-                        <td> {{InfoContable.Comision |currency}}   </td>
-                        <td>  {{InfoContable.Importe|currency}}   </td>   
+                        
+                        <td>  {{InfoContable.Importe|currency}}   </td>  
+                        <td> {{InfoContable.Comision}}   </td> 
                         <td >  {{InfoContable.id_categorias_fk}}   </td>                   
                 <td> <a class="btn btn-warning"    [routerLink]="['/Update', i]">editar</a>  </td> 
                     </tr>

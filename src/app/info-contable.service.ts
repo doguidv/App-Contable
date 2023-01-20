@@ -7,15 +7,17 @@ import { Infocontable } from './administracion/administracion';
 })
 
 export class InfoContableService {
+
   constructor(private adminservice:AdministracionService ) { }
 
-  Infocontable:Infocontable[]=[];
 
+  private _ListInfocontable:Infocontable[]= [];
 
+  List: BehaviorSubject<Infocontable[]> = new BehaviorSubject(this._ListInfocontable);
 
   
   SetInfo(InfoCont:Infocontable[]){
-    this.Infocontable =  InfoCont;
+    this._ListInfocontable =  InfoCont;
   
   }
   
@@ -28,7 +30,7 @@ export class InfoContableService {
 
   GetID(indice:number){
 
-    let InfoCont:Infocontable=this.Infocontable[indice]
+    let InfoCont:Infocontable=this._ListInfocontable[indice]
   return  InfoCont;
     // return  this.adminservice.GetId();
   }
@@ -36,7 +38,7 @@ export class InfoContableService {
   
   UpdateToInfo(indice:number,InfoCont:Infocontable){
 
-    let InfoContModificada= this.Infocontable[indice];
+    let InfoContModificada= this._ListInfocontable[indice];
 
       InfoContModificada.Fecha=InfoCont.Fecha;
       InfoContModificada.Detalle=InfoCont.Detalle;
@@ -51,23 +53,26 @@ export class InfoContableService {
 
   EliminarInfo(indice:number){
 
-   this.Infocontable.splice(indice,1);
+   this._ListInfocontable.splice(indice,1);
 
-    if(this.Infocontable!=null) this.adminservice.Eliminar (indice);
+    if(this._ListInfocontable!=null) this.adminservice.Eliminar (indice);
   }
 
   addToInfo(Infocontable:Infocontable){
 
-     this.Infocontable.find((v1) =>v1.Fecha == Infocontable.Fecha);
+let item = this._ListInfocontable.find((v1) =>v1.Fecha == Infocontable.Fecha);
     
-      this.Infocontable.push({ ...Infocontable});    
-    this.adminservice.guardarInfo(this.Infocontable);
+  if(!item){
+      this._ListInfocontable.push({ ...Infocontable});      
+      this.adminservice.guardarInfo(this._ListInfocontable);
   
-  }
-  
- 
+    }else {
+      item.Cantidad+=Infocontable.Cantidad;
+    }
+  this.List.next(this._ListInfocontable);
+  } 
 
-  
+    
 
 }
 

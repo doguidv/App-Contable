@@ -20,34 +20,15 @@ export class MayoresComponent {
   ngOnInit():void{
     this.route.snapshot.data['infocontable'];
     this.AdminService.getAll().subscribe(data=>{
-      this.InfoContable=  data;
+      this.InfoContable =  data;
     });
   
-
+   
   }
 
-Calculoppp(infoContable:Infocontable){
-  
-  let  PrecioConComision= infoContable.Importe + infoContable.Comision;
-  this.ppp= ((PrecioConComision * infoContable.Cantidad) / infoContable.Cantidad);
-  return this.ppp;
-}
-
-  CalculoTotal (PrecioConComision:number,infoContable:Infocontable){
-      this.Total = (PrecioConComision  * infoContable.Cantidad);
-     return this.Total; 
-    }
-  CalculoResut(Total:number,Cotizacion:number){
-    this.Resultado=(Cotizacion /  Total);
-      return this.Resultado;
-    }
-
-    Resultado:number;
-
+  Resultado:number;
     ppp:number;
-    
     Total:number;
-
   Cotizacion:number;
   Cantidad:number;
   Comision:number;
