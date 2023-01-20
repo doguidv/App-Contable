@@ -1,57 +1,47 @@
 .Contenedor-Resumen{
 
-    padding-left: 15vh;    
-    
+  padding-left: 15vh;    
+  
 }
 
 thead,tbody{
-    display: block;
-      
+  display: block;
+    
 }
 
-  th {
-    width: 163px;
-    text-align: center;
-    margin-inline-start: 2px;
-    
-   }
-  
+th {
+  width: 163px;
+  text-align: center;
 
-tr {
-  width: 20vh;
+
 }
 
-  th {
-    width: 20vh;
-   text-align: center;
+td {
+  height: 20px;
+  width: 150px;
+ 
 
-  }
-  
-  td {
-    height: 10px;
-    width: 30vh;
-  
-  }
-  
-  tbody {
-    box-sizing: border-box;
-  
-    width: 170vh;
-    height: 40vh;
-    
-    
-  
-  
-    background: rgba(255, 255, 255, 0.29);
-    border: 3px solid #000000;
-    box-shadow: -10px 15px 5px 3px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
-    overflow: auto;
-  }
-  
-input {
-  width: 10vh;
 }
+
+tbody {
+  box-sizing: border-box;
+
+  width: 140vh;
+  height: 40vh;
+  text-align: center;
+
+
+  background: rgba(255, 255, 255, 0.29);
+  border: 3px solid #000000;
+  box-shadow: -10px 15px 5px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  overflow: auto;
+}
+
+.ingcotizacion {
+margin-right: 20px;
+}
+
 
 
 
@@ -60,26 +50,22 @@ input {
 --------------------------------------------------------------------------------------------------------------------------------------
 
 .Btn{
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .Input-ppp {
-    padding: 12px;
+  padding: 12px;
 
 }
 
 button {
-    color: white;
-    background-color: #0d6efd;
-    border-color: #00000000;
-    border-radius: 5px;
-    text-align: center;
-    height: 37.6px;
-    width: 200px;
-}
-
-.input{
-  width: 12vh;
+  color: white;
+  background-color: #0d6efd;
+  border-color: #00000000;
+  border-radius: 5px;
+  text-align: center;
+  height: 37.6px;
+  width: 200px;
 }
 
 .Btn-resumen{
