@@ -53,13 +53,13 @@ display: flex;
 flex-direction: column;
 margin-left: 25vh;
 margin-top: -50px;
+margin-bottom: 1px;
 }
 
 
 
 .ContenedorFormAdmin{
 margin-top: 67.5px;
-margin-bottom: 10px;
 margin-left: 12px;
 margin-right: 40vh;
 padding: 12px;
@@ -76,19 +76,14 @@ font-weight: bold;
 }
 
 
-.Botones-Admin{
-display: flex;
-flex-direction: column;
-margin-top: 15px;
-}
-
 
 .boton-guardar {
   display: flex;
   flex-direction: column;
-  padding-top: 15px;
+  padding-top: 20px;
   margin-right: 4vh;
   margin-bottom: 1vh;
+  
  
 }
 

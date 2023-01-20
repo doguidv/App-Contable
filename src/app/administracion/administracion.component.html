@@ -1,7 +1,8 @@
 
 <div class="ContenedorDatosAdmin">
     <div   class="ContenedorFormAdmin" >
-            <div class="Form1">  
+            <div class="Form1">
+                
                 <form id="stiloFormAdmin" action="" class="oculto" >
                         
                             <input type="text" name="Fecha" id="Fecha" class="Inputform1" placeholder="Fecha" [(ngModel)]="Fecha">
@@ -21,20 +22,18 @@
                             <option  *ngFor="let Categorias of Categorias"  >   {{Categorias.Tipo_Inversion}}        </option>
                            </select>
                            <div class="boton-guardar" >
-
-                           <div class="boton-guardar" >
                             <button type="submit" class="btn btn-primary" (click)="addInfo()" >  Guardar</button>
                            </div>
-                   
-                            </div>
-                                <div class="Botones-Admin">                     
-                                    <div>
-                                        <a class="btn btn-primary" [routerLink]="['/Tipo_Especie']" >Agregar Tipo Especie</a>
-                                    </div>
-                          </div>
-                        </form>
+                    </form>
+            </div>
+                <div class="Botones-Admin">                     
+                    <div>
+                        <a class="btn btn-primary" [routerLink]="['/Tipo_Especie']" >Agregar Tipo Especie</a>
+                    </div>
                 </div>
-    </div>
+
+            </div>
+                      
         <div class="ContenedorTabla">    
 
                 <table class="table">
@@ -70,6 +69,6 @@
                     </tbody>
                 </table>
 
-            </div>  
+          </div>  
    
 </div>            
