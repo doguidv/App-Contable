@@ -34,10 +34,14 @@ export class MayoresComponent {
     this.ppp=this.infocontableService.ppp(this.Total);
   }
 
-  ppp:number;
 
-  Resultado:number;
-    Total:number;
+Resultado (){
+
+}
+
+  ppp:number;
+  resultado:number;
+  Total:number;
   Cotizacion:number;
   Cantidad:number;
   Comision:number;
