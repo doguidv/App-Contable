@@ -19,7 +19,7 @@ new Categorias ("Bonos"),
 new Categorias ("Plazo Fijo"),
 ];
 
-  id_categorias:number=1;
+  id_categorias:number;
   Tipo_Inversion:string;  
  
 
@@ -36,7 +36,7 @@ new Categorias ("Plazo Fijo"),
 
     addCateg(){
       let MiCateg= new Categorias  ( this.Tipo_Inversion);
-         this.AddCateg.addToCategorias(MiCateg);
+         this.AddCateg.addToInfo(MiCateg);
      }
     
  maxReached( m:string ){

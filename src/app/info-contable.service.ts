@@ -24,6 +24,8 @@ export class InfoContableService {
     return this.adminservice.getAll();
   }
 
+
+
   GetID(indice:number){
 
     let InfoCont:Infocontable=this.Infocontable[indice]
@@ -36,12 +38,12 @@ export class InfoContableService {
 
     let InfoContModificada= this.Infocontable[indice];
 
-    InfoContModificada.Fecha=InfoCont.Fecha;
-    InfoContModificada.Detalle=InfoCont.Detalle;
-    InfoContModificada.Cantidad=InfoCont.Cantidad;
-    InfoContModificada.Comision=InfoCont.Comision;
-    InfoContModificada.Importe=InfoCont.Importe;
-    InfoContModificada.id_categorias_fk=InfoCont.id_categorias_fk;
+      InfoContModificada.Fecha=InfoCont.Fecha;
+      InfoContModificada.Detalle=InfoCont.Detalle;
+      InfoContModificada.Cantidad=InfoCont.Cantidad;
+      InfoContModificada.Comision=InfoCont.Comision;
+      InfoContModificada.Importe=InfoCont.Importe;
+      InfoContModificada.id_categorias_fk=InfoCont.id_categorias_fk;
 
     this.adminservice.Actualizar(indice,InfoCont);
   }
@@ -49,17 +51,16 @@ export class InfoContableService {
 
   EliminarInfo(indice:number){
 
-  // this.Infocontable.splite(indice,1);
+   this.Infocontable.splice(indice,1);
 
-    this.adminservice.Eliminar(indice);
-
-    if(this.Infocontable!=null) this.adminservice.guardarInfo(this.Infocontable);
+    if(this.Infocontable!=null) this.adminservice.Eliminar (indice);
   }
+
   addToInfo(Infocontable:Infocontable){
 
      this.Infocontable.find((v1) =>v1.Fecha == Infocontable.Fecha);
     
-      this.Infocontable.push(Infocontable);    
+      this.Infocontable.push({ ...Infocontable});    
     this.adminservice.guardarInfo(this.Infocontable);
   
   }

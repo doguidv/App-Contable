@@ -37,7 +37,7 @@ export class AdministracionService {
 
   Actualizar(indice:number,Infocontable:Infocontable){
 
-    let url='https://637a13177419b414df99362e.mockapi.io/Infocontable/'+indice+'.json';
+    let url='https://637a13177419b414df99362e.mockapi.io/Infocontable'+indice+'.json';
 
     
     this.http.put (url,Infocontable).subscribe({
@@ -48,7 +48,7 @@ export class AdministracionService {
 
   Eliminar(indice:number){
 
-    let url='https://637a13177419b414df99362e.mockapi.io/Infocontable/'+indice+'.json';
+    let url='https://637a13177419b414df99362e.mockapi.io/Infocontable'+indice+'.json';
 
     this.http.delete (url).subscribe({
       next: (v) => console.log('Info borrada Correctamente' + v),

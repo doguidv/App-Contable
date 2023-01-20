@@ -27,8 +27,8 @@ export class UpDateComponent implements OnInit {
       this.indice=this.route.snapshot.params['id'];
 
       let InfoCont:Infocontable=this.infocontableService.GetID(this.indice);
-      
-        this.Fecha=InfoCont.Fecha;
+        
+      this.Fecha=InfoCont.Fecha;
         this.Detalle=InfoCont.Detalle;
         this.Cantidad=InfoCont.Cantidad;
         this.Comision=InfoCont.Comision;
@@ -41,10 +41,13 @@ export class UpDateComponent implements OnInit {
         UpdateInfo(){
 
            let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.Comision,this.Importe,this.id_categorias_fk);
-       this.infocontableService.UpdateToInfo(this.indice,InfoCont);
+           this.infocontableService.UpdateToInfo(this.indice,InfoCont);
    
+        }
+      EliminaInfo(){
+        this.infocontableService.EliminarInfo(this.indice);
+        
       }
-    
   Fecha:string;
   Detalle:string="";
   Cantidad:number=0;

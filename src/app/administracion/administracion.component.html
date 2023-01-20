@@ -17,14 +17,15 @@
                          
                             <input type="text"name="id_categorias_fk"  id="id_categorias_fk" class="Inputform1" placeholder="id_categorias_fk" [(ngModel)]="id_categorias_fk">
                          
-                           
+                           <select  name="SelectCateg" id="SelectCateg"   >
+
+                            <option  *ngFor="let Categorias of Categorias"  >   {{Categorias.Tipo_Inversion}}        </option>
+                           </select>
                            <div >
                             <button type="submit" class="btn btn-primary" (click)="addInfo()" >  Guardar</button>
                            </div>
                     </form>
             </div>
-        
-                            
                 <div class="Botones-Admin">                     
                     <div>
                         <a class="btn btn-primary" [routerLink]="['/Tipo_Especie']" >Agregar Tipo Especie</a>
@@ -62,7 +63,6 @@
                         <td>  {{InfoContable.Importe|currency}}   </td>   
                         <td >  {{InfoContable.id_categorias_fk}}   </td>                   
                 <td> <a class="btn btn-warning"    [routerLink]="['/Update', i]">editar</a>  </td> 
-                  <td><button class="btn btn-warning">borrar</button></td>
                     </tr>
                     </tbody>
                 </table>
