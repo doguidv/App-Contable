@@ -42,14 +42,11 @@
         <td>  {{InfoContable.Importe}}   </td>
 
         <th scope="col"    >{{InfoContable.Comision + InfoContable.Importe}} </th>
-        <td>    <input type="text" name="Cotizacion" id="Cotizacion" placeholder="Ingresar Contizacion" [ngModel]="Cotizacion" >     </td>
+        <td class="ingcotizacion">    <input type="text" name="Cotizacion" id="Cotizacion" placeholder="Ingresar Contizacion" [ngModel]="Cotizacion" >     </td>
         <td name="ppp" [(ngModel)]="ppp" >   {{ppp }}  </td>
         <td name="Total" [(ngModel)]="Total"   scope="col"  > {{ Total}}  </td>
         <td  name="Resultado-" [(ngModel)]="Resultado" scope="col"  > {{Resultado }}  </td>
       
-        <td>
-    
-      </td>
     </tr>
     
     </tbody>

@@ -11,6 +11,7 @@ thead,tbody{
   
   th {
     width: 163px;
+    text-align: center;
 
   
   }
@@ -18,15 +19,16 @@ thead,tbody{
   td {
     height: 20px;
     width: 150px;
-    text-align: center;
+   
   
   }
   
   tbody {
     box-sizing: border-box;
   
-    width: 150vh;
+    width: 140vh;
     height: 40vh;
+    text-align: center;
   
   
     background: rgba(255, 255, 255, 0.29);
@@ -36,6 +38,16 @@ thead,tbody{
     overflow: auto;
   }
   
+.ingcotizacion {
+  margin-right: 20px;
+}
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
 
 .Btn{
     flex-direction: column;
