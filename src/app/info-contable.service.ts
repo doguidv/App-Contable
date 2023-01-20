@@ -60,14 +60,14 @@ export class InfoContableService {
 
   addToInfo(Infocontable:Infocontable){
 
-let item = this._ListInfocontable.find((v1) =>v1.Fecha == Infocontable.Fecha);
+let item = this._ListInfocontable.find((v1) =>v1.Detalle == Infocontable.Detalle);
     
   if(!item){
-      this._ListInfocontable.push({ ...Infocontable});      
+      this._ListInfocontable.push({...Infocontable});      
       this.adminservice.guardarInfo(this._ListInfocontable);
   
     }else {
-      item.Cantidad+=Infocontable.Cantidad;
+      item.Cantidad +=  Infocontable.Cantidad;
     }
   this.List.next(this._ListInfocontable);
   } 
