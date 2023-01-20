@@ -21,26 +21,20 @@
 
                             <option  *ngFor="let Categorias of Categorias"  >   {{Categorias.Tipo_Inversion}}        </option>
                            </select>
-<<<<<<< HEAD
-
-                           <div  >
-
                            <div class="boton-guardar" >
 
-=======
                            <div class="boton-guardar" >
->>>>>>> 8d49b943f8fcb1436c9a2026e71609578a8e0acd
                             <button type="submit" class="btn btn-primary" (click)="addInfo()" >  Guardar</button>
                            </div>
                    
-            </div>
-                <div class="Botones-Admin">                     
-                    <div>
-                        <a class="btn btn-primary" [routerLink]="['/Tipo_Especie']" >Agregar Tipo Especie</a>
-                    </div>
-                </div>
-
-    </div>
+                            </div>
+                                <div class="Botones-Admin">                     
+                                    <div>
+                                        <a class="btn btn-primary" [routerLink]="['/Tipo_Especie']" >Agregar Tipo Especie</a>
+                                    </div>
+                          </div>
+                        </form>
+        </div>
 
         <div class="ContenedorTabla">    
 
@@ -76,5 +70,8 @@
                     </tr>
                     </tbody>
                 </table>
-        </div>
-</div>
+
+            </div>  
+    </div>
+    
+</div>            
