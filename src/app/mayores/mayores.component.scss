@@ -5,11 +5,15 @@
     
 }
 
+thead, tbody {
+    display: block;
+}
+
 tbody {
     box-sizing: content-box;
 
    
-position: absolute;
+position: relative;
 width: 170vh;
 height: 60vh;
 
@@ -22,15 +26,18 @@ text-align: right;
 
 }
 
-tr {
-    position: relative;
- width: 130vh;
+th {
+    padding-left: 50px;
+    width: 120px;
+
+
 }
 
-td, th {
+
+td {
     padding-left: 50px;
     height: 20px;
-    width: 100vh
+    width: 120px
 }
 
 .Btn{
