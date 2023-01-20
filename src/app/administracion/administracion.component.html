@@ -15,8 +15,6 @@
 
                             <input type="text"name="Importe"  id="Importe" class="Inputform1" placeholder="Importe" [(ngModel)]="Importe">
                          
-                            <input type="text"name="id_categorias_fk"  id="id_categorias_fk" class="Inputform1" placeholder="id_categorias_fk" [(ngModel)]="id_categorias_fk">
-                         
                            <select  name="SelectCateg" id="SelectCateg"   >
 
                             <option  *ngFor="let Categorias of Categorias"  >   {{Categorias.Tipo_Inversion}}        </option>

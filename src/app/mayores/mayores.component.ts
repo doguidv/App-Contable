@@ -26,14 +26,29 @@ export class MayoresComponent {
 
   }
 
-  Calcular (){
-  this.AdminService.CalculoResut(this.Total,this.Cotizacion)
-   
+Calculoppp(infoContable:Infocontable){
+  
+  let  PrecioConComision= infoContable.Importe + infoContable.Comision;
+  this.ppp= ((PrecioConComision * infoContable.Cantidad) / infoContable.Cantidad);
+  return this.ppp;
 }
-  ppp:number;
-  Resultado:number
+
+  CalculoTotal (PrecioConComision:number,infoContable:Infocontable){
+      this.Total = (PrecioConComision  * infoContable.Cantidad);
+     return this.Total; 
+    }
+  CalculoResut(Total:number,Cotizacion:number){
+    this.Resultado=(Cotizacion /  Total);
+      return this.Resultado;
+    }
+
+    Resultado:number;
+
+    ppp:number;
+    
+    Total:number;
+
   Cotizacion:number;
- Total:number;
   Cantidad:number;
   Comision:number;
   Importe:number;
