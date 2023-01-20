@@ -17,11 +17,15 @@
                             <input type="text"  name="Comision" id="Comision"   class="Inputform1" placeholder="Comision" [(ngModel)]="Comision">
 
                          
-                           <select  name="SelectCateg" id="SelectCateg"   >
+                           <select  name="SelectCateg" id="SelectCateg" class="barra"  >
 
                             <option  *ngFor="let Categorias of Categorias"  >   {{Categorias.Tipo_Inversion}}        </option>
                            </select>
+<<<<<<< HEAD
                            <div  >
+=======
+                           <div class="boton-guardar" >
+>>>>>>> e48a18b2fe326f21b2ccccf513377b43be1ca685
                             <button type="submit" class="btn btn-primary" (click)="addInfo()" >  Guardar</button>
                            </div>
                     </form>
