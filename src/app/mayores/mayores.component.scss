@@ -1,44 +1,41 @@
 .Contenedor-Resumen{
-    display: flex;
-    flex-direction: column;
+
     padding-left: 15vh;    
     
 }
 
-thead, tbody {
+thead,tbody{
     display: block;
-}
+    
+   }
+  
+  th {
+    width: 163px;
 
-tbody {
-    box-sizing: content-box;
-
-   
-position: relative;
-width: 170vh;
-height: 60vh;
-
-background: rgba(255, 255, 255, 0.29);
-border: 3px solid #000000;
-box-shadow: -10px 15px 5px 3px rgba(0, 0, 0, 0.25);
-border-radius: 30px;
-overflow: auto;
-text-align: right;
-
-}
-
-th {
-    padding-left: 50px;
-    width: 120px;
-
-
-}
-
-
-td {
-    padding-left: 50px;
+  
+  }
+  
+  td {
     height: 20px;
-    width: 120px
-}
+    width: 150px;
+    text-align: center;
+  
+  }
+  
+  tbody {
+    box-sizing: border-box;
+  
+    width: 150vh;
+    height: 40vh;
+  
+  
+    background: rgba(255, 255, 255, 0.29);
+    border: 3px solid #000000;
+    box-shadow: -10px 15px 5px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    overflow: auto;
+  }
+  
 
 .Btn{
     flex-direction: column;
