@@ -15,11 +15,11 @@
 
                             <input type="text"name="Importe"  id="Importe" class="Inputform1" placeholder="Importe" [(ngModel)]="Importe">
                          
-                           <select  name="SelectCateg" id="SelectCateg"   >
+                           <select  name="SelectCateg" id="SelectCateg" class="barra"  >
 
                             <option  *ngFor="let Categorias of Categorias"  >   {{Categorias.Tipo_Inversion}}        </option>
                            </select>
-                           <div >
+                           <div class="boton-guardar" >
                             <button type="submit" class="btn btn-primary" (click)="addInfo()" >  Guardar</button>
                            </div>
                     </form>
