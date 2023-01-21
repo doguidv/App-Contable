@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { NgModel } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AdministracionService } from '../administracion.service';
 import { Infocontable } from '../administracion/administracion';
@@ -23,21 +24,20 @@ export class MayoresComponent {
     this.AdminService.getAll().subscribe(data=>{
       this.InfoContable =  data;
     });
+ 
+
   }
 
 
-  
   CalculoTotal(InfoContable:Infocontable){
 
-    let PrecioComision =((InfoContable.Importe)+(InfoContable.Importe*(InfoContable.Comision/100)))
-    this.Total =  PrecioComision *InfoContable.Cantidad;
-    this.ppp=this.infocontableService.ppp(this.Total);
+    let PrecioComision =((InfoContable.Importe)+(InfoContable.Importe*(InfoContable.Comision/100) )  );
+    this.Total =  PrecioComision *  InfoContable.Cantidad;
+    let ppp  = this.infocontableService.ppp(this.Total);
+  this.ppp  = ppp;
   }
 
 
-Resultado (){
-
-}
 
   ppp:number;
   resultado:number;
