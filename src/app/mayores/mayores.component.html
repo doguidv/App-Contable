@@ -10,10 +10,11 @@
     </div>
 
     <div class="Input-ppp">
+
+      <!-- <button (click)="CalculoResut(Total,Cotizacion)"  > Calculo Costo Total </button> -->
       <button   class="btn btn-primary"  > Calculo Costo total</button>
      
     </div>
-    
     
   </div>
 <table class="table">
@@ -39,6 +40,17 @@
         <td>  {{InfoContable.Fecha }} </td>
         <td>   {{InfoContable.Detalle}}    </td>
         <td> {{InfoContable.Cantidad}}   </td>
+<<<<<<< HEAD
+        <td>  {{InfoContable.Importe}}   </td>
+
+        <th scope="col"    >{{InfoContable.Comision + InfoContable.Importe}} </th>
+        <td>    <input type="text" name="Cotizacion" id="Cotizacion" placeholder="Ingresar Contizacion" [ngModel]="Cotizacion" class="input" >     </td>
+        <td name="ppp" [(ngModel)]="ppp" >   {{ppp }}  </td>
+        <td name="Total" [(ngModel)]="Total"   scope="col"  > {{ Total}}  </td>
+        <td  name="Resultado-" [(ngModel)]="Resultado" scope="col"  > {{Resultado }}  </td>
+      
+    </tr> 
+=======
         <td  >  {{InfoContable.Importe}}   </td>
         <td> {{InfoContable.Comision}}   </td>  
         <td>{{ InfoContable.Importe      +     InfoContable.Importe *  InfoContable.Comision/100 }}</td>   
@@ -48,6 +60,7 @@
      
         <td  name="Resultado" scope="col"  > {{ppp  / Cotizacion }}  </td> 
     </tr>    
+>>>>>>> 6bfe73298f199dd526e9d0c4dccedb9e0a7b688a
     </tbody>
 </table>
 </div>
