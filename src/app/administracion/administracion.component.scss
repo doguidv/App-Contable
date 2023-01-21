@@ -30,6 +30,11 @@ td {
   height: 20px;
   width: 180px;
 
+  text-align: center;
+
+}
+thead{
+  width: 175%;
 }
 
 tbody {
@@ -37,7 +42,8 @@ tbody {
 
   width: 150vh;
   height: 40vh;
-
+  width: 200%;
+text-align: center;
 
   background: rgba(255, 255, 255, 0.29);
   border: 3px solid #000000;
