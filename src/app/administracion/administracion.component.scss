@@ -35,16 +35,15 @@ td {
 }
 thead{
   width: 175%;
+text-align: center;
 }
 
 tbody {
   box-sizing: content-box;
 
-  width: 150vh;
   height: 40vh;
   width: 200%;
-text-align: center;
-
+  text-align: center;
   background: rgba(255, 255, 255, 0.29);
   border: 3px solid #000000;
   box-shadow: -10px 15px 5px 3px rgba(0, 0, 0, 0.25);
@@ -54,23 +53,21 @@ text-align: center;
 
 
 .ContenedorDatosAdmin{
-
-display: flex;
-flex-direction: column;
-margin-left: 25vh;
-margin-top: -50px;
-margin-bottom: 1px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 25vh;
+  margin-top: -50px;
+  margin-bottom: 1px;
 }
 
 
 
 .ContenedorFormAdmin{
-margin-top: 67.5px;
-margin-left: 12px;
-margin-right: 40vh;
-padding: 12px;
-
-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-top: 67.5px;
+  margin-left: 12px;
+  margin-right: 55%;
+  padding: 12px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 
@@ -85,9 +82,9 @@ font-weight: bold;
 
 .boton-guardar {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding-top: 20px;
-  margin-right: 4vh;
+  margin-right: 60%;
   margin-bottom: 1vh;
   
  
