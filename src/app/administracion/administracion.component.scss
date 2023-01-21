@@ -32,11 +32,19 @@ td {
 
 }
 
+
+thead {
+  width: 175%;
+  text-align: center;
+}
+
+
 tbody {
   box-sizing: content-box;
 
-  width: 150vh;
+  width: 200%;
   height: 40vh;
+  text-align: center;
 
 
   background: rgba(255, 255, 255, 0.29);
