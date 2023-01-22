@@ -1,59 +1,42 @@
 
-.table {
-  display: block;
-  position: absolute;
-  width: 130vh;
-  height: 80vh;
-  padding: 10vh;
-  padding-top: 0%;
 
-}
-
-h1{
-  text-align:center;
-}
 .card {
-    background-color: transparent;
+  left: 50%;
+  background-color: transparent;
+  margin-top: 20%;
+  text-align: center;
+  border-radius: 60px;
+  border-width: 3px;
+  box-shadow: -10px 15px 5px 3px rgba(0, 0, 0, 0.25);
+
 }
 
-
-
-tbody{
-  box-sizing: border-box;
-
-  position: absolute;
-  width: 180vh;
-  height: 80vh;
-
-background: rgba(255, 255, 255, 0.29);
-border: 3px solid #000000;
-box-shadow: -10px 15px 5px 3px rgba(0, 0, 0, 0.25);
-border-radius: 30px;
-overflow: auto;
+.titulo-home {
+  margin: 40px;
 }
 
-  
-  thead th:nth-child(1) {
-    width: 30%;
-  }
-  
-  thead th:nth-child(2) {
-    width: 20%;
-  }
-  
-  thead th:nth-child(3) {
-    width: 15%;
-  }
-  
-  thead th:nth-child(4) {
-    width: 35%;
-  }
+.body-home-dialogo1 {
+  margin: 50px;
+  padding: 10px;
+  background-color: rgba(159, 159, 159, 0.703);
+  border-radius: 60px;
+}
 
-  th, td {
-    padding: 10px;
-    height: 20px;
-    width: 140vh;
-  }
+.body-home-dialogo2 {
+  margin: 50px;
+  padding: 10px;
+  background-color: rgba(159, 159, 159, 0.703);
+  border-radius: 60px;
+}
 
-  
-  
+.body-home-login {
+
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 300px;
+  margin-right: 300px;
+  padding: 10px;
+  background-color: rgba(100, 100, 255, 0.744);
+  border-radius: 60px;
+}
+
