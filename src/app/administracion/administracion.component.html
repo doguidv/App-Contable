@@ -9,22 +9,24 @@
                             
                             <input type="text" name="Detalle" id="Detalle" class="Inputform1"  placeholder="Especie" [(ngModel)]="Detalle">
                             
-                            <input type="text"  name="Cantidad"  id="Cantidad"   class="Inputform1" placeholder="Cantidad" [(ngModel)]="Cantidad">
+                            <input type="number"  name="Cantidad"  id="Cantidad"   class="Inputform1" placeholder="Cantidad" [(ngModel)]="Cantidad">
                           
                             
-                            <input type="text"name="Importe"  id="Importe" class="Inputform1" placeholder="Importe" [(ngModel)]="Importe">
+                            <input type="number"name="Importe"  id="Importe" class="Inputform1" placeholder="Importe" [(ngModel)]="Importe">
 
-                            <input type="text"  name="Comision" id="Comision"   class="Inputform1" placeholder="Comision" [(ngModel)]="Comision">
+                            <input type="number"  name="Comision" id="Comision"   class="Inputform1" placeholder="Comision" [(ngModel)]="Comision">
 
                          
-                           <select  name="SelectCateg" id="SelectCateg" class="barra"  >
-
+                       <select  name="SelectCateg" id="SelectCateg" class="barra"  >
+                        
                             <option  *ngFor="let Categorias of Categorias"  >   {{Categorias.Tipo_Inversion}}        </option>
-                           </select>
-                           <div class="boton-guardar" >
+                           
+                        </select>
+                    
+                        <div class="boton-guardar" >
                             <button type="submit" class="btn btn-primary" (click)="addInfo()" >  Guardar</button>
-                           </div>
-                    </form>
+                        </div>
+                </form>
             </div>
                 <div class="Botones-Admin">                     
                     <div>
