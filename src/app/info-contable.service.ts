@@ -67,6 +67,9 @@ let item = this._ListInfocontable.find((v1) =>v1.Detalle == Infocontable.Detalle
       this.adminservice.guardarInfo(this._ListInfocontable);
   
     }else {
+      
+      item.Fecha =  Infocontable.Fecha;
+      
       item.Cantidad +=  Infocontable.Cantidad;
       item.Importe+= Infocontable.Importe;
       item.Comision+= Infocontable.Comision;
