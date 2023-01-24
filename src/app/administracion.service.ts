@@ -5,7 +5,7 @@ import { Infocontable } from './administracion/administracion'
 
 
 
-const URL='https://637a13177419b414df99362e.mockapi.io/Infocontable'
+const URL='https://appcontable-c8190-default-rtdb.firebaseio.com/'
 const url='http://localhost/AppContable/api/infoContable'
 
 
@@ -20,16 +20,16 @@ export class AdministracionService {
 
   public getAll():Observable<Infocontable[]> {
 
-    return  this.http.get<Infocontable[]>(URL)
+    return  this.http.get<Infocontable[]>('https://appcontable-c8190-default-rtdb.firebaseio.com/datos.json')
   
   }
   public GetId(indice:number):Observable<Infocontable[]>{
-  return this.http.get<Infocontable[]>(URL)
+  return this.http.get<Infocontable[]>('https://appcontable-c8190-default-rtdb.firebaseio.com/datos.json')
   }
 
   guardarInfo(Infocontable:Infocontable[]){
 
-    this.http.post (URL,Infocontable).subscribe({
+    this.http.put ('https://appcontable-c8190-default-rtdb.firebaseio.com/datos.json',Infocontable).subscribe({
         next: (v) => console.log('Se Guardo la informacion' + v),
         error: (e) => console.log('Error' + e),
       });
@@ -37,7 +37,7 @@ export class AdministracionService {
 
   Actualizar(indice:number,Infocontable:Infocontable){
 
-    let url='https://637a13177419b414df99362e.mockapi.io/Infocontable'+indice+'.json';
+    let url='https://appcontable-c8190-default-rtdb.firebaseio.com/datos'+indice+'.json';
 
     
     this.http.put (url,Infocontable).subscribe({
@@ -48,7 +48,7 @@ export class AdministracionService {
 
   Eliminar(indice:number){
 
-    let url='https://637a13177419b414df99362e.mockapi.io/Infocontable'+indice+'.json';
+    let url='https://appcontable-c8190-default-rtdb.firebaseio.com/datos'+indice+'.json';
 
     this.http.delete (url).subscribe({
       next: (v) => console.log('Info borrada Correctamente' + v),

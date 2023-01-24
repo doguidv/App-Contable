@@ -69,9 +69,8 @@ let item = this._ListInfocontable.find((v1) =>v1.Detalle == Infocontable.Detalle
     }else {
       item.Cantidad +=  Infocontable.Cantidad;
       item.Importe+= Infocontable.Importe;
-      this.SumaComision  =          item.Comision+= Infocontable.Comision;
-      
-      this._ListInfocontable.push(Infocontable);      
+      item.Comision+= Infocontable.Comision;
+      this.SumaComision  = item.Comision;   
       this.adminservice.guardarInfo(this._ListInfocontable);
       this.AcumComision =  + 1;
       
@@ -79,9 +78,8 @@ let item = this._ListInfocontable.find((v1) =>v1.Detalle == Infocontable.Detalle
     this.List.next(this._ListInfocontable);
   } 
 
-
+  SumaComision:number;
   AcumComision:number=0;
-  SumaComision:number=10;
 }
 
 
