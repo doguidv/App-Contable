@@ -30,35 +30,33 @@ export class MayoresComponent {
 
 CalculoPrecioComision(InfoContable:Infocontable){
   this.PrecioComision=  ((InfoContable.Importe)   +  (InfoContable.Importe*(InfoContable.Comision/100) )  );
-  return this.PrecioComision;
 }
 
   CalculoTotal(InfoContable:Infocontable){
-    this.CalculoPrecioComision;
+    
     this.Total =  this.PrecioComision *  InfoContable.Cantidad;
   return this.Total;
   }
   
   Calculoppp(Total:number){  
-    this.ppp= Total/this.infocontableService.SumaComision;
+    this.ppp= (Total / this.infocontableService.SumaComision);
     return this.ppp;
   }
 
 Resultado(Cotizacion:number){
-  this.Calculoppp;
-  this.CalculoTotal;
-     this.resultado= Cotizacion /  this.ppp;
-     this.Cotizacion= Cotizacion;
+    this.Cotizacion= Cotizacion;
+     this.resultado= (this.Cotizacion /  this.ppp);
+     
      return this.resultado;
     }
 
-  PrecioComision:number=100;
+  PrecioComision:number;
   ppp:number=10;
   resultado:number;
   Total:number  =10;
   Cotizacion:number;
   Cantidad:number;
-  Comision:number=50/100;
+  Comision:number=30/100;
   Importe:number;
   firTerInfo='';  
     
