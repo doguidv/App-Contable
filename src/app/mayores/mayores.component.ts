@@ -28,28 +28,37 @@ export class MayoresComponent {
 
   }
 
-
-  CalculoTotal(){
-    this.PrecioComision =     ((this.ListInfoContable.Importe)   +  (this.ListInfoContable.Importe*(this.ListInfoContable.Comision/100) )  );
-
-    this.Total =  this.PrecioComision *  this.ListInfoContable.Cantidad;
-    let ppp  = this.infocontableService.ppp(this.Total);
-    this.ppp  = ppp;
-    this.Resultado();
-  }
-
-Resultado(){
-     this.resultado= this.Cotizacion /  this.ppp;
-     
+CalculoPrecioComision(InfoContable:Infocontable){
+  this.PrecioComision=  ((InfoContable.Importe)   +  (InfoContable.Importe*(InfoContable.Comision/100) )  );
+  return this.PrecioComision;
 }
 
-  PrecioComision:number=20;
-  ppp:number;
+  CalculoTotal(InfoContable:Infocontable){
+    this.CalculoPrecioComision;
+    this.Total =  this.PrecioComision *  InfoContable.Cantidad;
+  return this.Total;
+  }
+  
+  Calculoppp(Total:number){  
+    this.ppp= Total/this.infocontableService.SumaComision;
+    return this.ppp;
+  }
+
+Resultado(Cotizacion:number){
+  this.Calculoppp;
+  this.CalculoTotal;
+     this.resultado= Cotizacion /  this.ppp;
+     this.Cotizacion= Cotizacion;
+     return this.resultado;
+    }
+
+  PrecioComision:number=100;
+  ppp:number=10;
   resultado:number;
-  Total:number  = 1;
+  Total:number  =10;
   Cotizacion:number;
   Cantidad:number;
-  Comision:number;
+  Comision:number=50/100;
   Importe:number;
   firTerInfo='';  
     

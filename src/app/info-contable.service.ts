@@ -79,14 +79,9 @@ let item = this._ListInfocontable.find((v1) =>v1.Detalle == Infocontable.Detalle
   this.List.next(this._ListInfocontable);
   } 
 
-    ppp(Total:number){
-      
-      let ppp= Total/this.SumaComision;
-      return ppp;
-    }
 
   AcumComision:number=0;
-  SumaComision:number;
+  SumaComision:number=10;
 }
 
 
