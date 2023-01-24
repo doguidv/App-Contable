@@ -51,12 +51,12 @@ Resultado(Cotizacion:number){
     }
 
   PrecioComision:number;
-  ppp:number=10;
+  ppp:number;
   resultado:number;
-  Total:number  =10;
+  Total:number ;
   Cotizacion:number;
   Cantidad:number;
-  Comision:number=30/100;
+  Comision:number;
   Importe:number;
   firTerInfo='';  
     
