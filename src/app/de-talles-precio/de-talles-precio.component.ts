@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Infocontable } from '../administracion/administracion';
+import { InfoContableService } from '../info-contable.service';
 
 @Component({
   selector: 'app-de-talles-precio',
@@ -6,16 +9,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./de-talles-precio.component.scss']
 })
 export class DeTallesPrecioComponent {
+ 
 
 
-          constructor(){
-
-          }
-          ngOnInit():void{
+          constructor(private infocontableService:InfoContableService,private route:ActivatedRoute){
 
           }
+       
+   Infocontable:Infocontable[]=[];
 
-  DetallePrecio:string= "Precio de contado mas todo lo que se me ocurrio cobrar por q te vi cara de Concheto";
+    ngOnInit():void{
+      this.infocontableService.GetInfo()
+      .subscribe(Infocontable => {
+        this.Infocontable  = Infocontable
+      }); 
 
+      this.indice=this.route.snapshot.params['id'];
+    }
+    
+    indice: number;
+  DetallesCosto:string;
 
 }

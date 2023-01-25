@@ -14,8 +14,8 @@ export class UpDateComponent implements OnInit {
     private infocontableService:InfoContableService,private route:ActivatedRoute ){
      
    }
-  
-   Infocontable:Infocontable[]=[];
+    
+    Infocontable:Infocontable[]=[];
 
   
     ngOnInit():void{
@@ -31,7 +31,6 @@ export class UpDateComponent implements OnInit {
       this.Fecha=InfoCont.Fecha;
         this.Detalle=InfoCont.Detalle;
         this.Cantidad=InfoCont.Cantidad;
-        this.Comision=InfoCont.Comision;
         this.Importe=InfoCont.Importe;
         this.DetallesCosto=InfoCont.DetallesCosto;
         this.id_categorias_fk=InfoCont.id_categorias_fk;
@@ -41,7 +40,7 @@ export class UpDateComponent implements OnInit {
 
         UpdateInfo(){
 
-           let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.Comision,this.Importe,this.DetallesCosto,  this.id_categorias_fk);
+           let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.Importe,this.DetallesCosto,  this.id_categorias_fk);
            this.infocontableService.UpdateToInfo(this.indice,InfoCont);
    
         }
@@ -52,7 +51,6 @@ export class UpDateComponent implements OnInit {
   Fecha:string;
   Detalle:string="";
   Cantidad:number;
-  Comision:number;
   Importe:number;
   DetallesCosto:string;
 

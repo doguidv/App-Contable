@@ -43,7 +43,6 @@ export class InfoContableService {
       InfoContModificada.Fecha=InfoCont.Fecha;
       InfoContModificada.Detalle=InfoCont.Detalle;
       InfoContModificada.Cantidad=InfoCont.Cantidad;
-      InfoContModificada.Comision=InfoCont.Comision;
       InfoContModificada.Importe=InfoCont.Importe;
       InfoContModificada.DetallesCosto=InfoCont.DetallesCosto;
       InfoContModificada.id_categorias_fk=InfoCont.id_categorias_fk;
@@ -73,7 +72,6 @@ let item = this._ListInfocontable.find((v1) =>v1.Detalle == Infocontable.Detalle
       
       item.Cantidad +=  Infocontable.Cantidad;
       item.Importe+= Infocontable.Importe;
-      item.Comision+= Infocontable.Comision;
       this.adminservice.guardarInfo(this._ListInfocontable);
       
     }

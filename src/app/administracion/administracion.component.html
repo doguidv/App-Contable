@@ -8,7 +8,7 @@
                 
                 <form id="stiloFormAdmin" action="" class="oculto" >
                         
-                            <input type="text" name="Fecha" id="Fecha" class="Inputform1" placeholder="Fecha" [(ngModel)]="Fecha">
+                            <input type="text" name="Fecha" id="Fecha" class="Inputform1" placeholder="Fecha 00/00/0000" [(ngModel)]="Fecha">
                             
                             <input type="text" name="Detalle" id="Detalle" class="Inputform1"  placeholder="Especie" [(ngModel)]="Detalle">
                             
@@ -17,7 +17,6 @@
                             
                             <input type="number"name="Importe"  id="Importe" class="Inputform1" placeholder="Importe" [(ngModel)]="Importe">
 
-                            <input type="number"  name="Comision" id="Comision"   class="Inputform1" placeholder="Comision" [(ngModel)]="Comision">
 
                             <textarea type="text"  name="DetallesCosto" id="DetallesCosto"   class="Inputform1" placeholder="Detalle del Costo" [(ngModel)]="DetallesCosto">
                                 
@@ -46,16 +45,13 @@
                 <table class="table">
                     <thead>
                     <tr>
-                        <th scope="col">Fecha</th>
+                        <th scope="col">Fecha </th>
 
                         <th scope="col">Especie</th>
                         
                         <th scope="col">Cantidad</th>
                         
                         <th scope="col">Importe</th>
-
-                        <th scope="col">Comision</th>
-                        
 
                         <th scope="col">Tipo_Especie</th>
                                             
@@ -65,12 +61,11 @@
                     <tbody>
                     <tr *ngFor="let InfoContable of Infocontable; let  i  = index">
                         
-                        <td>{{InfoContable.Fecha}} </td>
+                             <td>{{InfoContable.Fecha}} </td>
                         <td>   {{InfoContable.Detalle}}    </td>
                         <td> {{InfoContable.Cantidad}}   </td>
                         <td>  {{InfoContable.Importe|currency}}   </td>  
-                        <td> {{InfoContable.Comision}}   </td> 
-                        <td >  {{InfoContable.id_categorias_fk}}   </td>                   
+                        <td >  {{InfoContable.id_categorias_fk}}  1 </td>                   
                 <td> <a class="btn btn-warning"    [routerLink]="['/Update', i]">editar</a>  </td> 
                     </tr>
                     </tbody>
