@@ -17,9 +17,9 @@
                             <input type="number"  name="Comision" id="Comision"   class="Inputform1" placeholder="Comision" [(ngModel)]="Comision">
 
                          
-                       <select  name="SelectCateg" id="SelectCateg" class="barra"  >
+                       <select  name="SelectCateg" id="SelectCateg" [(ngModel)]="Categorias" class="barra" >
                         
-                            <option  *ngFor="let Categorias of Categorias"  >   {{Categorias.Tipo_Inversion}}        </option>
+                            <option  *ngFor="let Categorias of Categorias" [value]="Categorias.Tipo_Inversion"   >   {{Categorias.Tipo_Inversion}}        </option>
                            
                         </select>
                     

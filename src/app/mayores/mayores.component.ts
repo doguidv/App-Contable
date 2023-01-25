@@ -35,19 +35,15 @@ CalculoPrecioComision(InfoContable:Infocontable){
   CalculoTotal(InfoContable:Infocontable){
     
     this.Total =  this.PrecioComision *  InfoContable.Cantidad;
-  return this.Total;
   }
   
-  Calculoppp(Total:number){  
-    this.ppp= (Total / this.infocontableService.SumaComision);
-    return this.ppp;
+  Calculoppp(Total:number,InfoContable:Infocontable){  
+    this.ppp= (Total / InfoContable.Comision);
   }
 
 Resultado(Cotizacion:number){
     this.Cotizacion= Cotizacion;
      this.resultado= (this.Cotizacion /  this.ppp);
-     
-     return this.resultado;
     }
 
   PrecioComision:number;

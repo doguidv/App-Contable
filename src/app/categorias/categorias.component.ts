@@ -12,12 +12,7 @@ export class CategoriasComponent {
 
 @Output ()  ListCategorias:Categorias;
   
-Categorias:Categorias[]=[
-
-new Categorias ("Acciones"),
-new Categorias ("Bonos"),
-new Categorias ("Plazo Fijo"),
-];
+Categorias:Categorias[]=[];
 
   id_categorias:number;
   Tipo_Inversion:string;  
