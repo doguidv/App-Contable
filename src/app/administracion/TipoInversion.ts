@@ -1,0 +1,8 @@
+export class TipoInversion{
+
+
+
+    constructor(){
+
+    }
+}

@@ -12,7 +12,7 @@
         <th scope="col">Fecha</th>
         <th scope="col">Especie</th>
         <th scope="col">Cantidad</th>        
-        <th scope="col">Precio</th>
+        <th scope="col">  Precio</th>
         <th scope="col">Comision</th>
         <th scope="col">Precio Con Comision</th>
         <th scope="col">Cotizacion</th>
@@ -30,7 +30,7 @@
         <td> {{InfoContable.Cantidad}}   </td>
 
       
-        <td  >  {{InfoContable.Importe}}   </td>
+        <td  > <button> {{InfoContable.Importe}}  </button> </td>
 
         <td> {{InfoContable.Comision}}   </td>  
         <td name="PrecioComision" [(ngModel)]="PrecioComision" >{{PrecioComision}}</td>   

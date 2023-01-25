@@ -3,6 +3,7 @@ import { Infocontable } from './administracion';
 import { InfoContableService } from '../info-contable.service';
 import { CategoriasService } from '../categorias.service';
 import { Categorias } from '../categorias/categorias';
+import { TipoInversion } from './TipoInversion';
 
 @Component({
   selector: 'app-administracion',
@@ -34,6 +35,7 @@ export class AdministracionComponent implements OnInit {
       }); 
         }
 
+        TipoInversion:TipoInversion[]=[];
         Categorias:Categorias[]=[];
 
         Infocontable:Infocontable[]=[];
@@ -45,7 +47,7 @@ export class AdministracionComponent implements OnInit {
       this.infocontableService.addToInfo(InfoCont);
     }
     
-
+    PrecioDetalles:string;
     Tipo_Inversion:string;
   Fecha:string;
   Detalle:string;

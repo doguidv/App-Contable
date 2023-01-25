@@ -13,6 +13,7 @@ import { AdministracionService } from './administracion.service';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { UpDateComponent } from './up-date/up-date.component';
 import { FilterPipe } from './pipes/filter.pipe';
+import { DeTallesPrecioComponent } from './de-talles-precio/de-talles-precio.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FilterPipe } from './pipes/filter.pipe';
     CategoriasComponent,
     UpDateComponent,
     FilterPipe,
+    DeTallesPrecioComponent,
   ],
   imports: [
     BrowserModule,
