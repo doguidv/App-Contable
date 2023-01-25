@@ -3,7 +3,6 @@ import { Infocontable } from './administracion';
 import { InfoContableService } from '../info-contable.service';
 import { CategoriasService } from '../categorias.service';
 import { Categorias } from '../categorias/categorias';
-import { TipoInversion } from './TipoInversion';
 
 @Component({
   selector: 'app-administracion',
@@ -35,7 +34,6 @@ export class AdministracionComponent implements OnInit {
       }); 
         }
 
-        TipoInversion:TipoInversion[]=[];
         Categorias:Categorias[]=[];
 
         Infocontable:Infocontable[]=[];
@@ -43,7 +41,7 @@ export class AdministracionComponent implements OnInit {
     
     addInfo(){
 
-      let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.Comision,this.Importe,this.id_categorias_fk);
+      let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.Comision,this.Importe,this.DetallesCosto,this.id_categorias_fk);
       this.infocontableService.addToInfo(InfoCont);
     }
     
@@ -55,7 +53,7 @@ export class AdministracionComponent implements OnInit {
   Comision:number;
   Importe:number;
   id_categorias_fk:number;
-  
+  DetallesCosto:string;
 
  maxReached( m:string ){
   alert(m);

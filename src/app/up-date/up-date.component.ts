@@ -33,6 +33,7 @@ export class UpDateComponent implements OnInit {
         this.Cantidad=InfoCont.Cantidad;
         this.Comision=InfoCont.Comision;
         this.Importe=InfoCont.Importe;
+        this.DetallesCosto=InfoCont.DetallesCosto;
         this.id_categorias_fk=InfoCont.id_categorias_fk;
         
         }
@@ -40,7 +41,7 @@ export class UpDateComponent implements OnInit {
 
         UpdateInfo(){
 
-           let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.Comision,this.Importe,this.id_categorias_fk);
+           let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.Comision,this.Importe,this.DetallesCosto,  this.id_categorias_fk);
            this.infocontableService.UpdateToInfo(this.indice,InfoCont);
    
         }
@@ -53,6 +54,8 @@ export class UpDateComponent implements OnInit {
   Cantidad:number=0;
   Comision:number;
   Importe:number=0;
+  DetallesCosto:string;
+
   id_categorias_fk:number=0;
     indice:number;
 
