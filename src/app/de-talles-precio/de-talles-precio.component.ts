@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class DeTallesPrecioComponent {
 
+
+          constructor(){
+
+          }
+          ngOnInit():void{
+
+          }
+
+  DetallePrecio:string= "Precio de contado mas todo lo que se me ocurrio cobrar por q te vi cara de Concheto";
+
+
 }

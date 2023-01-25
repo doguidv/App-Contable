@@ -51,12 +51,12 @@ export class UpDateComponent implements OnInit {
       }
   Fecha:string;
   Detalle:string="";
-  Cantidad:number=0;
+  Cantidad:number;
   Comision:number;
-  Importe:number=0;
+  Importe:number;
   DetallesCosto:string;
 
-  id_categorias_fk:number=0;
+  id_categorias_fk:number;
     indice:number;
 
  maxReached( m:string ){

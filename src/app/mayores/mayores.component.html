@@ -30,7 +30,7 @@
         <td> {{InfoContable.Cantidad}}   </td>
 
       
-        <td  > <button> {{InfoContable.Importe}}  </button> </td>
+        <td  > <button  [routerLink]="['/DetallesPrecio']"   > {{InfoContable.Importe}}  </button> </td>
 
         <td> {{InfoContable.Comision}}   </td>  
         <td name="PrecioComision" [(ngModel)]="PrecioComision" >{{PrecioComision}}</td>   

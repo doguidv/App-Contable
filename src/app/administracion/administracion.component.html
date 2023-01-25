@@ -19,7 +19,9 @@
 
                             <input type="number"  name="Comision" id="Comision"   class="Inputform1" placeholder="Comision" [(ngModel)]="Comision">
 
-                            <textarea type="text"  name="DetallesCosto" id="DetallesCosto"   class="Inputform1" placeholder="Detalle del Costo" [(ngModel)]="DetallesCosto"></textarea>
+                            <textarea type="text"  name="DetallesCosto" id="DetallesCosto"   class="Inputform1" placeholder="Detalle del Costo" [(ngModel)]="DetallesCosto">
+                                
+                            </textarea>
                        <select  name="SelectCateg" id="SelectCateg" [(ngModel)]="Categorias" class="barra" >
                         
                             <option  *ngFor="let Categorias of Categorias" [value]="Categorias.Tipo_Inversion"   >   {{Categorias.Tipo_Inversion}}        </option>
