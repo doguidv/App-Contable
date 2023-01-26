@@ -45,7 +45,6 @@ export class AdministracionComponent implements OnInit {
       this.infocontableService.addToInfo(InfoCont);
     }
     
-    PrecioDetalles:string;
     Tipo_Inversion:string;
   Fecha:string;
   Detalle:string;
