@@ -61,11 +61,9 @@
                              <td>{{InfoContable.Fecha}} </td>
                         <td>   {{InfoContable.Detalle}}    </td>
                         <td> {{InfoContable.Cantidad}}   </td>
-                        <td>  {{InfoContable.Importe|currency}}   </td>  
-                        <td>  {{InfoContable.DetallesCosto}}   </td>  
-                        
-                        <td >  {{InfoContable.id_categorias_fk}}  1 </td>                   
-                <td> <a class="btn btn-warning"    [routerLink]="['/Update', i]">editar</a>  </td> 
+                        <td>  {{InfoContable.Importe|currency}}   </td>
+                        <td >  {{InfoContable.id_categorias_fk}}   </td>
+                        <td> <a class="btn btn-warning"    [routerLink]="['/Update', i]">editar</a>  </td> 
                     </tr>
                     </tbody>
                 </table>

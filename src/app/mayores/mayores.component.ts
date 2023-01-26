@@ -30,7 +30,7 @@ export class MayoresComponent {
 
   CalculoTotal(InfoContable:Infocontable){
     
-    this.Total =  this.PrecioComision *  InfoContable.Cantidad;
+    this.Total = this.Importe *  InfoContable.Cantidad;
   }
   
 
