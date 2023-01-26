@@ -28,18 +28,14 @@ export class MayoresComponent {
 
   }
 
-  CalculoTotal(InfoContable:Infocontable){
-    
-    this.Total = this.Importe *  InfoContable.Cantidad;
-  }
-  
 
 Resultado(Cotizacion:number){
     this.Cotizacion= Cotizacion;
      this.resultado= (this.Cotizacion /  this.ppp);
     }
 
-  PrecioComision:number;
+    Procentajedevariacion:number;
+     PrecioComision:number;
   ppp:number;
   resultado:number;
   Total:number ;

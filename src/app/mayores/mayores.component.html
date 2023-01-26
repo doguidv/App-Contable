@@ -12,11 +12,15 @@
         <th scope="col">Fecha</th>
         <th scope="col">Especie</th>
         <th scope="col">Cantidad</th>        
-        <th scope="col">  Precio</th>
+        <th scope="col">  Costo Acum</th>
+     
+        <th scope="col">  Costo Unitario</th>
+
         <th scope="col">Cotizacion</th>
+     
         <th scope="col"> Costo Total</th>
-        <th scope="col">P P P</th>
-        <th scope="col"> Resultado</th>
+        
+        <th scope="col"> Porcentaje de variacion</th>
     </tr>
     </thead>
     
@@ -29,21 +33,19 @@
         
         <td> {{InfoContable.Cantidad}}   </td>      
        
-        <td  > <a  [routerLink]="['/DetallesPrecio', i]"   > {{InfoContable.Importe}} </a> </td>
- 
-        <td name="PrecioComision" [(ngModel)]="PrecioComision" >{{PrecioComision}}</td>   
+        <td  > <a  [routerLink]="['/DetallesPrecio', i]"> {{InfoContable.Importe}} </a> </td>
+
+        <td name="CostoUnit" >   {{ InfoContable.Importe/InfoContable.Cantidad}}   </td>      
 
         <td >
       
-          <input class="input" type="text" name="Cotizacion" id="Cotizacion" placeholder="Ingresar Contizacion" (keypress)=" CalculoTotal(InfoContable);Resultado(Cotizacion)"  [(ngModel)]="Cotizacion" >  
+          <input class="input" type="text" name="Cotizacion" id="Cotizacion" placeholder="Ingresar Contizacion"   [(ngModel)]="Cotizacion" >  
       
         </td>
      
-        <td   name="Total"  type="number"  [(ngModel)]="Total" scope="col">  {{Total}}  </td>
+        <td   name="Total"  type="number"  [(ngModel)]="Total" scope="col">  {{InfoContable.Importe * InfoContable.Cantidad}}  </td>
      
-        <td name="ppp" id="ppp" [(ngModel)]="ppp"  > {{ppp}} </td>
-      
-        <td  name="resultado" scope="col"  > {{resultado }}  </td>    
+        <td  name="PorcentajeDevariacion" scope="col"  > {{ Cotizacion      /    InfoContable.Importe}}  </td>    
     
 </tr>    
     </tbody>
