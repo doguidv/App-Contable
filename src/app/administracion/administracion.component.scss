@@ -17,6 +17,8 @@
 }
 
 
+
+
 thead,tbody{
   display: block;
   }
@@ -31,8 +33,8 @@ thead,tbody{
   tbody {
     box-sizing: content-box;
   
-    width: 200%;
-    height: 40vh;
+    width: 250%;
+    height: 65vh;
     text-align: center;
   
   
@@ -44,7 +46,8 @@ thead,tbody{
   }
   
 th {
-  width: 8.5%;
+  width:22%;
+  
 }
 
 
@@ -53,7 +56,7 @@ th {
 td {
   padding: 10px;
   height: 20px;
-  width: 15.68%;
+  width: 8%;
 
   text-align: center;
 
@@ -62,26 +65,30 @@ td {
 
 
 
-.ContenedorDatosAdmin{
-
-display: flex;
-flex-direction: column;
-margin-left: 25vh;
-margin-top: -50px;
-margin-bottom: 1px;
-}
-
-
 
 .ContenedorFormAdmin{
-margin-top: 15%;
-margin-left: 12px;
-margin-right: 55%;
-margin-bottom: 5%;
+height: 20%;
+
+margin-top: 18%;
+margin-left: 10%;
+margin-right: 25%;
+
 padding: 12px;
 
 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
+
+
+
+.ContenedorDatosAdmin{
+
+  display: flex;
+  flex-direction: row;
+  margin-right: 20%;
+  margin-top: 10%;
+  }
+  
+
 
 
 .Inputform1 {
