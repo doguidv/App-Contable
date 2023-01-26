@@ -21,21 +21,18 @@
 
 thead,tbody{
   display: block;
-  }
-
-
-  thead {
-    width: 200%;
-    text-align: center;
-  }
+  text-align: center;
+  width: 60vw;
   
+  }
+
   
   tbody {
     box-sizing: content-box;
   
-    width: 250%;
+    
     height: 65vh;
-    text-align: center;
+    
   
   
     background: rgba(255, 255, 255, 0.29);
@@ -44,19 +41,12 @@ thead,tbody{
     border-radius: 30px;
     overflow: auto;
   }
-  
-th {
-  width:22%;
-  
-}
 
 
 
+tbody,td {
 
-td {
-  padding: 10px;
-  height: 20px;
-  width: 8%;
+  width: 65%;
 
   text-align: center;
 

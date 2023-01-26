@@ -62,7 +62,7 @@ color: #000000;
 
 
 footer {
-    position: relative;
+    position: absolute;
 
 
 font-family: 'Arial';
@@ -71,11 +71,11 @@ font-weight: 400;
 font-size: 10px;
 line-height: 15px;
 
-align-items: normal;
-text-align: left;
+
 padding-left: 30px;
 bottom: 0;
 width: 100%;
+margin-bottom: 10px;
 
 
 color: #000000;
