@@ -21,20 +21,16 @@
 
 thead,tbody{
   display: block;
-  text-align: center;
-  width: 60vw;
-  
-  }
+
+  width: 65vw;
+}
 
   
   tbody {
     box-sizing: content-box;
   
-    
     height: 65vh;
-    
-  
-  
+   
     background: rgba(255, 255, 255, 0.29);
     border: 3px solid #000000;
     box-shadow: -10px 15px 5px 3px rgba(0, 0, 0, 0.25);
@@ -44,10 +40,11 @@ thead,tbody{
 
 
 
-tbody,td {
+  tbody,td,th {
 
-  width: 65%;
-
+  width: 65vw;
+min-width: 120px;
+min-height: 120px;
   text-align: center;
 
 }

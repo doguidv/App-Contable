@@ -7,23 +7,11 @@
 
 thead,tbody{
   display: block;
-    
+
+  width: 65vw;
 }
 
-th {
-  width: 163px;
-  text-align: center;
 
-
-
-}
-
-td {
-  height: 20px;
-  width: 14%;
- 
-
-}
 
 tbody {
   box-sizing: border-box;
@@ -41,6 +29,18 @@ tbody {
   border-radius: 30px;
   overflow: auto;
 }
+
+
+
+tbody,td,th {
+
+  width: 65vw;
+min-width: 120px;
+min-height: 120px;
+  text-align: center;
+
+}
+
 
 .ingcotizacion {
 margin-right: 20px;
