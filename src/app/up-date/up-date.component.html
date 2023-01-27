@@ -45,6 +45,9 @@
         <th scope="col">  Costo Acum</th>
      
         <th scope="col">  Costo Unitario</th>
+        <th scope="col">  detalles del costo</th>
+
+
         <th scope="col"> Costo Total</th>
         
         <th scope="col"> Porcentaje de variacion</th>
@@ -63,6 +66,8 @@
         <td  >   {{Importe |currency}}</td>
 
         <td name="CostoUnit" >   {{ Importe/Cantidad    |currency}}   </td>      
+
+        <td name="CostoUnit" >   {{DetallesCosto}}  </td>      
 
        
      

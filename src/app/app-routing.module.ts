@@ -4,7 +4,6 @@ import { AdministracionComponent } from './administracion/administracion.compone
 
 import { DeTallesPrecioComponent } from './de-talles-precio/de-talles-precio.component';
 import { HomeComponent } from './home/home.component';
-import { MayoresComponent } from './mayores/mayores.component';
 import { UpDateComponent } from './up-date/up-date.component';
 
 
@@ -15,19 +14,12 @@ const routes: Routes = [
     pathMatch:'full'
   },
   {
-    path:'Mayores',
-    component: MayoresComponent
-    },
-  {
     path:'administracion',
     component: AdministracionComponent
   },
   {
     path:'Update/:id',
     component:  UpDateComponent
-  },
-    {path:'Buscar/:id',
-  component:MayoresComponent
   },
   {
     path: 'DetallesPrecio:id',
