@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
 import { Infocontable } from '../administracion/administracion';
 import { InfoContableService } from '../info-contable.service';
@@ -55,7 +55,8 @@ resultChange: EventEmitter<number>  = new EventEmitter<number>() ;
 
       CalculoResul():void{
         if(this.Cotizacion>0){
-          this.result=this.Cotizacion/this.Importe;
+
+          this.result=   (this.Cotizacion/this.Importe);
           this.resultChange.emit( this.result);
         }
       }

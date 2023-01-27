@@ -17,12 +17,7 @@
 
 
         <input type="text"  name="Cotizacion"  id="Importe" class="Inputform1" placeholder="Cotizacion" (input)="CalculoResul()" [(ngModel)]="Cotizacion">
-          
-
-            <!-- <app-input-number [(result)]="result" ></app-input-number> -->
-     
-
-
+        
             <div >
                 <button type="submit" class="btn btn-primary"  (click)="UpdateInfo()" >  Guardar</button>
             
@@ -36,40 +31,41 @@
 
 
 <div    class="DivTabla">
-      
-<table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Fecha</th>
-        <th scope="col">Especie</th>
-        <th scope="col">Cantidad</th>        
-        <th scope="col">  Costo Acum</th>
-     
-        <th scope="col">  Costo Unitario</th>
-        <th scope="col">  detalles del costo</th>
+            
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Fecha</th>
+                <th scope="col">Especie</th>
+                <th scope="col">Cantidad</th>        
+                <th scope="col">  Costo Acum</th>
+            
+                <th scope="col">  Costo Unitario</th>
+                <th scope="col">  detalles del costo</th>
 
 
-        <th scope="col"> Costo Total</th>
-        
-        <th scope="col"> Porcentaje de variacion</th>
-    </tr>
-    </thead>
-    
-    <tbody>
-      <tr >
+                <th scope="col"> Costo Total</th>
+                
+                <th scope="col"> Porcentaje de variacion</th>
+            </tr>
+            </thead>
+            
+            <tbody>
+            <tr >
 
-        <td>  {{Fecha }} </td>
-        
-        <td>   {{Detalle}}    </td>
-        
-        <td> {{Cantidad}}   </td>      
-       
-        <td  >   {{Importe |currency}}</td>
+                <td>  {{Fecha }} </td>
+                
+                <td>   {{Detalle}}    </td>
+                
+                <td> {{Cantidad}}   </td>      
+            
+                <td  >   {{Importe |currency}}</td>
 
-        <td name="CostoUnit" >   {{ Importe/Cantidad    |currency}}   </td>      
+                <td name="CostoUnit" >   {{ Importe/Cantidad    |currency}}   </td>      
 
-        <td name="CostoUnit" >   {{DetallesCosto}}  </td>      
+                <td name="CostoUnit" >   {{DetallesCosto}}  </td>      
 
+<<<<<<< HEAD
        
      
         <td   name="Total"  type="number"  [(ngModel)]="Total" scope="col">  {{Importe *    Cantidad  |currency}}  </td>
@@ -79,6 +75,17 @@
 </tr>    
     </tbody>
 </table>
+=======
+            
+            
+                <td   name="Total"  type="number"  [(ngModel)]="Total" scope="col">  {{Importe *    Cantidad  |currency}}  </td>
+            
+                <td  scope="col" [(ngModel)]="result"> {{ result        }}   </td>    
+            
+        </tr>    
+            </tbody>
+        </table>
+>>>>>>> 98123cadf6d07db9661690d2792a309163e6b532
 
 </div>
 
