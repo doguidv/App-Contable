@@ -15,13 +15,12 @@
           
 
 
-        <input type="text"  name="Cotizacion"  id="Importe" class="Inputform1" placeholder="Cotizacion" (input)="CalculoResul()" [(ngModel)]="Cotizacion">
+        <input type="text"  name="Cotizacion"  id="Importe" class="Inputform1" placeholder="Cotizacion" (input)="CalculoResul();CostoUnit();CostoTotal()" [(ngModel)]="Cotizacion">
         
             <div >
                 <button type="submit" class="btn btn-primary"  (click)="UpdateInfo()" >  Guardar</button>
             
                 <button type="submit" class="btn btn-primary" [routerLink]="'/administracion'" (click)="EliminaInfo()" > Eliminar</button>
-
             </div>
             
         </form>
@@ -66,7 +65,7 @@
 
             
             
-                <td   name="Total"  type="number"  [(ngModel)]="Total" scope="col">  {{Importe *    Cantidad  |currency}}  </td>
+                <td   name="Total"  type="number"  [(ngModel)]="Total" scope="col">  {{ Total|currency}}  </td>
             
                 <td  scope="col" [(ngModel)]="result"> {{ result }}   </td>    
             
@@ -75,3 +74,5 @@
         </table>
 
 </div>
+
+

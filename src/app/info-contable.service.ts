@@ -79,7 +79,7 @@ let item = this._ListInfocontable.find((v1) =>v1.Detalle == Infocontable.Detalle
     this.List.next(this._ListInfocontable);
   } 
 
-acumCant:number;
+acumCant:number=2;
 
 }
 

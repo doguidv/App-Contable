@@ -50,13 +50,14 @@ resultChange: EventEmitter<number>  = new EventEmitter<number>() ;
         }
       EliminaInfo(){
         this.infocontableService.EliminarInfo(this.indice);
-        
-      }
+       }
 
+       CostoTotal():void{
+   this.Total=          this.Importe *    this.Cantidad/this.infocontableService.acumCant;
+}
 
 CostoUnit():void{
-  let cantidad=  (this.Cantidad/this.infocontableService.acumCant);
-    this.costoUnit= (this.Importe/cantidad);
+    this.costoUnit= (this.Total/this.Cantidad);
 }
 
 
