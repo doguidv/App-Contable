@@ -7,3 +7,49 @@ padding: 12px;
 
 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
+
+.Contenedor-Resumen{
+
+    padding-left: 28%;    
+    padding-top: 15%;
+    
+  }
+  
+  
+  thead,tbody{
+    display: block;
+  
+  }
+  
+    
+    tbody {
+      box-sizing: content-box;
+      height: 50vh;
+         background: rgba(255, 255, 255, 0.29);
+      border: 3px solid #000000;
+      box-shadow: -10px 15px 5px 3px rgba(0, 0, 0, 0.25);
+      border-radius: 30px;
+      overflow: auto;
+    }
+  
+  
+  
+    tbody,td,th {
+  
+    width: 65vw;
+    min-width: 40px;
+    min-height: 40px;
+    text-align: center;
+  
+  }
+  
+  
+  
+  
+  .ingcotizacion {
+  margin-right: 20px;
+  }
+  
+  
+  
+  
