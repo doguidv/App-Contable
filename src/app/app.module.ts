@@ -11,7 +11,6 @@ import {  HttpClientModule } from '@angular/common/http';
 import { InfoContableService } from './info-contable.service';
 import { AdministracionService } from './administracion.service';
 import { UpDateComponent } from './up-date/up-date.component';
-import { FilterPipe } from './pipes/filter.pipe';
 import { DeTallesPrecioComponent } from './de-talles-precio/de-talles-precio.component';
 
 
@@ -23,7 +22,6 @@ import { DeTallesPrecioComponent } from './de-talles-precio/de-talles-precio.com
     AdministracionComponent,
     HomeComponent,
     UpDateComponent,
-    FilterPipe,
     DeTallesPrecioComponent,
   ],
   imports: [

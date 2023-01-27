@@ -35,7 +35,7 @@ resultChange: EventEmitter<number>  = new EventEmitter<number>() ;
       this.Fecha=InfoCont.Fecha;
         this.Detalle=InfoCont.Detalle;
         this.Cantidad=InfoCont.Cantidad;
-        this.Importe=InfoCont.Importe;
+        this.Importe  = InfoCont.Importe;
         this.DetallesCosto=InfoCont.DetallesCosto;
         this.id_categorias_fk=InfoCont.id_categorias_fk;
         
@@ -53,6 +53,13 @@ resultChange: EventEmitter<number>  = new EventEmitter<number>() ;
         
       }
 
+
+CostoUnit():void{
+  let cantidad=  (this.Cantidad/this.infocontableService.acumCant);
+    this.costoUnit= (this.Importe/cantidad);
+}
+
+
       CalculoResul():void{
         if(this.Cotizacion>0){
 
@@ -61,6 +68,9 @@ resultChange: EventEmitter<number>  = new EventEmitter<number>() ;
         }
       }
 
+
+  costoUnit:number;
+    CostoTotalAcum:number;
       Total:number;
       result:number;
       Cotizacion:number;

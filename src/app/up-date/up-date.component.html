@@ -60,15 +60,15 @@
             
                 <td  >   {{Importe |currency}}</td>
 
-                <td name="CostoUnit" >   {{ Importe/Cantidad    |currency}}   </td>      
+                <td name="CostoUnit"  >   {{   costoUnit |currency}}   </td>      
 
-                <td name="CostoUnit" >   {{DetallesCosto}}  </td>      
+                <td name="DetallesCosto" >   {{DetallesCosto}}  </td>      
 
             
             
                 <td   name="Total"  type="number"  [(ngModel)]="Total" scope="col">  {{Importe *    Cantidad  |currency}}  </td>
             
-                <td  scope="col" [(ngModel)]="result"> {{ result        }}   </td>    
+                <td  scope="col" [(ngModel)]="result"> {{ result }}   </td>    
             
         </tr>    
             </tbody>
