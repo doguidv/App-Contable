@@ -25,7 +25,7 @@
             <div >
                 <button type="submit" class="btn btn-primary"  (click)="UpdateInfo()" >  Guardar</button>
             
-                <button type="submit" class="btn btn-primary" (click)="EliminaInfo()" > Eliminar</button>
+                <button type="submit" class="btn btn-primary" [routerLink]="'/administracion'" (click)="EliminaInfo()" > Eliminar</button>
 
             </div>
             
@@ -34,7 +34,7 @@
 
 
 
-
+<div    class="DivTabla">
       
 <table class="table">
     <thead>
@@ -73,8 +73,10 @@
      
         <td   name="Total"  type="number"  [(ngModel)]="Total" scope="col">  {{Importe *    Cantidad  |currency}}  </td>
      
-        <td  scope="col" [(ngModel)]="result"> {{ result}}  </td>    
+        <td  scope="col" [(ngModel)]="result"> {{ result}}   | percent [ : digitsInfo [ : locale ] ]  </td>    
     
 </tr>    
     </tbody>
 </table>
+
+</div>
