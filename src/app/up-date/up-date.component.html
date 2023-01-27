@@ -16,12 +16,7 @@
 
 
         <input type="text"  name="Cotizacion"  id="Importe" class="Inputform1" placeholder="Cotizacion" (input)="CalculoResul()" [(ngModel)]="Cotizacion">
-          
-
-            <!-- <app-input-number [(result)]="result" ></app-input-number> -->
-     
-
-
+        
             <div >
                 <button type="submit" class="btn btn-primary"  (click)="UpdateInfo()" >  Guardar</button>
             
@@ -73,7 +68,7 @@
             
                 <td   name="Total"  type="number"  [(ngModel)]="Total" scope="col">  {{Importe *    Cantidad  |currency}}  </td>
             
-                <td  scope="col" [(ngModel)]="result"> {{ result | percent        }}   </td>    
+                <td  scope="col" [(ngModel)]="result"> {{ result        }}   </td>    
             
         </tr>    
             </tbody>
