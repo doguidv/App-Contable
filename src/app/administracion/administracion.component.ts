@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Infocontable } from './administracion';
 import { InfoContableService } from '../info-contable.service';
 
@@ -15,7 +15,6 @@ export class AdministracionComponent implements OnInit {
      
    }
 
-  
     ngOnInit():void{
       this.infocontableService.GetInfo()
       .subscribe(Infocontable => {

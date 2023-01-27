@@ -28,7 +28,7 @@ export class InputNumberComponent {
         }
  @Input()
   result: number;
-  
+ 
  @Output()
   resultChange: EventEmitter<number>  = new EventEmitter<number>() ;
 
@@ -36,6 +36,10 @@ export class InputNumberComponent {
   maxReached: EventEmitter<string>  = new EventEmitter<string>() ;
 
 
+  Import(InfoContable:Infocontable):void{
+  this.Importe= InfoContable.Importe;
+return ;
+}
   CalculoResul():void{
     if(this.Cotizacion>0){
       this.result=this.Importe/this.Cotizacion;
@@ -45,6 +49,6 @@ export class InputNumberComponent {
       this.maxReached.emit("Se alcanzo el Cupo  maximo"); 
     }
   }
-  Importe:number=30;
   Cotizacion:number;
+  Importe:number=1;
 }
