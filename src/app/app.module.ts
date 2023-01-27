@@ -13,7 +13,7 @@ import { AdministracionService } from './administracion.service';
 import { UpDateComponent } from './up-date/up-date.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { DeTallesPrecioComponent } from './de-talles-precio/de-talles-precio.component';
-import { PercentPipeComponent } from './pipes/percent.pipe';
+
 
 
 
@@ -25,7 +25,6 @@ import { PercentPipeComponent } from './pipes/percent.pipe';
     UpDateComponent,
     FilterPipe,
     DeTallesPrecioComponent,
-    PercentPipeComponent
   ],
   imports: [
     BrowserModule,

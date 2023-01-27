@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
 import { Infocontable } from '../administracion/administracion';
 import { InfoContableService } from '../info-contable.service';
