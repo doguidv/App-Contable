@@ -33,22 +33,21 @@
         
         <td> {{InfoContable.Cantidad}}   </td>      
        
-        <td  > <a  [routerLink]="['/DetallesPrecio', i]"> {{InfoContable.Importe}} </a> </td>
+        <td  > <a    [routerLink]="['/DetallesPrecio', i]" > {{InfoContable.Importe}} </a> </td>
 
         <td name="CostoUnit" >   {{ InfoContable.Importe/InfoContable.Cantidad}}   </td>      
 
         <td >
-      
-          <input class="input" type="text" name="Cotizacion" id="Cotizacion" placeholder="Ingresar Contizacion"   [(ngModel)]="Cotizacion" >  
-      
+          
+          <app-input-number [(result)]="result" >
+    </app-input-number>
         </td>
      
         <td   name="Total"  type="number"  [(ngModel)]="Total" scope="col">  {{InfoContable.Importe * InfoContable.Cantidad}}  </td>
      
-        <td  name="PorcentajeDevariacion" scope="col"  > {{ Cotizacion      /    InfoContable.Importe}}  </td>    
+        <td  scope="col" > {{ result}}  </td>    
     
 </tr>    
     </tbody>
 </table>
 </div>
-

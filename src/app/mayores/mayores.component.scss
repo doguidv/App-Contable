@@ -8,31 +8,22 @@
 thead,tbody{
   display: block;
 
-  width: 65vw;
 }
 
-
-
-tbody {
-  box-sizing: border-box;
-
-
-  width: 140vh;
-  height: 40vh;
-  text-align: center;
- 
-
-
-  background: rgba(255, 255, 255, 0.29);
-  border: 3px solid #000000;
-  box-shadow: -10px 15px 5px 3px rgba(0, 0, 0, 0.25);
-  border-radius: 30px;
-  overflow: auto;
-}
+  
+  tbody {
+    box-sizing: content-box;
+  
+    background: rgba(255, 255, 255, 0.29);
+    border: 3px solid #000000;
+    box-shadow: -10px 15px 5px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    overflow: auto;
+  }
 
 
 
-tbody,td,th {
+  tbody,td,th {
 
   width: 65vw;
 min-width: 120px;
@@ -40,6 +31,8 @@ min-height: 120px;
   text-align: center;
 
 }
+
+
 
 
 .ingcotizacion {

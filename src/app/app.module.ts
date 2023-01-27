@@ -10,10 +10,10 @@ import { FormsModule } from '@angular/forms';
 import {  HttpClientModule } from '@angular/common/http';
 import { InfoContableService } from './info-contable.service';
 import { AdministracionService } from './administracion.service';
-import { CategoriasComponent } from './categorias/categorias.component';
 import { UpDateComponent } from './up-date/up-date.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { DeTallesPrecioComponent } from './de-talles-precio/de-talles-precio.component';
+import { InputNumberComponent } from './input-number/input-number.component';
 
 @NgModule({
   declarations: [
@@ -21,10 +21,10 @@ import { DeTallesPrecioComponent } from './de-talles-precio/de-talles-precio.com
     AdministracionComponent,
     MayoresComponent,
     HomeComponent,
-    CategoriasComponent,
     UpDateComponent,
     FilterPipe,
     DeTallesPrecioComponent,
+    InputNumberComponent,
   ],
   imports: [
     BrowserModule,

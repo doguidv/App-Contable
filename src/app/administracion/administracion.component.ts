@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Infocontable } from './administracion';
 import { InfoContableService } from '../info-contable.service';
-import { CategoriasService } from '../categorias.service';
-import { Categorias } from '../categorias/categorias';
+
 
 @Component({
   selector: 'app-administracion',
@@ -12,7 +11,7 @@ import { Categorias } from '../categorias/categorias';
 export class AdministracionComponent implements OnInit {
 
   constructor(
-    private infocontableService:InfoContableService,private CategService:CategoriasService ){
+    private infocontableService:InfoContableService){
      
    }
 
@@ -27,14 +26,8 @@ export class AdministracionComponent implements OnInit {
       
       }); 
       
-      
-      this.CategService.getAll()
-      .subscribe(Categorias => {
-        this.Categorias  = Categorias
-      }); 
         }
 
-        Categorias:Categorias[]=[];
 
         Infocontable:Infocontable[]=[];
 

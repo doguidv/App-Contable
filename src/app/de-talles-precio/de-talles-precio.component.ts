@@ -25,9 +25,14 @@ export class DeTallesPrecioComponent {
       }); 
 
       this.indice=this.route.snapshot.params['id'];
+
+      let InfoCont:Infocontable=this.infocontableService.GetID(this.indice);
+      
+      this.DetallesCosto=InfoCont.DetallesCosto;
+
     }
     
     indice: number;
   DetallesCosto:string;
-
+ 
 }
