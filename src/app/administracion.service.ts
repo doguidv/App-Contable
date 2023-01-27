@@ -37,9 +37,8 @@ export class AdministracionService {
 
   Actualizar(indice:number,Infocontable:Infocontable){
 
-    let url='https://appcontable-c8190-default-rtdb.firebaseio.com/datos'+indice+'.json';
+    let url='https://appcontable-c8190-default-rtdb.firebaseio.com/datos/'+indice+'.json';
 
-    
     this.http.put (url,Infocontable).subscribe({
       next: (v) => console.log('Info modificada Correctamente' + v),
       error: (e) => console.log('Error' + e),
@@ -48,7 +47,7 @@ export class AdministracionService {
 
   Eliminar(indice:number){
 
-    let url='https://appcontable-c8190-default-rtdb.firebaseio.com/datos'+indice+'.json';
+    let url='https://appcontable-c8190-default-rtdb.firebaseio.com/datos/'+indice+'.json';
 
     this.http.delete (url).subscribe({
       next: (v) => console.log('Info borrada Correctamente' + v),

@@ -41,5 +41,5 @@ export class InputNumberComponent {
     }
   }
   Cotizacion:number;
-  Importe:number=10;
+  Importe:number;
 }
