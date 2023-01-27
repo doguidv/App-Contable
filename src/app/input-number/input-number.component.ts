@@ -1,31 +1,17 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
-import { Infocontable } from '../administracion/administracion';
 import { InfoContableService } from '../info-contable.service';
+import { Infocontable } from '../administracion/administracion';
 @Component({
   selector: 'app-input-number',
   templateUrl: './input-number.component.html',
   styleUrls: ['./input-number.component.scss']
 })
 export class InputNumberComponent {
+
   InfoContable:Infocontable[];
 
   
-  constructor(
-    private infocontableService:InfoContableService){
-     
-   }
-
-  
-    ngOnInit():void{
-      this.infocontableService.GetInfo()
-      .subscribe(Infocontable => {
-        this.InfoContable  = Object.values( Infocontable);
-
-      
-      }); 
-      
-        }
  @Input()
   result: number;
  
@@ -36,10 +22,15 @@ export class InputNumberComponent {
   maxReached: EventEmitter<string>  = new EventEmitter<string>() ;
 
 
+
+
+
+  
   Import(InfoContable:Infocontable):void{
-  this.Importe= InfoContable.Importe;
-return ;
-}
+    this.Importe= InfoContable.Importe;
+  return ;
+  }
+
   CalculoResul():void{
     if(this.Cotizacion>0){
       this.result=this.Importe/this.Cotizacion;
@@ -50,5 +41,5 @@ return ;
     }
   }
   Cotizacion:number;
-  Importe:number=1;
+  Importe:number=10;
 }

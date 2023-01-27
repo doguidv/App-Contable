@@ -15,9 +15,6 @@
         <th scope="col">  Costo Acum</th>
      
         <th scope="col">  Costo Unitario</th>
-
-        <th scope="col">Cotizacion</th>
-     
         <th scope="col"> Costo Total</th>
         
         <th scope="col"> Porcentaje de variacion</th>
@@ -33,17 +30,13 @@
         
         <td> {{InfoContable.Cantidad}}   </td>      
        
-        <td  > <a    [routerLink]="['/DetallesPrecio', i]" > {{InfoContable.Importe}} </a> </td>
+        <td  > <a    [routerLink]="['/DetallesPrecio', i]" > {{InfoContable.Importe |currency}} </a> </td>
 
-        <td name="CostoUnit" >   {{ InfoContable.Importe/InfoContable.Cantidad}}   </td>      
+        <td name="CostoUnit" >   {{ InfoContable.Importe/InfoContable.Cantidad    |currency}}   </td>      
 
-        <td >
-          
-          <app-input-number [(result)]="result" >
-    </app-input-number>
-        </td>
+       
      
-        <td   name="Total"  type="number"  [(ngModel)]="Total" scope="col">  {{InfoContable.Importe * InfoContable.Cantidad}}  </td>
+        <td   name="Total"  type="number"  [(ngModel)]="Total" scope="col">  {{InfoContable.Importe * InfoContable.Cantidad  |currency}}  </td>
      
         <td  scope="col" > {{ result}}  </td>    
     

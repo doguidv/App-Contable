@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
 import { Infocontable } from '../administracion/administracion';
 import { InfoContableService } from '../info-contable.service';
@@ -16,7 +16,8 @@ export class UpDateComponent implements OnInit {
    }
     
     Infocontable:Infocontable[]=[];
-
+@Input()
+result:number;
   
     ngOnInit():void{
       this.infocontableService.GetInfo()
@@ -53,7 +54,6 @@ export class UpDateComponent implements OnInit {
   Cantidad:number;
   Importe:number;
   DetallesCosto:string;
-
   id_categorias_fk:number;
     indice:number;
 
