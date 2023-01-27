@@ -59,6 +59,8 @@ resultChange: EventEmitter<number>  = new EventEmitter<number>() ;
           this.resultChange.emit( this.result);
         }
       }
+
+      Total:number;
       result:number;
       Cotizacion:number;
       Fecha:string;
