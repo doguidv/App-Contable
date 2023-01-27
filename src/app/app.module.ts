@@ -13,7 +13,7 @@ import { AdministracionService } from './administracion.service';
 import { UpDateComponent } from './up-date/up-date.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { DeTallesPrecioComponent } from './de-talles-precio/de-talles-precio.component';
-import { InputNumberComponent } from './input-number/input-number.component';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +24,6 @@ import { InputNumberComponent } from './input-number/input-number.component';
     UpDateComponent,
     FilterPipe,
     DeTallesPrecioComponent,
-    InputNumberComponent,
   ],
   imports: [
     BrowserModule,

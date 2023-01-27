@@ -13,14 +13,28 @@
 
         <input type="text"name="Importe"  id="Importe" class="Inputform1" placeholder="Importe" [(ngModel)]="Importe">
           
-            <app-input-number [(result)]="result" >
-      </app-input-number>
+
+
+        <input type="text"  name="Cotizacion"  id="Importe" class="Inputform1" placeholder="Cotizacion" (input)="CalculoResul()" [(ngModel)]="Cotizacion">
+          
+
+            <!-- <app-input-number [(result)]="result" ></app-input-number> -->
      
+
+
             <div >
-                <button type="submit" class="btn btn-primary" [routerLink]="'/Mayores'" (click)="UpdateInfo()" >  Guardar</button>
+                <button type="submit" class="btn btn-primary"  (click)="UpdateInfo()" >  Guardar</button>
             
                 <button type="submit" class="btn btn-primary" (click)="EliminaInfo()" > Eliminar</button>
+
             </div>
             
         </form>
 </div>
+
+
+
+<P>{{result}}</P>
+
+
+<app-mayores  [result]="result"  ></app-mayores>

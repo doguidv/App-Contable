@@ -11,8 +11,10 @@ import { InfoContableService } from '../info-contable.service';
 })
 export class MayoresComponent {
   
+
+  @Input()
+  result:number;
   InfoContable:Infocontable[];
- @Input()ListInfoContable:Infocontable;
 
   constructor(private AdminService:AdministracionService,private router:Router,private route:ActivatedRoute,private infocontableService:InfoContableService ){
 
@@ -26,16 +28,7 @@ export class MayoresComponent {
 
   }
 
-
-  CalculoResult(){
-    this.result= this.Cotizacion  / this.Importe;
-
-  }
-
-    
-  result:number;
-  Procentajedevariacion:number;
-  Total:number ;
+Total:number ;
   Cotizacion:number;
   Cantidad:number;
   Comision:number;

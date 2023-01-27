@@ -45,12 +45,13 @@
                     
                     <tbody>
                     <tr *ngFor="let InfoContable of Infocontable; let  i  = index">
-                        
+                        <a class="btn btn-warning"    [routerLink]="['/Update', i]">
                              <td>{{InfoContable.Fecha}} </td>
                         <td>   {{InfoContable.Detalle}}    </td>
                         <td> {{InfoContable.Cantidad}}   </td>
                         <td>  {{InfoContable.Importe|currency}}   </td>
-                        <td> <a class="btn btn-warning"    [routerLink]="['/Update', i]">editar</a>  </td> 
+ 
+                    </a> 
                     </tr>
                     </tbody>
                 </table>

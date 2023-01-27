@@ -38,7 +38,7 @@
      
         <td   name="Total"  type="number"  [(ngModel)]="Total" scope="col">  {{InfoContable.Importe * InfoContable.Cantidad  |currency}}  </td>
      
-        <td  scope="col" > {{ result}}  </td>    
+        <td  scope="col" [(ngModel)]="result"> {{ result}}  </td>    
     
 </tr>    
     </tbody>

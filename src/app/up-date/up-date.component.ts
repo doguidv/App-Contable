@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
 import { Infocontable } from '../administracion/administracion';
 import { InfoContableService } from '../info-contable.service';
@@ -16,9 +16,12 @@ export class UpDateComponent implements OnInit {
    }
     
     Infocontable:Infocontable[]=[];
-@Input()
-result:number;
-  
+
+@Output()
+resultChange: EventEmitter<number>  = new EventEmitter<number>() ;
+
+
+
     ngOnInit():void{
       this.infocontableService.GetInfo()
       .subscribe(Infocontable => {
@@ -49,9 +52,18 @@ result:number;
         this.infocontableService.EliminarInfo(this.indice);
         
       }
-  Fecha:string;
-  Detalle:string="";
-  Cantidad:number;
+
+      CalculoResul():void{
+        if(this.Cotizacion>0){
+          this.result=this.Cotizacion/this.Importe;
+          this.resultChange.emit( this.result);
+        }
+      }
+      result:number;
+      Cotizacion:number;
+      Fecha:string;
+      Detalle:string="";
+      Cantidad:number;
   Importe:number;
   DetallesCosto:string;
   id_categorias_fk:number;

@@ -46,10 +46,8 @@ export class InfoContableService {
       InfoContModificada.Importe=InfoCont.Importe;
       InfoContModificada.DetallesCosto=InfoCont.DetallesCosto;
       InfoContModificada.id_categorias_fk=InfoCont.id_categorias_fk;
-
     this.adminservice.Actualizar(indice,InfoCont);
   }
-
 
   EliminarInfo(indice:number){
 
