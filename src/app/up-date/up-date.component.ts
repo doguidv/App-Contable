@@ -52,19 +52,19 @@ resultChange: EventEmitter<number>  = new EventEmitter<number>() ;
         this.infocontableService.EliminarInfo(this.indice);
        }
 
-       CostoTotal():void{
-   this.Total=          this.Importe *    this.Cantidad/this.infocontableService.acumCant;
-}
+      CostoTotal():void{
+      this.Total=          this.Importe *    this.Cantidad/this.infocontableService.acumCant;
+      }
 
-CostoUnit():void{
-    this.costoUnit= (this.Total/this.Cantidad);
-}
+      CostoUnit():void{
+          this.costoUnit= (this.Total/this.Cantidad);
+      }
 
 
       CalculoResul():void{
         if(this.Cotizacion>0){
 
-          this.result=   (this.Cotizacion/this.Importe);
+          this.result=   ((this.Cotizacion/this.Total));
           this.resultChange.emit( this.result);
         }
       }
