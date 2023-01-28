@@ -5,15 +5,7 @@
     <form id="stiloFormAdmin" action="" class="oculto">
             
            
-        <input type="text" name="Fecha" id="Fecha" class="Inputform1" placeholder="Fecha" [(ngModel)]="Fecha">
-                            
-        <input type="text" name="Detalle" id="Detalle" class="Inputform1"  placeholder="Especie" [(ngModel)]="Detalle">
-        
-        <input type="text"  name="Cantidad"  id="Cantidad"   class="Inputform1" placeholder="Cantidad" [(ngModel)]="Cantidad">
-        
-
-        <input type="text"name="Importe"  id="Importe" class="Inputform1" placeholder="Importe" [(ngModel)]="Importe">
-          
+      
 
 
         <input type="text"  name="Cotizacion"  id="Importe" class="Inputform1" placeholder="Cotizacion" (input)="CalculoResul();CostoUnit();CostoTotal()" [(ngModel)]="Cotizacion">
@@ -36,14 +28,12 @@
             <tr>
                 <th scope="col">Fecha</th>
                 <th scope="col">Especie</th>
-                <th scope="col">Cantidad</th>        
-                <th scope="col">  Costo Acum</th>
-            
-                <th scope="col">  Costo Unitario</th>
-                <th scope="col">  detalles del costo</th>
+                <th scope="col">Cantidad</th>                  
+                <th scope="col">  Costo Unitario ponderado</th>
+              
 
 
-                <th scope="col"> Costo Total</th>
+                <th scope="col"> Costo Total acum</th>
                 
                 <th scope="col"> Porcentaje de variacion</th>
             </tr>
@@ -57,23 +47,23 @@
                 <td>   {{Detalle}}    </td>
                 
                 <td> {{Cantidad}}   </td>      
-            
-                <td  >   {{Importe |currency}}</td>
 
                 <td name="CostoUnit"  >   {{   costoUnit |currency}}   </td>      
-
-                <td name="DetallesCosto" >   {{DetallesCosto}}  </td>      
-
-            
             
                 <td   name="Total"  type="number"  [(ngModel)]="Total" scope="col">  {{ Total|currency}}  </td>
             
-                <td  scope="col" [(ngModel)]="result"> {{ result    |number }}   </td>    
+                <td  scope="col" [(ngModel)]="result"> {{ result | percent  }}   </td>    
             
         </tr>    
             </tbody>
         </table>
 
 </div>
+<div>
+    
+<h1 > recuerde el precio de compra contiene Costos </h1>
 
 
+<p name="DetallesCosto" >  {{DetallesCosto}}  </p>      
+
+</div>

@@ -58,7 +58,7 @@ export class InfoContableService {
 
   addToInfo(Infocontable:Infocontable){
 
-let item = this._ListInfocontable.find((v1) =>v1.Detalle == Infocontable.Detalle);
+    let item = this._ListInfocontable.find((v1) =>v1.Detalle == Infocontable.Detalle);
  
   if(!item){
       this._ListInfocontable.push({...Infocontable});      
@@ -67,8 +67,6 @@ let item = this._ListInfocontable.find((v1) =>v1.Detalle == Infocontable.Detalle
     }else {
       
       item.Fecha =  Infocontable.Fecha;
-      
-      
       item.Cantidad +=  Infocontable.Cantidad;
        this.acumCant +=1;
       item.Importe +=  Infocontable.Importe;
