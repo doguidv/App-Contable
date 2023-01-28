@@ -8,7 +8,7 @@
       
 
 
-        <input type="text"  name="Cotizacion"  id="Importe" class="Inputform1" placeholder="Cotizacion" (input)="CalculoResul();CostoUnit();CostoTotal()" [(ngModel)]="Cotizacion">
+        <input type="text"  name="Cotizacion"  id="Importe" class="Inputform1" placeholder="Cotizacion" (input)="CalculoResul();CostoUnit()" [(ngModel)]="Cotizacion">
         
             <div >
                 <button type="submit" class="btn btn-primary"  (click)="UpdateInfo()" >  Guardar</button>
@@ -50,7 +50,7 @@
 
                 <td name="CostoUnit"  >   {{   costoUnit |currency}}   </td>      
             
-                <td   name="Total"  type="number"  [(ngModel)]="Total" scope="col">  {{ Total|currency}}  </td>
+                <td    type="number"  scope="col">  {{ CostoTotalacum|currency}}  </td>
             
                 <td  scope="col" [(ngModel)]="result"> {{ result | percent  }}   </td>    
             

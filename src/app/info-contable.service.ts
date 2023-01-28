@@ -43,7 +43,7 @@ export class InfoContableService {
       InfoContModificada.Fecha=InfoCont.Fecha;
       InfoContModificada.Detalle=InfoCont.Detalle;
       InfoContModificada.Cantidad=InfoCont.Cantidad;
-      InfoContModificada.Importe=InfoCont.Importe;
+      InfoContModificada.CostoTotalacum=InfoCont.CostoTotalacum;
       InfoContModificada.DetallesCosto=InfoCont.DetallesCosto;
       InfoContModificada.id_categorias_fk=InfoCont.id_categorias_fk;
     this.adminservice.Actualizar(indice,InfoCont);
@@ -67,17 +67,14 @@ export class InfoContableService {
     }else {
       
       item.Fecha =  Infocontable.Fecha;
-      item.Cantidad +=  Infocontable.Cantidad;
-       this.acumCant +=1;
-      item.Importe +=  Infocontable.Importe;
-         
+      item.Cantidad +=  Infocontable.Cantidad;   
+      item.CostoTotalacum +=Infocontable.CostoTotalacum;     
       this.adminservice.guardarInfo(this._ListInfocontable);
       
     }
     this.List.next(this._ListInfocontable);
   } 
 
-acumCant:number=2;
 
 }
 

@@ -33,7 +33,11 @@ export class AdministracionComponent implements OnInit {
     
     addInfo(){
 
-      let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.Importe,this.DetallesCosto,this.id_categorias_fk);
+
+    this.CostoTotalacum=this.Cantidad*this.Importe;
+
+
+      let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.CostoTotalacum,this.DetallesCosto,this.id_categorias_fk);
       this.infocontableService.addToInfo(InfoCont);
     }
     
@@ -42,6 +46,7 @@ export class AdministracionComponent implements OnInit {
   Detalle:string;
   Cantidad:number;
   Importe:number;
+  CostoTotalacum:number;
   id_categorias_fk:number;
   DetallesCosto:string;
 

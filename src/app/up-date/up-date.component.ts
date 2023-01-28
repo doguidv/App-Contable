@@ -35,7 +35,7 @@ resultChange: EventEmitter<number>  = new EventEmitter<number>() ;
       this.Fecha=InfoCont.Fecha;
         this.Detalle=InfoCont.Detalle;
         this.Cantidad=InfoCont.Cantidad;
-        this.Importe  = InfoCont.Importe;
+        this.CostoTotalacum  = InfoCont.CostoTotalacum;
         this.DetallesCosto=InfoCont.DetallesCosto;
         this.id_categorias_fk=InfoCont.id_categorias_fk;
         
@@ -44,7 +44,7 @@ resultChange: EventEmitter<number>  = new EventEmitter<number>() ;
 
         UpdateInfo(){
 
-           let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.Importe,this.DetallesCosto,  this.id_categorias_fk);
+           let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.CostoTotalacum,this.DetallesCosto,  this.id_categorias_fk);
            this.infocontableService.UpdateToInfo(this.indice,InfoCont);
    
         }
@@ -52,12 +52,8 @@ resultChange: EventEmitter<number>  = new EventEmitter<number>() ;
         this.infocontableService.EliminarInfo(this.indice);
        }
 
-      CostoTotal():void{
-      this.Total=          this.Importe *    this.Cantidad/this.infocontableService.acumCant;
-      }
-
       CostoUnit():void{
-          this.costoUnit= (this.Total/this.Cantidad);
+          this.costoUnit= (this.CostoTotalacum/this.Cantidad);
       }
 
 
@@ -69,10 +65,8 @@ resultChange: EventEmitter<number>  = new EventEmitter<number>() ;
         }
       }
 
-
+      CostoTotalacum:number;
   costoUnit:number;
-    CostoTotalAcum:number;
-      Total:number;
       result:number;
       Cotizacion:number;
       Fecha:string;
