@@ -58,9 +58,9 @@ resultChange: EventEmitter<number>  = new EventEmitter<number>() ;
 
 
       CalculoResul():void{
-        if(this.Cotizacion> 0 ){
+        if(this.Cotizacion  > 0 ){
 
-          this.result=   ((this.Cotizacion/this.costoUnit))-1;
+          this.result =   ((this.Cotizacion/this.costoUnit))-1;
           this.resultChange.emit( this.result);
         }
       }
