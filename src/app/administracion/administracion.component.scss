@@ -89,7 +89,7 @@ font-weight: bold;
 .boton-guardar {
   display: flex;
   flex-direction: column;
-  padding-top: 20px;
+  padding-top: 2vh;
   margin-right: 60%;
   margin-bottom: 1vh;
   
@@ -104,3 +104,6 @@ select{
   width: 20vh;
 }
 
+.btn.btn-primary {
+  padding-right: 5vw;
+} 
