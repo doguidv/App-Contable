@@ -36,9 +36,7 @@
                         <th scope="col">Especie</th>
                         
                         <th scope="col">Cantidad</th>
-                        
-                        <th scope="col">Precio</th>
-                        
+                    
                         <th scope="col">Costo Acum</th>
                                             
                     </tr>
@@ -49,9 +47,7 @@
                         <a class="btn btn-warning"    [routerLink]="['/Update', i]">
                              <td>{{InfoContable.Fecha}} </td>
                         <td>   {{InfoContable.Detalle}}    </td>
-                        <td> {{InfoContable.Cantidad}}   </td>
-                        <td> {{Importe}}   </td>
-                        
+                        <td> {{InfoContable.Cantidad}}   </td>                      
                         <td>  {{InfoContable.CostoTotalacum|currency}}   </td>
                     </a> 
                     </tr>

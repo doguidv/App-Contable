@@ -37,14 +37,13 @@ resultChange: EventEmitter<number>  = new EventEmitter<number>() ;
         this.Cantidad=InfoCont.Cantidad;
         this.CostoTotalacum  = InfoCont.CostoTotalacum;
         this.DetallesCosto=InfoCont.DetallesCosto;
-        this.id_categorias_fk=InfoCont.id_categorias_fk;
         
         }
 
 
         UpdateInfo(){
 
-           let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.CostoTotalacum,this.DetallesCosto,  this.id_categorias_fk);
+           let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.Importe,this.CostoTotalacum,this.DetallesCosto);
            this.infocontableService.UpdateToInfo(this.indice,InfoCont);
    
         }
@@ -58,7 +57,7 @@ resultChange: EventEmitter<number>  = new EventEmitter<number>() ;
 
 
       CalculoResul():void{
-        if(this.Cotizacion  > 0 ){
+        if(this.Cotizacion  > -1 ){
 
           this.result =   ((this.Cotizacion/this.costoUnit))-1;
           this.resultChange.emit( this.result);

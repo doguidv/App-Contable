@@ -27,6 +27,11 @@ export class InfoContableService {
   }
 
 
+GetLista(){
+  return this._ListInfocontable;
+}
+
+
 
   GetID(indice:number){
 
@@ -43,9 +48,9 @@ export class InfoContableService {
       InfoContModificada.Fecha=InfoCont.Fecha;
       InfoContModificada.Detalle=InfoCont.Detalle;
       InfoContModificada.Cantidad=InfoCont.Cantidad;
+      InfoContModificada.Importe=InfoCont.Importe;
       InfoContModificada.CostoTotalacum=InfoCont.CostoTotalacum;
       InfoContModificada.DetallesCosto=InfoCont.DetallesCosto;
-      InfoContModificada.id_categorias_fk=InfoCont.id_categorias_fk;
     this.adminservice.Actualizar(indice,InfoCont);
   }
 
@@ -65,7 +70,6 @@ export class InfoContableService {
       this.adminservice.guardarInfo(this._ListInfocontable);
   
     }else {
-      
       item.Fecha =  Infocontable.Fecha;
       item.Cantidad +=  Infocontable.Cantidad;   
       item.CostoTotalacum +=Infocontable.CostoTotalacum;     
