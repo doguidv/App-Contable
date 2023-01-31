@@ -12,6 +12,9 @@ import { InfoContableService } from './info-contable.service';
 import { AdministracionService } from './administracion.service';
 import { UpDateComponent } from './up-date/up-date.component';
 import { DeTallesPrecioComponent } from './de-talles-precio/de-talles-precio.component';
+import { LoginComponent } from './login/login.component';
+import { LoginGuardian } from './login/Login-Guardian';
+import { LoginService } from './login.service';
 
 
 
@@ -23,6 +26,7 @@ import { DeTallesPrecioComponent } from './de-talles-precio/de-talles-precio.com
     HomeComponent,
     UpDateComponent,
     DeTallesPrecioComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,7 @@ import { DeTallesPrecioComponent } from './de-talles-precio/de-talles-precio.com
     FormsModule,
     HttpClientModule
   ],
-  providers: [AdministracionService ,InfoContableService ],
+  providers: [AdministracionService ,InfoContableService,LoginService,LoginGuardian ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

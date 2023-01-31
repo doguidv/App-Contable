@@ -43,10 +43,15 @@ resultChange: EventEmitter<number>  = new EventEmitter<number>() ;
 
         UpdateInfo(){
 
+          this.CostoTotalacum=this.Cantidad*this.Importe;
+        
            let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.Importe,this.CostoTotalacum,this.DetallesCosto);
            this.infocontableService.UpdateToInfo(this.indice,InfoCont);
    
         }
+
+
+        
       EliminaInfo(){
         this.infocontableService.EliminarInfo(this.indice);
        }
@@ -63,6 +68,8 @@ resultChange: EventEmitter<number>  = new EventEmitter<number>() ;
           this.resultChange.emit( this.result);
         }
       }
+      
+   
 
       CostoTotalacum:number;
   costoUnit:number;

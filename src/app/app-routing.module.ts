@@ -4,6 +4,8 @@ import { AdministracionComponent } from './administracion/administracion.compone
 
 import { DeTallesPrecioComponent } from './de-talles-precio/de-talles-precio.component';
 import { HomeComponent } from './home/home.component';
+import { LoginGuardian } from './login/Login-Guardian';
+import { LoginComponent } from './login/login.component';
 import { UpDateComponent } from './up-date/up-date.component';
 
 
@@ -15,26 +17,25 @@ const routes: Routes = [
   },
   {
     path:'administracion',
-    component: AdministracionComponent
+    component: AdministracionComponent,canActivate:[LoginGuardian]
   },
   {
     path:'Update/:id',
-    component:  UpDateComponent
+    component:  UpDateComponent,canActivate:[LoginGuardian]
   },
   {
     path: 'DetallesPrecio:id',
-    component:  DeTallesPrecioComponent
-  }
-
-  /*
-  {
-    path:'registro',
-    component: EmpleadosComponent,canActivate:[LoginGuardian]
+    component:  DeTallesPrecioComponent,canActivate:[LoginGuardian]
   },
+
+  // {
+    // path:'registro',
+    // component: EmpleadosComponent,canActivate:[LoginGuardian]
+  // },
   {
     path:'login',
     component: LoginComponent
-  },*/
+  },
   
 
 ];

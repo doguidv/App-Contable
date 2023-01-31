@@ -7,7 +7,7 @@
                             
                                 <input type="text" name="Fecha" id="Fecha" class="Inputform1" placeholder="Fecha 00/00/0000" [(ngModel)]="Fecha">
                                 
-                                <input type="text" name="Detalle" id="Detalle" class="Inputform1"  placeholder="Especie" [(ngModel)]="Detalle">
+                                <input type="text" name="Detalle" id="Detalle" class="Inputform1"  placeholder="Especie o producto" [(ngModel)]="Detalle">
                                 
                                 <input type="number"  name="Cantidad"  id="Cantidad"   class="Inputform1" placeholder="Cantidad" [(ngModel)]="Cantidad">
                             
@@ -21,6 +21,10 @@
 
                             <div class="boton-guardar" >
                                 <button type="submit" class="btn btn-primary" (click)="addInfo()" >  Comprar</button>
+                            </div>
+                            
+                            <div class="boton-guardar" >
+                                <button type="submit" class="btn btn-primary" (click)="addInfo()" >  vender</button>
                             </div>
                     </form>
                 </div>
@@ -57,3 +61,4 @@
           </div>  
    
 </div>            
+

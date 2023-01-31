@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Infocontable } from './administracion';
 import { InfoContableService } from '../info-contable.service';
 
@@ -34,6 +34,7 @@ export class AdministracionComponent implements OnInit {
       let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.Importe,this.CostoTotalacum,this.DetallesCosto);
       this.infocontableService.addToInfo(InfoCont);
     }
+
     
     Tipo_Inversion:string;
   Fecha:string;

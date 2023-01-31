@@ -61,6 +61,9 @@ GetLista(){
     if(this._ListInfocontable!=null) this.adminservice.Eliminar (indice);
   }
 
+
+    
+  
   addToInfo(Infocontable:Infocontable){
 
     let item = this._ListInfocontable.find((v1) =>v1.Detalle == Infocontable.Detalle);

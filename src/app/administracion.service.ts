@@ -2,6 +2,7 @@ import  {HttpClient} from '@angular/common/http'
 import { Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
 import { Infocontable } from './administracion/administracion'
+import { LoginService } from './login.service';
 
 
 
@@ -15,12 +16,13 @@ const url='http://localhost/AppContable/api/infoContable'
 })
 export class AdministracionService {
  
-  constructor(private http: HttpClient ) { }
+  constructor(private http: HttpClient,private loginservice:LoginService ) { }
 
 
   public getAll():Observable<Infocontable[]> {
 
-    return  this.http.get<Infocontable[]>('https://appcontable-c8190-default-rtdb.firebaseio.com/datos.json')
+    const token=this.loginservice.getIdtoken();
+    return  this.http.get<Infocontable[]>('https://appcontable-c8190-default-rtdb.firebaseio.com/datos.json?auth='+ token)
   
   }
   public GetId(indice:number):Observable<Infocontable[]>{
