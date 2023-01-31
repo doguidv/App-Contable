@@ -51,7 +51,8 @@ GetLista(){
       InfoContModificada.Importe=InfoCont.Importe;
       InfoContModificada.CostoTotalacum=InfoCont.CostoTotalacum;
       InfoContModificada.DetallesCosto=InfoCont.DetallesCosto;
-    this.adminservice.Actualizar(indice,InfoCont);
+      InfoContModificada.Total=InfoCont.Total;
+    this.adminservice.Actualizar(indice,InfoContModificada);
   }
 
   EliminarInfo(indice:number){
@@ -75,7 +76,7 @@ GetLista(){
     }else {
       item.Fecha =  Infocontable.Fecha;
       item.Cantidad +=  Infocontable.Cantidad;   
-      item.CostoTotalacum +=Infocontable.CostoTotalacum;     
+       item.CostoTotalacum  +=  Infocontable.CostoTotalacum;     
       this.adminservice.guardarInfo(this._ListInfocontable);
       
     }
