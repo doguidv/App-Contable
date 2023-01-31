@@ -21,7 +21,18 @@
     background-color: rgba(159, 159, 159, 0.703);
     border-radius: 60px;
   }
+
+  input {
+    background-color: transparent;
+    border-color: transparent;
+    text-align: center;
+    
+    font-style: italic;
+
+  }
   
+  ::placeholder { color: rgba(0, 0, 0, 0.559); }
+
   .body-home-dialogo2 {
     margin: 50px;
     padding: 10px;
@@ -38,6 +49,17 @@
     padding: 10px;
     background-color: rgba(100, 100, 255, 0.744);
     border-radius: 60px;
+
+    
   }
   
-  
+  button {
+    background-color: transparent;
+    border-color: transparent;
+    text-align: center;
+    
+    font-style: italic;
+    color: white;
+
+  }
+
