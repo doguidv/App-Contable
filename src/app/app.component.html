@@ -18,11 +18,11 @@
       <ul class="navbar-nav">
 
         <li class="nav-item" *ngIf="!sessionStart()" >
-          <a class="nav-link" [routerLink]="['/login']" >Login</a>
+          <a class="nav-link" [routerLink]="['/login']" (click)="sessionStart()">Login</a>
         </li>
 
         <li class="nav-item" *ngIf="sessionStart()">
-          <a class="nav-link" [routerLink]="['/logout']">  Logout</a>
+          <a class="nav-link" [routerLink]="['/']"  (click)="sessiondestroy()"   >  Logout</a>
         </li>
       </ul>
     </div>

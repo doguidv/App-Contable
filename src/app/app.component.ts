@@ -21,7 +21,7 @@ export class AppComponent {
       }
 
       sessionStart(){
-        return this.loginService.sessionstart()
+        return this.loginService.sessionstart();
       }
 
       sessiondestroy(){
