@@ -43,7 +43,7 @@ export class AdministracionService {
 
     const token=this.loginservice.getIdtoken();
 
-    const url='https://appcontable-c8190-default-rtdb.firebaseio.com/datos/'+token+indice +'.json';
+    const url='https://appcontable-c8190-default-rtdb.firebaseio.com/datos/'+indice +'.json?auth='+token;
 
 
     this.http.put (url,Infocontable).subscribe({
