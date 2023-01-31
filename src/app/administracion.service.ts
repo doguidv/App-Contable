@@ -20,9 +20,10 @@ export class AdministracionService {
 
 
   public getAll():Observable<Infocontable[]> {
-
+    
     const token=this.loginservice.getIdtoken();
-    return  this.http.get<Infocontable[]>('https://appcontable-c8190-default-rtdb.firebaseio.com/datos.json?auth='+ token)
+
+    return  this.http.get<Infocontable[]>('https://appcontable-c8190-default-rtdb.firebaseio.com/datos.json?auth='+token)
   
   }
   public GetId(indice:number):Observable<Infocontable[]>{
@@ -31,7 +32,8 @@ export class AdministracionService {
 
   guardarInfo(Infocontable:Infocontable[]){
 
-    this.http.put ('https://appcontable-c8190-default-rtdb.firebaseio.com/datos.json',Infocontable).subscribe({
+    const token=this.loginservice.getIdtoken();
+    this.http.put ('https://appcontable-c8190-default-rtdb.firebaseio.com/datos.json?auth='+token,Infocontable).subscribe({
         next: (v) => console.log('Se Guardo la informacion' + v),
         error: (e) => console.log('Error' + e),
       });

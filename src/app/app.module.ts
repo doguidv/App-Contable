@@ -15,7 +15,7 @@ import { DeTallesPrecioComponent } from './de-talles-precio/de-talles-precio.com
 import { LoginComponent } from './login/login.component';
 import { LoginGuardian } from './login/Login-Guardian';
 import { LoginService } from './login.service';
-
+import { CookieService } from 'ngx-cookie-service';
 
 
 
@@ -34,7 +34,7 @@ import { LoginService } from './login.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [AdministracionService ,InfoContableService,LoginService,LoginGuardian ],
+  providers: [AdministracionService ,InfoContableService,LoginService,LoginGuardian,CookieService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

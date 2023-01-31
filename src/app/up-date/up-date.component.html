@@ -5,7 +5,7 @@
     <form id="stiloFormAdmin" action="" class="oculto">
             
            
-        <input type="number"  name="Cantidad"  id="Cantidad"   class="Inputform1" placeholder="Cantidad" [(ngModel)]="Cantidad">
+        <!-- <input type="number"  name="Cantidad"  id="Cantidad"   class="Inputform1" placeholder="Cantidad" [(ngModel)]="Cantidad"> -->
       
 
         <input type="text"  name="Cotizacion"  id="Importe" class="Inputform1" placeholder="Precio del dia" (input)="CalculoResul();CostoUnit()" [(ngModel)]="Cotizacion">
@@ -14,10 +14,10 @@
                 <button type="submit" class="btn btn-primary"  [routerLink]="'/administracion'" > volver</button>
              </div>
           
-             <div >
+             <!-- <div >
                 <button type="submit" class="btn btn-primary"  (click)="UpdateInfo()"> vender</button>
              </div>
-          
+           -->
         </form>
 </div>
 

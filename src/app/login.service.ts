@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import firebase from  'firebase/compat/app';
 import  'firebase/compat/auth';
+import { CookieService } from 'ngx-cookie-service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
-  constructor(private router:Router) {}
+  constructor(private router:Router,private CoookieService:CookieService) {}
 
   token:string;
 
@@ -22,6 +23,7 @@ export class LoginService {
           token=>{
 
             this.token  = token;
+            this.CoookieService.set("token",this.token);
             this.router.navigate(['/administracion']);
           
           }
@@ -29,13 +31,16 @@ export class LoginService {
       }
     );
   }
+
     getIdtoken(){
-      return this.token;
+  
+      return this.CoookieService.get("token");
     }
 
   sessionstart(){
-    return this.token;
 
+    return this.CoookieService.get("token");
+    
   } 
 
   sessiondestroy(){
@@ -43,6 +48,8 @@ export class LoginService {
     firebase.auth().signOut().then(()=> {
       
       this.token="";
+      
+      this.CoookieService.set("token",this.token);
       this.router.navigate(['/']);
     });
   } 

@@ -14,8 +14,8 @@ export class AppComponent {
       ngOnInit():void{
   
        firebase.initializeApp ({
-          apiKey: "AIzaSyCXKaO43lLWUaIX-5WPTQZlr9Cz03kzRF0",
-            authDomain: "appcontable-c8190.firebaseapp.com",
+        apiKey: "AIzaSyCXKaO43lLWUaIX-5WPTQZlr9Cz03kzRF0",
+        authDomain: "appcontable-c8190.firebaseapp.com",
   
         });
       }
