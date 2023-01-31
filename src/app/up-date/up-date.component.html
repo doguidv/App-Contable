@@ -5,7 +5,7 @@
     <form id="stiloFormAdmin" action="" class="oculto">
             
            
-        <!-- <input type="number"  name="Cantidad"  id="Cantidad"   class="Inputform1" placeholder="Cantidad" [(ngModel)]="Cantidad"> -->
+     <input type="number"  name="Cantidad"  id="Cantidad"   class="Inputform1" placeholder="Cantidad" [(ngModel)]="Cantidad"> 
       
 
         <input type="text"  name="Cotizacion"  id="Importe" class="Inputform1" placeholder="Precio del dia" (input)="CalculoResul();CostoUnit()" [(ngModel)]="Cotizacion">
@@ -14,10 +14,10 @@
                 <button type="submit" class="btn btn-primary"  [routerLink]="'/administracion'" > volver</button>
              </div>
           
-             <!-- <div >
+            <div >
                 <button type="submit" class="btn btn-primary"  (click)="UpdateInfo()"> vender</button>
              </div>
-           -->
+           
         </form>
 </div>
 
@@ -31,13 +31,13 @@
                 <th scope="col">Fecha</th>
                 <th scope="col">Especie o producto</th>
                 <th scope="col">Cantidad</th>                  
-                <th scope="col"> Costo total acumulado  </th>
-              
+                <th scope="col"> Costo total acumulado  </th>               
 
-
-                <th scope="col"> Costo Unitario ponderado </th>
+            <th scope="col"> Costo Unitario ponderado </th>
                 
                 <th scope="col"> Porcentaje de variacion</th>
+                <th scope="col"> Resultado Acumulado</th>
+                
             </tr>
             </thead>
             
@@ -55,8 +55,10 @@
                 <td    type="number"  scope="col">  {{ costoUnit |currency}}  </td>
             
                 <td  scope="col"    [(ngModel)]="result" > {{ result | percent  }}   </td>    
-            
+                
+                <td> {{Total |currency}} </td>   
         </tr>    
+        
             </tbody>
         </table>   
     

@@ -41,7 +41,8 @@ export class AdministracionService {
 
   Actualizar(indice:number,Infocontable:Infocontable){
 
-    let url='https://appcontable-c8190-default-rtdb.firebaseio.com/datos/'+indice+'.json';
+    const token=this.loginservice.getIdtoken();
+    let url='https://appcontable-c8190-default-rtdb.firebaseio.com/datos.json?auth='+token+indice+'.json';
 
     this.http.put (url,Infocontable).subscribe({
       next: (v) => console.log('Info modificada Correctamente' + v),
