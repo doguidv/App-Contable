@@ -44,7 +44,14 @@ resultChange: EventEmitter<number>  = new EventEmitter<number>() ;
         UpdateInfo(){
 
           this.Total= (this.CostoTotalacum) +  ( this.Cantidad*this.Cotizacion);
-        
+
+          if(this.Cantidad>0){
+            this.Cantidad--;
+          }
+
+          if(this.CostoTotalacum>0){
+            this.CostoTotalacum+this.Total;
+          }
            let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.Importe,this.CostoTotalacum,this.DetallesCosto,this.Total);
            this.infocontableService.UpdateToInfo(this.indice,InfoCont);
    

@@ -43,15 +43,16 @@ GetLista(){
   
   UpdateToInfo(indice:number,InfoCont:Infocontable){
 
-    let InfoContModificada= this._ListInfocontable[indice];
+    let InfoContModificada  = this._ListInfocontable[indice];
 
-      InfoContModificada.Fecha=InfoCont.Fecha;
-      InfoContModificada.Detalle=InfoCont.Detalle;
-      InfoContModificada.Cantidad=InfoCont.Cantidad;
-      InfoContModificada.Importe=InfoCont.Importe;
-      InfoContModificada.CostoTotalacum=InfoCont.CostoTotalacum;
-      InfoContModificada.DetallesCosto=InfoCont.DetallesCosto;
-      InfoContModificada.Total=InfoCont.Total;
+      InfoContModificada.Fecha= InfoCont.Fecha;
+      InfoContModificada.Detalle= InfoCont.Detalle;
+      InfoContModificada.Cantidad= InfoCont.Cantidad;
+      InfoContModificada.Importe= InfoCont.Importe;
+      InfoContModificada.CostoTotalacum=  InfoCont.CostoTotalacum + InfoCont.Total;
+      InfoContModificada.DetallesCosto= InfoCont.DetallesCosto;
+      InfoContModificada.Total= InfoCont.Total;
+      
     this.adminservice.Actualizar(indice,InfoContModificada);
   }
 

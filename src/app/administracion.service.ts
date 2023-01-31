@@ -42,12 +42,14 @@ export class AdministracionService {
   Actualizar(indice:number,Infocontable:Infocontable){
 
     const token=this.loginservice.getIdtoken();
-    let url='https://appcontable-c8190-default-rtdb.firebaseio.com/datos.json?auth='+token+indice+'.json';
+
+    const url='https://appcontable-c8190-default-rtdb.firebaseio.com/datos/'+token+indice +'.json';
+
 
     this.http.put (url,Infocontable).subscribe({
-      next: (v) => console.log('Info modificada Correctamente' + v),
-      error: (e) => console.log('Error' + e),
-    });
+        next: (v) => console.log('Se Guardo la informacion' + v),
+        error: (e) => console.log('Error' + e),
+      });
   }
 
   Eliminar(indice:number){

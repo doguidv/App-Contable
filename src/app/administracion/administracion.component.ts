@@ -43,7 +43,7 @@ export class AdministracionComponent implements OnInit {
   Importe:number;
   CostoTotalacum:number;
   DetallesCosto:string;
-Total:number;
+Total:number=0;
  maxReached( m:string ){
   alert(m);
  }
