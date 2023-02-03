@@ -1,4 +1,101 @@
 
+
+
+
+
+
+.update {
+  
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+  
+  }
+  
+
+
+  .Form1 {
+display: flex;
+    margin-top: 25vh;
+  margin-bottom: 40vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  padding: 12px;
+  
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+
+  
+  .stiloFormAdmin{
+   display: flex;
+   flex-direction: column; 
+  }
+
+
+  .table {
+    margin-top: 20vh;
+  }
+  
+  
+  .Contenedor-Resumen{
+  
+      padding-left: 28%;    
+      padding-top: 15%;
+      
+    }
+  
+  
+  
+    thead,tbody{
+      display: block;
+    
+    }
+    
+      
+      tbody {
+        box-sizing: content-box;
+        height: 40px;
+           background: rgba(255, 255, 255, 0.29);
+        border: 3px solid #000000;
+        box-shadow: -10px 15px 5px 3px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+        overflow: auto;
+      }
+    
+    
+    
+      tbody,td,th {
+    
+      width: 180vw;
+      min-width: 40px;
+      min-height: 40px;
+      text-align: center;
+    
+    }
+    
+    
+    
+    
+    .ingcotizacion {
+    margin-right: 20px;
+    }
+  
+    .subtitulo {
+      margin-top: 35vh;
+    }
+    
+    
+    .red{
+    color: red;
+    }
+    
+    .btn.btn-primary {
+      margin-top: 2vh;
+    }
+
+/*Dise�o Desk*/
+@media only screen and (min-width: 600px) {
+
 .update {
   
 display: flex;
@@ -77,3 +174,4 @@ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   .btn.btn-primary {
     margin-top: 2vh;
   }
+}

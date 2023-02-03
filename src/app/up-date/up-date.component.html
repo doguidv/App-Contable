@@ -1,74 +1,73 @@
 <div class="update">
 
-<div class="Form1">
+    <div class="Form1">
+            
+        <form id="stiloFormAdmin" action="" class="oculto">    
+            <div>
+             <input type="number"  name="Cantidad"  id="Cantidad"    placeholder="Cantidad" [(ngModel)]="Cantidad"> 
+            </div>
+            <div>  
+             <input type="text"  name="Cotizacion"  id="Importe"  placeholder="Precio del dia" (input)="CalculoResul();CostoUnit()" [(ngModel)]="Cotizacion">    
+            </div>
+               <div >
+                    <button type="submit" class="btn btn-primary"  [routerLink]="'/administracion'" > volver</button>
+                </div>
+            
+                <div >
+                    <button type="submit" class="btn btn-primary"  (click)="UpdateInfo()"> vender</button>
+                </div>
+            
+       </form>
+    </div>
+
+
+
+    <div    class="DivTabla">
+                
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Especie o producto</th>
+                    <th scope="col">Cantidad</th>                  
+                    <th scope="col"> Costo total acumulado  </th>               
+
+                <th scope="col"> Costo Unitario ponderado </th>
+                    
+                    <th scope="col"> Porcentaje de variacion</th>
+                    <th scope="col"> Resultado Acumulado</th>
+                    
+                </tr>
+                </thead>
+                
+                <tbody>
+                <tr *ngIf="Cantidad>0">
+
+                    <td>  {{Fecha }} </td>
+                    
+                    <td>   {{Detalle}}    </td>
+                    
+                    <td> {{Cantidad}}   </td>      
+
+                    <td name="CostoUnit"  >   {{   CostoTotalacum |currency}}   </td>      
+                
+                    <td    type="number"    scope="col">  {{ costoUnit |currency}}  </td>
+                
+                    <td  scope="col"    [(ngModel)]="result" > {{ result | percent  }}   </td>    
+                    
+                    <td> {{Total |currency}} </td>   
+            </tr>    
+            
+                </tbody>
+            </table>   
         
-    <form id="stiloFormAdmin" action="" class="oculto">
-            
-           
-     <input type="number"  name="Cantidad"  id="Cantidad"   class="Inputform1" placeholder="Cantidad" [(ngModel)]="Cantidad"> 
-      
-
-        <input type="text"  name="Cotizacion"  id="Importe" class="Inputform1" placeholder="Precio del dia" (input)="CalculoResul();CostoUnit()" [(ngModel)]="Cotizacion">
+    <div>
         
-            <div >
-                <button type="submit" class="btn btn-primary"  [routerLink]="'/administracion'" > volver</button>
-             </div>
-          
-            <div >
-                <button type="submit" class="btn btn-primary"  (click)="UpdateInfo()"> vender</button>
-             </div>
-           
-        </form>
-</div>
-
-
-
-<div    class="DivTabla">
-            
-        <table class="table">
-            <thead>
-            <tr>
-                <th scope="col">Fecha</th>
-                <th scope="col">Especie o producto</th>
-                <th scope="col">Cantidad</th>                  
-                <th scope="col"> Costo total acumulado  </th>               
-
-            <th scope="col"> Costo Unitario ponderado </th>
+                <h3 class="subtitulo"> recuerde el precio de compra contiene Costos </h3>
                 
-                <th scope="col"> Porcentaje de variacion</th>
-                <th scope="col"> Resultado Acumulado</th>
                 
-            </tr>
-            </thead>
-            
-            <tbody>
-            <tr *ngIf="Cantidad>0">
-
-                <td>  {{Fecha }} </td>
+                <p name="DetallesCosto" > {{DetallesCosto}}  </p>      
                 
-                <td>   {{Detalle}}    </td>
-                
-                <td> {{Cantidad}}   </td>      
-
-                <td name="CostoUnit"  >   {{   CostoTotalacum |currency}}   </td>      
-            
-                <td    type="number"    scope="col">  {{ costoUnit |currency}}  </td>
-            
-                <td  scope="col"    [(ngModel)]="result" > {{ result | percent  }}   </td>    
-                
-                <td> {{Total |currency}} </td>   
-        </tr>    
-        
-            </tbody>
-        </table>   
-    
-<div>
-    
-            <h3 class="subtitulo"> recuerde el precio de compra contiene Costos </h3>
-            
-            
-            <p name="DetallesCosto" > {{DetallesCosto}}  </p>      
-            
-</div>
+    </div>
             
 </div>
