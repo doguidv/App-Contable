@@ -1,18 +1,22 @@
 
 
 .card {
-  left: 50%;
+  left: 0.5vw;
   background-color: transparent;
-  margin-top: 10%;
+  margin-top: 10vh;
   text-align: center;
-  border-radius: 60px;
+  border-radius: 30px;
   border-width: 3px;
-  box-shadow: -10px 15px 5px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: -5px 5px 5px 3px rgba(0, 0, 0, 0.25);
 
 }
 
 .titulo-home {
-  margin: 40px;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  font-size: 16px;
 }
 
 .body-home-dialogo1 {
@@ -43,15 +47,14 @@ input {
 
 .body-home-login {
 
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: 300px;
-  margin-right: 300px;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  margin-left: 30vw;
+  margin-right: 30vw;
   padding: 10px;
   background-color: rgba(100, 100, 255, 0.744);
   border-radius: 60px;
 
-  
 }
 
 button {
