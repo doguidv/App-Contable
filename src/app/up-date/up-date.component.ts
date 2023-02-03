@@ -64,9 +64,10 @@ resultChange: EventEmitter<number>  = new EventEmitter<number>() ;
        }
 
       CostoUnit():void{
-          this.costoUnit= (this.CostoTotalacum/this.Cantidad);
+        if(this.Cantidad  > 0){
+          this.costoUnit  = (this.CostoTotalacum/this.Cantidad);
       }
-
+    }
 
       CalculoResul():void{
         if(this.Cotizacion  > -1 ){

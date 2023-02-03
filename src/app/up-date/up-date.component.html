@@ -42,7 +42,7 @@
             </thead>
             
             <tbody>
-            <tr >
+            <tr *ngIf="Cantidad>0">
 
                 <td>  {{Fecha }} </td>
                 
@@ -52,7 +52,7 @@
 
                 <td name="CostoUnit"  >   {{   CostoTotalacum |currency}}   </td>      
             
-                <td    type="number"  scope="col">  {{ costoUnit |currency}}  </td>
+                <td    type="number"    scope="col">  {{ costoUnit |currency}}  </td>
             
                 <td  scope="col"    [(ngModel)]="result" > {{ result | percent  }}   </td>    
                 
