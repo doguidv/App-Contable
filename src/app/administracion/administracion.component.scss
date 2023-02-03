@@ -40,7 +40,11 @@ thead,tbody{
 
   tbody,td,th {
 
+<<<<<<< HEAD
   width: 85vw;
+=======
+  width: 150vw;
+>>>>>>> a6ae9e06cd6f8eb4d913652b4c8afecbb6cbe56d
   min-width: 40px;
   min-height: 40px;
   text-align: center;
@@ -116,6 +120,7 @@ select{
 			/*Dise�o Desk*/
       @media only screen and (min-width: 600px) {
 
+
 .car-header {
   text-align: center;
   box-sizing: content-box;
@@ -157,7 +162,7 @@ thead,tbody{
 
   tbody,td,th {
 
-  width: 65vw;
+  width: 75vw;
   min-width: 40px;
   min-height: 40px;
   text-align: center;
