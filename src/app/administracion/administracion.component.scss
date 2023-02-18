@@ -15,9 +15,6 @@
 
 }
 
-
-
-
 thead,tbody{
   display: block;
 
@@ -40,11 +37,7 @@ thead,tbody{
 
   tbody,td,th {
 
-<<<<<<< HEAD
-  width: 85vw;
-=======
   width: 150vw;
->>>>>>> a6ae9e06cd6f8eb4d913652b4c8afecbb6cbe56d
   min-width: 40px;
   min-height: 40px;
   text-align: center;
@@ -137,9 +130,12 @@ select{
 
 }
 
-
-
-
+.Parraf{
+  margin-top: 120px;
+}
+.Text2{
+  margin-top: 15px;
+}
 thead,tbody{
   display: block;
 
@@ -174,8 +170,9 @@ thead,tbody{
 
 
 .ContenedorFormAdmin{
-height: 20%;
-
+display: flex;
+flex-direction: column;
+  height: 20%;
 margin-top: 18%;
 margin-left: 10%;
 margin-right: 25%;
@@ -190,9 +187,9 @@ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 .ContenedorDatosAdmin{
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-right: 20%;
-  margin-top: 10%;
+  margin-top: 2%;
   }
   
 
@@ -228,4 +225,5 @@ select{
 .btn.btn-primary {
   padding-right: 5vw;
 } 
-      }
+ 
+}
