@@ -1,22 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import { Infocontable } from './administracion';
+import { Component, Input } from '@angular/core';
+import { Infocontable } from '../administracion/administracion';
 import { InfoContableService } from '../info-contable.service';
-import { empty } from 'rxjs';
-
 
 @Component({
-  selector: 'app-administracion',
-  templateUrl: './administracion.component.html',
-  styleUrls: ['./administracion.component.scss']
+  selector: 'app-registros-separados',
+  templateUrl: './registros-separados.component.html',
+  styleUrls: ['./registros-separados.component.scss']
 })
-export class AdministracionComponent implements OnInit {
-
-  constructor(
+export class RegistrosSeparadosComponent {
+ constructor(
     private infocontableService:InfoContableService){
      
    }
 
-    ngOnInit():void{
+
+
+   ngOnInit():void{
       this.infocontableService.GetInfo()
        .subscribe(Infocontable => {
         this.Infocontable  = Object.values( Infocontable);
@@ -30,7 +29,7 @@ export class AdministracionComponent implements OnInit {
         Infocontable:Infocontable[]=[];
 
     
-    addInfo(){
+    AgregarInfo(){
    if  ( this.Fecha==null || this.Cantidad==null || this.Detalle==null || this.Importe==null ){
 
     this.msj= ("Debe Completar los campos para poder guardar")
@@ -38,7 +37,7 @@ export class AdministracionComponent implements OnInit {
    }else{
     this.CostoTotalacum =  ( this.Cantidad*this.Importe);
     let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.Importe,this.CostoTotalacum,this.DetallesCosto,this.Total);
-    // this.infocontableService.addToInfo(InfoCont);
+    this.infocontableService.AgregarInfo(InfoCont);
    }
     }
 
@@ -50,9 +49,8 @@ export class AdministracionComponent implements OnInit {
   Importe:number;
   CostoTotalacum:number;
   DetallesCosto:string;
-Total:number=0;
+  Total:number=0;
  maxReached( m:string ){
   alert(m);
  }
-
 }

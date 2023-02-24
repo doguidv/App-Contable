@@ -1,10 +1,4 @@
-<div class="Parraf">
-<h5>Completar los datos antes de Comprar</h5>
-<div class="Text2">
-<h6>Para modificar los datos tiene que ingresar en cada registro</h6>
-</div>
-</div>
-
+<p>registros-separados works!</p>
 
 <div class="ContenedorDatosAdmin">
     <div   class="ContenedorFormAdmin" >
@@ -27,46 +21,42 @@
                                 </textarea>
 
                             <div class="boton-guardar" >
-                                <button type="submit" class="btn btn-primary" (click)="addInfo()" >  Comprar</button>
+                                <button type="submit" class="btn btn-primary" (click)="AgregarInfo()" >  Comprar</button>
                             </div>
                             
                     </form>
                 </div>
         </div>
-                      
-<div>
-    <p>{{msj}}</p>
-</div>
 
+
+        
 
         <div class="ContenedorTabla">    
 
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th scope="col">Fecha </th>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Fecha </th>
 
-                        <th scope="col">Especie</th>
-                        
-                        <th scope="col">Cantidad</th>
+                    <th scope="col">Especie</th>
                     
-                        <th scope="col">Costo Acum</th>
-                                            
-                    </tr>
-                    </thead>
-                    
-                    <tbody>
-                    <tr   *ngFor="let InfoContable of Infocontable; let  i  = index" >
-                        <a class="btn btn-warning"    [routerLink]="['/Update', i]">
-                             <td>{{InfoContable.Fecha}} </td>
-                        <td>   {{InfoContable.Detalle}}    </td>
-                        <td> {{InfoContable.Cantidad}}   </td>                      
-                        <td>  {{InfoContable.CostoTotalacum|currency}}   </td>
-                    </a> 
-                    </tr>
-                    </tbody>
-                </table>
+                    <th scope="col">Cantidad</th>
+                
+                    <th scope="col">Costo Acum</th>
+                                        
+                </tr>
+                </thead>
+                
+                <tbody>
+                <tr   *ngFor="let InfoContable of Infocontable ; let  i  = index" >
+                    <a class="btn btn-warning"    [routerLink]="['/Update', i]">
+                         <td>{{InfoContable.Fecha}} </td>
+                    <td>   {{InfoContable.Detalle}}    </td>
+                    <td> {{InfoContable.Cantidad}}   </td>                      
+                    <td>  {{InfoContable.CostoTotalacum|currency}}   </td>
+                </a> 
+                </tr>
+                </tbody>
+            </table>
 
-          </div>  
-   
-</div>            
+      </div>  

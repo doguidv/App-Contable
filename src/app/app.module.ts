@@ -16,6 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { LoginGuardian } from './login/Login-Guardian';
 import { LoginService } from './login.service';
 import { CookieService } from 'ngx-cookie-service';
+import { RegistrosSeparadosComponent } from './registros-separados/registros-separados.component';
 
 
 
@@ -27,6 +28,7 @@ import { CookieService } from 'ngx-cookie-service';
     UpDateComponent,
     DeTallesPrecioComponent,
     LoginComponent,
+    RegistrosSeparadosComponent,
   ],
   imports: [
     BrowserModule,

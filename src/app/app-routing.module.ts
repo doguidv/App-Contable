@@ -6,6 +6,7 @@ import { DeTallesPrecioComponent } from './de-talles-precio/de-talles-precio.com
 import { HomeComponent } from './home/home.component';
 import { LoginGuardian } from './login/Login-Guardian';
 import { LoginComponent } from './login/login.component';
+import { RegistrosSeparadosComponent } from './registros-separados/registros-separados.component';
 import { UpDateComponent } from './up-date/up-date.component';
 
 
@@ -28,10 +29,10 @@ const routes: Routes = [
     component:  DeTallesPrecioComponent,canActivate:[LoginGuardian]
   },
 
-  // {
-    // path:'registro',
-    // component: EmpleadosComponent,canActivate:[LoginGuardian]
-  // },
+  {
+     path:'Movimientos-Diarios',
+     component: RegistrosSeparadosComponent
+  },
   {
     path:'login',
     component: LoginComponent
