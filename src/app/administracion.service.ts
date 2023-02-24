@@ -32,7 +32,7 @@ export class AdministracionService {
 
   guardarInfo(Infocontable:Infocontable[]){
 
-    const token=this.loginservice.getIdtoken();
+    const token =  this.loginservice.getIdtoken();
     this.http.put ('https://appcontable-c8190-default-rtdb.firebaseio.com/datos.json?auth='+token,Infocontable).subscribe({
         next: (v) => console.log('Se Guardo la informacion' + v),
         error: (e) => console.log('Error' + e),
@@ -54,9 +54,12 @@ export class AdministracionService {
 
   Eliminar(indice:number){
 
-    let url='https://appcontable-c8190-default-rtdb.firebaseio.com/datos/'+indice+'.json';
+    const token=this.loginservice.getIdtoken();
 
-    this.http.delete (url).subscribe({
+    const url='https://appcontable-c8190-default-rtdb.firebaseio.com/datos/'+indice +'.json?auth='+token;
+
+
+    this.http.delete(url).subscribe({
       next: (v) => console.log('Info borrada Correctamente' + v),
       error: (e) => console.log('Error' + e),
     });

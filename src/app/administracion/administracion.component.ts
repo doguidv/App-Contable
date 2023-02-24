@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Infocontable } from './administracion';
 import { InfoContableService } from '../info-contable.service';
+import { empty } from 'rxjs';
 
 
 @Component({
@@ -30,12 +31,18 @@ export class AdministracionComponent implements OnInit {
 
     
     addInfo(){
-          this.CostoTotalacum= -1* ( this.Cantidad*this.Importe);
-      let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.Importe,this.CostoTotalacum,this.DetallesCosto,this.Total);
-      this.infocontableService.addToInfo(InfoCont);
+   if  ( this.Fecha==null || this.Cantidad==null || this.Detalle==null || this.Importe==null ){
+
+    this.msj= ("Debe Completar los campos para poder guardar")
+
+   }else{
+    this.CostoTotalacum =  ( this.Cantidad*this.Importe);
+    let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.Importe,this.CostoTotalacum,this.DetallesCosto,this.Total);
+    this.infocontableService.addToInfo(InfoCont);
+   }
     }
 
-    
+    msj:string;
     Tipo_Inversion:string;
   Fecha:string;
   Detalle:string;

@@ -49,7 +49,7 @@ GetLista(){
       InfoContModificada.Detalle= InfoCont.Detalle;
       InfoContModificada.Cantidad= InfoCont.Cantidad;
       InfoContModificada.Importe= InfoCont.Importe;
-      InfoContModificada.CostoTotalacum=  InfoCont.CostoTotalacum + InfoCont.Total;
+      InfoContModificada.CostoTotalacum=  InfoCont.CostoTotalacum;
       InfoContModificada.DetallesCosto= InfoCont.DetallesCosto;
       InfoContModificada.Total= InfoCont.Total;
       
@@ -60,7 +60,9 @@ GetLista(){
 
    this._ListInfocontable.splice(indice,1);
 
-    if(this._ListInfocontable!=null) this.adminservice.Eliminar (indice);
+   this.adminservice.Eliminar(indice);
+
+   if(this._ListInfocontable!=null)   this.adminservice.guardarInfo(this._ListInfocontable);
   }
 
 

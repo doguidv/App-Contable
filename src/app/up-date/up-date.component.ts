@@ -40,27 +40,31 @@ resultChange: EventEmitter<number>  = new EventEmitter<number>() ;
         
         }
 
-
+Modificar(){
+  this.CostoTotalacum =  ( this.Cantidad*this.Importe);
+  let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.Importe,this.CostoTotalacum,this.DetallesCosto,this.Total);
+  this.infocontableService.UpdateToInfo(this.indice,InfoCont);
+}
         UpdateInfo(){
 
-          this.Total= (this.CostoTotalacum) +  ( this.Cantidad*this.Cotizacion);
-
           if(this.Cantidad>0){
-            this.Cantidad--;
+            this.Cantidad-=this.Max;          
+            let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.Importe,this.CostoTotalacum,this.DetallesCosto,this.Total);
+            this.infocontableService.UpdateToInfo(this.indice,InfoCont);
+            
+          }if(this.Cantidad     =    0){
+            this.EliminaInfo();
           }
-
-          if(this.CostoTotalacum>0){
-            this.CostoTotalacum+this.Total;
-          }
-           let InfoCont= new Infocontable(this.Fecha,this.Detalle,this.Cantidad,this.Importe,this.CostoTotalacum,this.DetallesCosto,this.Total);
-           this.infocontableService.UpdateToInfo(this.indice,InfoCont);
-   
+        
         }
 
-
+        CalTotal(){
+        this.Total  =   -1*(this.CostoTotalacum)+(this.Max*this.Cotizacion);
+        }
         
       EliminaInfo(){
         this.infocontableService.EliminarInfo(this.indice);
+
        }
 
       CostoUnit():void{
@@ -72,13 +76,13 @@ resultChange: EventEmitter<number>  = new EventEmitter<number>() ;
       CalculoResul():void{
         if(this.Cotizacion  > -1 ){
 
-          this.result =  -1 * ((this.Cotizacion/this.costoUnit))-1;
+          this.result = ((this.Cotizacion/this.costoUnit))-1;
           this.resultChange.emit( this.result);
         }
       }
       
-   
-Total:number;
+      Max:number;
+      Total:number;
       CostoTotalacum:number;
   costoUnit:number;
       result:number;

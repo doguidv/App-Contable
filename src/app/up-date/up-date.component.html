@@ -1,28 +1,68 @@
+
 <div class="update">
 
     <div class="Form1">
             
         <form id="stiloFormAdmin" action="" class="oculto">    
             <div>
-             <input type="number"  name="Cantidad"  id="Cantidad"    placeholder="Cantidad" [(ngModel)]="Cantidad"> 
+             <input type="number"  name="Max"  id="Max"    placeholder="Cantidad A vender" [(ngModel)]="Max"> 
             </div>
             <div>  
-             <input type="text"  name="Cotizacion"  id="Importe"  placeholder="Precio del dia" (input)="CalculoResul();CostoUnit()" [(ngModel)]="Cotizacion">    
+             <input type="text"  name="Cotizacion"  id="Importe"  placeholder="Precio del dia" (input)="CostoUnit();CalTotal()" [(ngModel)]="Cotizacion">    
             </div>
                <div >
-                    <button type="submit" class="btn btn-primary"  [routerLink]="'/administracion'" > volver</button>
-                </div>
-            
-                <div >
-                    <button type="submit" class="btn btn-primary"  (click)="UpdateInfo()"> vender</button>
+                
+                <button type="submit" class="btn btn-primary" (click)="CalculoResul()"  >Calcular Porcentaje de variacion</button>
+                
                 </div>
             
        </form>
+
+       <div class="Boton-Borrar">
+        <button type="submit" class="btn btn-primary"  (click)="UpdateInfo()"> vender</button> 
+  
+        <button type="submit" class="btn btn-primary"  (click)="EliminaInfo() "   [routerLink]="'/administracion'">Borrar</button>
+        <button type="submit" class="btn btn-primary"  [routerLink]="'/administracion'" > volver</button>
+   </div>
+
+
     </div>
+    
 
 
 
-    <div    class="DivTabla">
+            <div>
+                <form id="stiloFormAdmin" action="" class="oculto">    
+                    <input type="text" name="Fecha" id="Fecha" class="Inputform1" placeholder="Fecha 00/00/0000" [(ngModel)]="Fecha">
+                                
+                    <input type="text" name="Detalle" id="Detalle" class="Inputform1"  placeholder="Especie o producto" [(ngModel)]="Detalle">
+                    
+                    <input type="number"  name="Cantidad"  id="Cantidad"   class="Inputform1" placeholder="Cantidad" [(ngModel)]="Cantidad">
+                
+                    
+                    <input type="number"name="Importe"  id="Importe" class="Inputform1" placeholder="Importe" [(ngModel)]="Importe">
+
+
+                    <textarea type="text"  name="DetallesCosto" id="DetallesCosto"   class="Inputform1" placeholder="Detalle del Costo" [(ngModel)]="DetallesCosto">
+                        
+                    </textarea>
+
+            </form>
+            <div class="Boton-Borrar">
+                <button type="submit" class="btn btn-primary"  (click)="Modificar()"> Modificar datos</button> 
+           </div>
+        
+        
+            </div>
+        </div>
+
+
+
+
+
+
+
+<div    class="DivTabla">
                 
             <table class="table">
                 <thead>
@@ -61,13 +101,15 @@
                 </tbody>
             </table>   
         
-    <div>
+   </div>
+  
+            <div>
         
                 <h3 class="subtitulo"> recuerde el precio de compra contiene Costos </h3>
                 
                 
                 <p name="DetallesCosto" > {{DetallesCosto}}  </p>      
                 
-    </div>
+             </div>
             
-</div>
+
