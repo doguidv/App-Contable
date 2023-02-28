@@ -13,13 +13,13 @@
 
   .Form1 {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin-top: 1vh;
   margin-bottom: 1vh;
   margin-left: 5vw;
   margin-right: 5vw;
   padding: 12px;
-  width: 55vw;
+  width: 35vw;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   }
 
@@ -27,14 +27,14 @@
 .Boton-Borrar{
 
   display: flex;
-  flex-direction: column;
-  
-margin-right: 5vw;
-width: 75px;
+  flex-direction: row;
+
+  margin-right: 5vw;
+  width: 2vw;
 }
   .stiloFormAdmin{
    display: flex;
-   flex-direction: column; 
+   flex-direction: row; 
   }
 
 
@@ -88,7 +88,7 @@ width: 75px;
     }
   
     .subtitulo {
-      margin-top: 35vh;
+      margin-top: 10vh;
     }
     
     
@@ -107,28 +107,41 @@ width: 75px;
   
 display: flex;
 flex-direction: row;
+width:100vw;
 
 }
 
 .Form1 {
   display: flex;
+  flex-direction: row;
+}
+
+form {
+  display: flex;
   flex-direction: column;
     margin-top: 2vw;
-margin-bottom: 0vw;
-margin-left: 2vw;
-margin-right: 1vw;
-padding: 2px;
-width: 200px;
+  margin-bottom: 0vw;
+  margin-left: 2vw;
+  margin-right: 1vw;
+  padding: 2px;
+  width: 15vw;
+
 
 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
+
+  .stiloFormAdmin{
+   display: flex;
+   flex-direction: row; 
+  }
+
 .Boton-Borrar{
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   
-margin-right: 5vw;
-width: 75px;
+  margin-right: 5vw;
+  width: 5vw;
 }
 .table {
   margin-top: 20vh;
@@ -187,7 +200,11 @@ width: 75px;
   color: red;
   }
   
+
+
   .btn.btn-primary {
     margin-top: 2vh;
+
+  
   }
 }
